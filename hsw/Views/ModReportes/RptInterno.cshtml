@@ -1,0 +1,103 @@
+﻿<style>
+    .btn-excel {
+        background-color: #217346; /* Color verde de Excel */
+        color: white; /* Texto blanco para mejor contraste */
+        border-color: #217346; /* Opcional: para que el borde también sea verde */
+    }
+
+        .btn-excel:hover {
+            background-color: #1a5a37; /* Color más oscuro al pasar el ratón */
+            color: white; /* Texto blanco para mejor contraste */
+            border-color: #1a5a37;
+        }
+
+    /* Estilos adicionales para los grupos de radio buttons si es necesario */
+    .radio-group-container {
+        display: flex;
+        flex-direction: column; /* Apilar los grupos verticalmente */
+        gap: 15px; /* Espacio entre los grupos de radio */
+        margin-top: 15px; /* Espacio superior para separar del selector de fecha */
+    }
+
+    .radio-group-item {
+        display: flex;
+        flex-direction: column; /* Apilar label y radio buttons */
+        align-items: center; /* Centrar horizontalmente */
+    }
+
+    .radio-option {
+        display: flex;
+        align-items: center;
+        margin-right: 15px; /* Espacio entre las opciones de radio */
+    }
+
+        .radio-option input[type="radio"] {
+            margin-right: 5px;
+        }
+
+</style>
+
+<!-- Content -->
+<div id="lista">
+    <div class="card h-100">
+        <h5 class="card-header text-center">INFORME MENSUAL INTERNO</h5>
+
+        <div class="card-body">
+
+            <div class="row mt-1 mb-2 g-5 justify-content-center">
+
+                <div class="col-xl-3 col-md-4 col-5">
+                    <div class="form-floating form-floating-outline d-flex justify-content-center">
+                        <input class="form-control" type="date" id="dtpFecha" />
+                        <label for="dtpFecha">Al *</label>
+                        <div class="invalid-feedback text-start">Por favor ingrese fecha</div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row justify-content-center radio-group-container">
+
+                <div class="col-xl-12 col-md-12 col-12 text-center">
+                    <label class="form-label mb-2">Tipo de Depósito:</label>
+                    <div class="d-flex justify-content-center flex-wrap">
+                        <div class="radio-option">
+                            <input class="form-check-input" type="radio" name="tipoDeposito" id="radioAduanero" value="Aduanero" checked />
+                            <label class="form-check-label" for="radioAduanero"> Aduanero </label>
+                        </div>
+                        <div class="radio-option">
+                            <input class="form-check-input" type="radio" name="tipoDeposito" id="radioSimple" value="Simple" />
+                            <label class="form-check-label" for="radioSimple"> Simple </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-12 col-md-12 col-12 text-center">
+                    <label class="form-label mb-2">Formato de Informe:</label>
+                    <div class="d-flex justify-content-center flex-wrap">
+                        <div class="radio-option">
+                            <input class="form-check-input" type="radio" name="formatoInforme" id="radioDetalle" value="Detalle" checked />
+                            <label class="form-check-label" for="radioDetalle"> Detalle </label>
+                        </div>
+                        <div class="radio-option">
+                            <input class="form-check-input" type="radio" name="formatoInforme" id="radioResumen" value="Resumen" />
+                            <label class="form-check-label" for="radioResumen"> Resumen </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="card-footer d-flex justify-content-center">
+            <div class="d-grid gap-3 col-lg-3">
+                <button class="btn btn-excel" type="button" id="btnExportar">
+                    <i class="ri-file-excel-line ri-20px me-1_5"></i> Exportar Excel
+                </button>
+            </div>
+        </div>
+
+    </div>
+</div>
+<!--/ Scrollable -->
+<script type="text/javascript" src="~/scripts/ModReportes/RptInterno.js?v=1.0001"></script>

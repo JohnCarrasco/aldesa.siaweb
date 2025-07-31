@@ -1,0 +1,347 @@
+﻿<div id="lista-lst" class="card h-100">
+    <div class="card-header bg-primary">
+        <h5 class="card-title text-white m-0 me-2">Clientes/Proveedores</h5>
+    </div>
+    <div class="card-body">
+        <div class="card-datatable">
+            <table id="tabla" class="table table-bordered table-striped table-hover table-responsive table-sm">
+                <thead>
+                    <tr style="background-color:#2F75B5;color:white;">
+                        <th class="text-center">Acciones</th>
+                        <th class="text-center">Código</th>
+                        <th class="text-center">Documento</th>
+                        <th class="text-center">Razón Social</th>
+                        <th class="text-center">Dirección</th>
+                        <th class="text-center">Estado</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+    </div>
+</div>
+
+<!--/ Scrollable -->
+
+<div class="card h-100" id="lista-edt" hidden>
+    <div class="card-header bg-primary">
+        <h5 class="card-title text-white m-0 me-2" id="tituloEdt">Edición Documento</h5>
+    </div>
+    <div class="card-body">
+        <div id="controles">
+            <div class="row mt-1 mb-2 g-5">
+                <div class="col-xl-4 col-md-6 col-12">
+                    <input type="text" id="txtTipDoc" hidden />
+                    <div class="form-floating form-floating-outline">
+                        <select id="cboServicio" class="select2 form-select"></select>
+                        <label for="cboServicio">Servicio</label>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-md-6 col-12">
+                    <div class="form-floating form-floating-outline">
+                        <input type="text" id="txtNumDoc" class="form-control" disabled />
+                        <label for="txtNumDoc">N° Comprobante</label>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-md-6 col-12">
+                    <div class="form-floating form-floating-outline">
+                        <select id="cboMoneda" class="select2 form-select"></select>
+                        <label for="cboMoneda">Moneda</label>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-md-6 col-12">
+                    <div class="form-floating form-floating-outline">
+                        <select id="cboForPag" class="select2 form-select"></select>
+                        <label for="cboForPag">Forma de pago</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-1 mb-2 g-5">
+                <div class="col-xl-2 col-md-3 col-3">
+                    <div class="form-floating form-floating-outline">
+                        <input class="form-control" type="date" id="dtpFecha" />
+                        <label for="dtpFecha">Fecha de emisión *</label>
+                        <div class="invalid-feedback text-start">Por favor ingrese fecha de emisión</div>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-md-5 col-9">
+                    <div class="form-floating form-floating-outline">
+                        <select id="cboCliPro" class="select2 form-select"></select>
+                        <label for="cboCliPro">Cliente</label>
+                        <div class="invalid-feedback text-start">Por favor seleccione cliente</div>
+                    </div>
+                </div>
+                <div class="col-xl-1 col-md-1 col-4 d-flex align-items-center">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="chkVarias">
+                        <label class="form-check-label" for="chkVarias">
+                            Varias Tarjetas
+                        </label>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-md-3 col-8">
+                    <input type="text" id="txtCodSer" hidden />
+                    <input type="text" id="txtNroTar" hidden />
+                    <div class="input-group input-group-merge">
+                        <span class="input-group-text" style="cursor:pointer" id="lupa"><i class="ri-search-line"></i></span>
+                        <div class="form-floating form-floating-outline">
+                            <input class="form-control" type="text" id="txtNroTarDes" placeholder="Número de Tarjeta" readonly />
+                            <label for="txtNroTarDes">Número de Tarjeta</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-1 mb-2 g-5">
+                <div class="col-xl-4 col-md-3 col-12">
+                    <div class="form-floating form-floating-outline">
+                        <input class="form-control" type="text" id="txtCorreo" placeholder="Ingrese Correo" autocomplete="off" />
+                        <label for="txtCorreo">Correo</label>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-md-3 col-12">
+                    <div class="form-floating form-floating-outline">
+                        <input class="form-control" type="text" id="txtDUA" disabled />
+                        <label for="txtDUA">DUA/DAM</label>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-md-3 col-12">
+                    <input type="text" id="txtId_Cotizacion" hidden />
+                    <div class="form-floating form-floating-outline">
+                        <input class="form-control" type="text" id="txtNroCar" disabled />
+                        <label for="txtNroCar">N° Carta</label>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-md-3 col-12">
+                    <div class="form-floating form-floating-outline">
+                        <input class="form-control" type="text" id="txtFecCar" disabled />
+                        <label for="txtFecCar">Fecha Carta</label>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-md-3 col-12">
+                    <div class="form-floating form-floating-outline">
+                        <input class="form-control" type="text" id="txtFecNum" disabled />
+                        <label for="txtFecNum">Fecha Numeración</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-1 mb-2 g-5">
+                <div class="col-xl-2 col-md-3 col-4">
+                    <div class="form-floating form-floating-outline">
+                        <input class="form-control" type="date" id="dtpFecIni_Per" />
+                        <label for="dtpFecIni_Per">Desde *</label>
+                        <div class="invalid-feedback text-start">Por favor ingrese fecha de inicio</div>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-md-2 col-2">
+                    <div class="form-floating form-floating-outline">
+                        <input class="form-control" type="number" id="txtDias_Per" value="30" autocomplete="off" />
+                        <label for="txtDias_Per">Dias Facturar</label>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-md-3 col-4">
+                    <div class="form-floating form-floating-outline">
+                        <input class="form-control" type="text" id="txtFecFin_Per" disabled />
+                        <label for="txtFecFin_Per">Hasta</label>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-md-2 col-3">
+                    <div class="form-floating form-floating-outline">
+                        <input class="form-control" type="text" id="txtTipCam" disabled />
+                        <label for="txtTipCam">Tipo de cambio</label>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-md-2 col-3">
+                    <div class="form-floating form-floating-outline">
+                        <input class="form-control" type="text" id="txtDias" autocomplete="off" />
+                        <label for="txtDias">Dias crédito</label>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-md-2 col-4">
+                    <div class="form-floating form-floating-outline">
+                        <input class="form-control" type="text" id="txtFecVen" disabled />
+                        <label for="txtFecVen">Vencimiento</label>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-md-2 col-4" id="divAdicional1">
+                    <div class="form-floating form-floating-outline">
+                        <input class="form-control" type="text" id="txtBultos" placeholder="Ingrese cantidad" autocomplete="off" disabled />
+                        <label for="txtBultos">Cantidad Facturar</label>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-md-2 col-4" id="divAdicional2">
+                    <div class="form-floating form-floating-outline">
+                        <input class="form-control" type="text" id="txtMonto" placeholder="Ingrese monto" autocomplete="off" disabled />
+                        <label for="txtMonto">Valor Facturar</label>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-md-2 col-4" id="divAdicional3">
+                    <div class="form-floating form-floating-outline">
+                        <input class="form-control" type="text" id="txtDetPor" autocomplete="off" disabled />
+                        <label for="txtDetPor">Detracción %</label>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-md-2 col-4" id="divAdicional4">
+                    <div class="form-floating form-floating-outline">
+                        <input class="form-control" type="text" id="txtDetSol" autocomplete="off" disabled />
+                        <label for="txtDetSol">Detracción Soles</label>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-md-2 col-4" id="divAdicional5">
+                    <div class="form-floating form-floating-outline">
+                        <input class="form-control" type="text" id="txtDetDol" autocomplete="off" disabled />
+                        <label for="txtDetDol">Detracción Dólares</label>
+                    </div>
+                </div>
+            </div>
+            <hr />
+
+            <label style="display:block;text-align:center;"><b>DETALLE DE COMPROBANTE</b></label>
+
+            <div class="row" id="divServicios">
+                <button class="col-3 btn btn-info waves-effect waves-light" type="button" id="btnAgregarServicio">Agregar Servicio</button>
+                <hr />
+                <div class="col-12" id="servicios">
+                    <div class="col-12 col-md-12 mb-2">
+                        <div class="form-floating form-floating-outline">
+                            <select id="cboServiciosGrp" class="select2 form-select">
+                            </select>
+                            <label for="cboServicioGrp">Grupo de Servicios</label>
+                        </div>
+
+                        <div class="col-12 table-responsive">
+                            <table class="table">
+                                <tbody id="tbl_servicios">
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="d-grid">
+                            <button type="button" id="btnCerrarServicio" class="btn btn-secondary waves-effect waves-light">Cerrar</button>
+                        </div>
+                    </div>
+                    <hr />
+                </div>
+            </div>
+
+            <div class="row" id="det">
+                <table id="tabfac_det" class="table table-bordered table-striped table-hover table-responsive table-sm">
+                    <thead>
+                        <tr>
+                            <th class="text-center">It</th>
+                            <th class="text-center">id_servicio</th>
+                            <th class="text-center">Descripción</th>
+                            <th class="text-center">CIF S/.</th>
+                            <th class="text-center">CIF USD</th>
+                            <th class="text-center">% Tarif</th>
+                            <th class="text-center">Valor</th>
+                            <th class="text-center">Tar. Mínima</th>
+                            <th class="text-center">Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+            <div class="row" id="det_ser">
+                <table id="tabfac_det_ser" class="table table-bordered table-striped table-hover table-responsive table-sm">
+                    <thead>
+                        <tr>
+                            <th class="text-center">Acc</th>
+                            <th class="text-center">It</th>
+                            <th class="text-center">Cód.Servicio</th>
+                            <th class="text-center">Descripción</th>
+                            <th class="text-center">Cantidad</th>
+                            <th class="text-center">Precio</th>
+                            <th class="text-center">Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="row">
+
+                <div class="card-body px-3 pb-6">
+                    <div class="row">
+                        <div class="col-md-8 mb-md-0 mb-3 form-floating form-floating-outline">
+                            <textarea class="form-control h-px-100"
+                                      id="txtObs"
+                                      placeholder="Observaciones aquí..." maxlength="500" oninput="this.value=this.value.toUpperCase();"></textarea>
+                            <label for="txtObs">Observaciones</label>
+                        </div>
+                        <div class="col-md-4 d-flex justify-content-md-end mt-0">
+                            <div class="invoice-calculations">
+                                <div class="d-flex justify-content-between mb-1">
+                                    <span class="w-px-150">Valor Venta</span>
+                                    <h6 class="mb-0" id="lblVV">0.00</h6>
+                                </div>
+                                <div class="d-flex justify-content-between mb-1">
+                                    <input type="text" id="txtPorIGV" hidden />
+                                    <span class="w-px-150" id="lblPorIGV"></span>
+                                    <h6 class="mb-0" id="lblIGV">0.00</h6>
+                                </div>
+                                <hr class="my-2" />
+                                <div class="d-flex justify-content-between">
+                                    <span class="w-px-150">TOTAL</span>
+                                    <h6 class="mb-0" id="lblTotal">0.00</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card-footer d-flex justify-content-center">
+        <div class="d-grid gap-3 col-lg-3 me-3">
+            <button class="btn btn-outline-secondary" type="button" id="btnRegresarLista">Cancelar</button>
+        </div>
+        <div class="d-grid gap-3 col-lg-3">
+            <button class="btn btn-primary" type="button" id="btnGuardar">Grabar Documento</button>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="MostrarTarjetas" tabindex="-1" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+    <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header bg-primary">
+                <h4 class="modal-title text-white" id="modalCenterTitle">Seleccionar Tarjeta</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="card-datatable">
+                    <table id="tablatarjetas" class="table table-responsive table-hover table-striped table-valign-middle table-sm">
+                        <thead class="bg-custom-table">
+                            <tr>
+                                <th style="text-align:center">Opc</th>
+                                <th style="display:none">codser</th>
+                                <th style="text-align:center">Servicio</th>
+                                <th style="text-align:center">Tarjeta</th>
+                                <th style="text-align:center">Fecha</th>
+                                <th style="text-align:center">Manifiesto</th>
+                                <th style="text-align:center">Descripción</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="modal-footer d-flex justify-content-center">
+                <div class="d-grid gap-3 col-lg-3">
+                    <button class="btn btn-outline-secondary" id="btnCerrarListaTarjetas" data-bs-dismiss="modal">Regresar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /Modal -->
+
+<script type="text/javascript" src="~/scripts/ModTablas/ManteCliPro.js?v=1.0003"></script>

@@ -1,0 +1,192 @@
+﻿<style>
+    .card {
+        min-height:77vh;
+        display: flex;
+        flex-direction: column;
+    }
+    .card-body {
+        flex: 1; /* Permite que el contenido se expanda para ocupar todo el espacio disponible */
+    }
+
+    div.dataTables_wrapper div.dataTables_filter {
+        text-align: right;
+    }
+
+        div.dataTables_wrapper div.dataTables_filter label {
+            font-weight: normal;
+            white-space: nowrap;
+            text-align: left;
+        }
+
+        div.dataTables_wrapper div.dataTables_filter input {
+            margin-left: 0.5em;
+            display: inline-block;
+            width: auto;
+        }
+
+    div.dt-buttons {
+        float:left;
+    }
+
+div.dataTables_wrapper div.dataTables_length,
+div.dataTables_wrapper div.dataTables_filter {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+
+/*     .btn-group,
+    .btn-group-vertical {
+        position: relative;
+        display: inline-flex;
+        vertical-align: middle;
+    }
+
+        .btn-group > .btn,
+        .btn-group-vertical > .btn {
+            position: relative;
+            flex: 1 1 auto;
+        } */
+
+
+
+
+
+</style>
+
+ <!-- Content -->
+<!-- Invoice List Table -->
+<div class="card">
+    <h5 class="card-header bg-primary text-white">Listado de Empresas</h5>
+    <div class="card-body">
+        <div class="card-datatable table-responsive text-nowrap">
+            <table id="tabla" class="dt-scrollableTable table table-bordered table-striped table-hover table-sm w-100">
+                <thead>
+                    <tr>
+                        <th class="text-center">Acciones</th>
+                        <th class="text-center">Código</th>
+                        <th class="text-center">RUC</th>
+                        <th class="text-center">Razón Social</th>
+                        <th class="text-center">Abreviado</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+    </div>
+</div>
+
+<!--/ Scrollable -->
+
+<!-- Modal -->
+<div class="modal fade" id="EmpresaAdiMod" tabindex="-1" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header bg-primary">
+                <h4 class="modal-title text-white" id="modalCenterTitle">Crear Empresa</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <div class="modal-body">
+
+                <label style="display:none" id="lblid_empresa">id_empresa</label>
+
+                <div class="row mb-4 g-3">
+                    <div class="col-12 col-md-6">
+                        <div class="form-floating form-floating-outline">
+                            <input type="text" id="txtRUC" name="txtRUC" class="form-control" placeholder="RUC *" autocomplete="off" />
+                            <label for="txtRUC">RUC *</label>
+                            <div class="invalid-feedback text-start">Por favor ingrese RUC</div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6">
+                    </div>
+
+                    <div class="col-12 col-md-8">
+                        <div class="form-floating form-floating-outline">
+                            <input type="text" id="txtDescri" name="txtDescri" class="form-control" placeholder="Razón Social *" oninput="this.value=this.value.toUpperCase();" autocomplete="off" tabindex="1" />
+                            <label for="txtDescri">Razón Social *</label>
+                            <div class="invalid-feedback text-start">Por favor ingrese razón social</div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="form-floating form-floating-outline">
+                            <input type="text" id="txtDesAbr" name="txtDesAbr" class="form-control" placeholder="Razón Abreviada *" oninput="this.value=this.value.toUpperCase();" autocomplete="off" tabindex="2" />
+                            <label for="txtDesAbr">Razón Abreviado *</label>
+                            <div class="invalid-feedback text-start">Por favor ingrese razón social abrev</div>
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="form-floating form-floating-outline">
+                            <input type="text" id="txtDirecc" name="txtDirecc" class="form-control" placeholder="Dirección" oninput="this.value=this.value.toUpperCase();" autocomplete="off" tabindex="3" />
+                            <label for="txtDirecc">Dirección</label>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-8">
+                        <div class="form-floating form-floating-outline">
+                            <input type="text" id="txtContacto" name="txtContacto" class="form-control" placeholder="Contacto" oninput="this.value=this.value.toUpperCase();" autocomplete="off" tabindex="4" />
+                            <label for="txtContacto">Contacto</label>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="form-floating form-floating-outline">
+                            <input type="text" id="txtTelefono" name="txtTelefono" class="form-control" placeholder="Teléfono" oninput="this.value=this.value.toUpperCase();" autocomplete="off" tabindex="5" />
+                            <label for="txtTelefono">Teléfono</label>
+                        </div>
+                    </div>
+
+                </div>
+
+                <h4 class="onboarding-title text-body mb-0" style="color:red!important;">Datos SUNAT</h4>
+                <div class="row mb-4 g-3">
+                    <div class="col-12 col-md-6">
+                        <div class="form-floating form-floating-outline">
+                            <input type="text" id="txtUsuario" name="txtUsuario" class="form-control" placeholder="Usuario" tabindex="6" />
+                            <label for="txtUsuario">Usuario</label>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="form-floating form-floating-outline">
+                            <input type="text" id="txtClave" name="txtClave" class="form-control" placeholder="Clave" tabindex="7" />
+                            <label for="txtClave">Clave</label>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="form-floating form-floating-outline">
+                            <input type="text" id="txtclient_id" name="txtclient_id" class="form-control" placeholder="CLIENT_ID" tabindex="8" />
+                            <label for="txtclient_id">CLIENT_ID</label>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="form-floating form-floating-outline">
+                            <input type="text" id="txtcliente_secret" name="txtcliente_secret" class="form-control" placeholder="CLIENT_SECRET" tabindex="9" />
+                            <label for="txtcliente_secret">CLIENT_SECRET</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mb-2">
+                    <div class="d-grid gap-2 col-lg-3 mx-auto">
+                    </div>
+                    <div class="d-grid gap-2 col-lg-3 mx-auto">
+                        <button class="btn btn-outline-secondary" type="reset" data-bs-dismiss="modal">Cancelar</button>
+                    </div>
+                    <div class="d-grid gap-2 col-lg-3 mx-auto">
+                        <button class="btn btn-primary" type="button" id="btnGuardarEmpresa" tabindex="10">Guardar</button>
+                    </div>
+                    <div class="d-grid gap-2 col-lg-3 mx-auto">
+                    </div>
+                </div>
+
+
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- /Modal -->
+<script type="text/javascript" src="~/Scripts/ModConfiguraciones/ManteEmpresas.js?v=1.006"></script>

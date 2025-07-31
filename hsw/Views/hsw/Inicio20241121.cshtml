@@ -1,0 +1,1068 @@
+﻿@{
+    Layout = null;
+    ViewData["Title"] = "ERP - Hard System Web";
+}
+
+<!DOCTYPE html>
+<!--
+<html lang="es-PE" class='light-style layout-navbar-fixed layout-menu-fixed layout-compact' dir="ltr" data-theme="theme-default" data-assets-path='/' data-template='vertical-menu-template'>
+-->
+<html lang="es-PE"
+      class="light-style layout-navbar-fixed layout-menu-fixed layout-compact"
+      dir="ltr"
+      data-theme="theme-default"
+      data-assets-path="/assets/"
+      data-template="vertical-menu-template"
+      data-style="light">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+    @{
+        string title = ViewData["title"] as string ?? "";
+        string appName = TempData.Peek("appName") as string ?? "";
+        string productPage = TempData.Peek("productPage") as string ?? "";
+    }
+    <title>@title | HSW</title>
+    <meta name="description" content="" />
+
+    <!-- Canonical SEO -->
+    <link rel="canonical" href='@productPage'>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="~/assets/img/favicon/favicon.ico" />
+
+    <!-- Core Styles -->
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="~/assets/vendor/fonts/remixicon/remixicon.css" />
+    <link rel="stylesheet" href="~/assets/vendor/fonts/flag-icons.css" />
+
+    <!-- Menu waves for no-customizer fix -->
+    <link rel="stylesheet" href="~/assets/vendor/libs/node-waves/node-waves.css" />
+
+    <!-- Core CSS -->
+    <link rel="stylesheet" href="~/assets/vendor/css/rtl/core.css" class="template-customizer-core-css" />
+    <link rel="stylesheet" href="~/assets/vendor/css/rtl/theme-default.css" class="template-customizer-theme-css" />
+
+    <!-- Vendors CSS -->
+    <link rel="stylesheet" href="~/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
+    <link rel="stylesheet" href="~/assets/vendor/libs/typeahead-js/typeahead.css" />
+    <link rel="stylesheet" href="~/assets/vendor/libs/datatables-bs5/datatables.bootstrap5.css" />
+    <link rel="stylesheet" href="~/assets/vendor/libs/datatables-responsive-bs5/responsive.bootstrap5.css" />
+    <!--
+    <link rel="stylesheet" href="~/assets/vendor/libs/datatables-select-bs5/select.bootstrap5.css" />
+    <link rel="stylesheet" href="~/assets/vendor/libs/datatables-checkboxes-jquery/datatables.checkboxes.css" />
+    <link rel="stylesheet" href="~/assets/vendor/libs/datatables-fixedcolumns-bs5/fixedcolumns.bootstrap5.css" />
+    <link rel="stylesheet" href="~/assets/vendor/libs/datatables-fixedheader-bs5/fixedheader.bootstrap5.css" />
+    -->
+
+    <link rel="stylesheet" href="~/assets/vendor/libs/sweetalert2/sweetalert2.css" />
+    <link rel="stylesheet" href="~/assets/vendor/libs/bootstrap-maxlength/bootstrap-maxlength.css" />
+    <link rel="stylesheet" href="~/assets/vendor/libs/select2/select2.css" />
+    <link rel="stylesheet" href="~/assets/vendor/libs/tagify/tagify.css" />
+    <link rel="stylesheet" href="~/assets/vendor/libs/bootstrap-select/bootstrap-select.css" />
+    <link rel="stylesheet" href="~/assets/vendor/libs/&#64;form-validation/form-validation.css" />
+    <link rel="stylesheet" href="~/assets/vendor/libs/bs-stepper/bs-stepper.css" />
+    <link rel="stylesheet" href="~/assets/vendor/libs/spinkit/spinkit.css" />
+    <!--
+    <link rel="stylesheet" href="~/styles/estilos.css" />
+    -->
+
+    <!--
+    <link rel="stylesheet" href="~/assets/vendor/libs/flatpickr/flatpickr.css" />
+    <link rel="stylesheet" href="~/assets/vendor/libs/apex-charts/apex-charts.css" />
+    <link rel="stylesheet" href="~/assets/vendor/libs/swiper/swiper.css" />
+    -->
+    <!-- Page CSS
+    <link rel="stylesheet" href="~/assets/vendor/css/pages/cards-statistics.css" />
+    <link rel="stylesheet" href="~/assets/vendor/css/pages/cards-analytics.css" />
+    -->
+    <!-- Helpers -->
+    <script src="~/assets/vendor/js/helpers.js"></script>
+    <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
+    <!--? Template customizer: To hide customizer set displayCustomizer value false in config.js.  -->
+    <script src="~/assets/vendor/js/template-customizer-hsw.js"></script>
+    <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
+    <script src="~/assets/js/config.js"></script>
+</head>
+
+<body>
+
+    <!-- Layout Content -->
+    <input type="text" id="txtRol" class="form-control" hidden value=1>
+
+    <div class='layout-wrapper layout-content-navbar'>
+        <div class='layout-container'>
+
+            <!-- Menu -->
+            <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
+
+                <div class='app-brand demo'>
+                    <a class="app-brand-link" href="/">
+                        <span class="app-brand-logo demo">
+                            <svg width="38" height="20" viewBox="0 0 38 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M30.0944 2.22569C29.0511 0.444187 26.7508 -0.172113 24.9566 0.849138C23.1623 1.87039 22.5536 4.14247 23.5969 5.92397L30.5368 17.7743C31.5801 19.5558 33.8804 20.1721 35.6746 19.1509C37.4689 18.1296 38.0776 15.8575 37.0343 14.076L30.0944 2.22569Z" fill="#666cff" />
+                                <path d="M30.171 2.22569C29.1277 0.444187 26.8274 -0.172113 25.0332 0.849138C23.2389 1.87039 22.6302 4.14247 23.6735 5.92397L30.6134 17.7743C31.6567 19.5558 33.957 20.1721 35.7512 19.1509C37.5455 18.1296 38.1542 15.8575 37.1109 14.076L30.171 2.22569Z" fill="url(#paint0_linear_2989_100980)" fill-opacity="0.4" />
+                                <path d="M22.9676 2.22569C24.0109 0.444187 26.3112 -0.172113 28.1054 0.849138C29.8996 1.87039 30.5084 4.14247 29.4651 5.92397L22.5251 17.7743C21.4818 19.5558 19.1816 20.1721 17.3873 19.1509C15.5931 18.1296 14.9843 15.8575 16.0276 14.076L22.9676 2.22569Z" fill="#666cff" />
+                                <path d="M14.9558 2.22569C13.9125 0.444187 11.6122 -0.172113 9.818 0.849138C8.02377 1.87039 7.41502 4.14247 8.45833 5.92397L15.3983 17.7743C16.4416 19.5558 18.7418 20.1721 20.5361 19.1509C22.3303 18.1296 22.9391 15.8575 21.8958 14.076L14.9558 2.22569Z" fill="#666cff" />
+                                <path d="M14.9558 2.22569C13.9125 0.444187 11.6122 -0.172113 9.818 0.849138C8.02377 1.87039 7.41502 4.14247 8.45833 5.92397L15.3983 17.7743C16.4416 19.5558 18.7418 20.1721 20.5361 19.1509C22.3303 18.1296 22.9391 15.8575 21.8958 14.076L14.9558 2.22569Z" fill="url(#paint1_linear_2989_100980)" fill-opacity="0.4" />
+                                <path d="M7.82901 2.22569C8.87231 0.444187 11.1726 -0.172113 12.9668 0.849138C14.7611 1.87039 15.3698 4.14247 14.3265 5.92397L7.38656 17.7743C6.34325 19.5558 4.04298 20.1721 2.24875 19.1509C0.454514 18.1296 -0.154233 15.8575 0.88907 14.076L7.82901 2.22569Z" fill="#666cff" />
+                                <defs>
+                                    <linearGradient id="paint0_linear_2989_100980" x1="5.36642" y1="0.849138" x2="10.532" y2="24.104" gradientUnits="userSpaceOnUse">
+                                        <stop offset="0" stop-opacity="1" />
+                                        <stop offset="1" stop-opacity="0" />
+                                    </linearGradient>
+                                    <linearGradient id="paint1_linear_2989_100980" x1="5.19475" y1="0.849139" x2="10.3357" y2="24.1155" gradientUnits="userSpaceOnUse">
+                                        <stop offset="0" stop-opacity="1" />
+                                        <stop offset="1" stop-opacity="0" />
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                        </span>
+                        <span class="app-brand-text demo menu-text fw-bold ms-2"></span>
+                    </a>
+
+                    <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto">
+                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11.4854 4.88844C11.0081 4.41121 10.2344 4.41121 9.75715 4.88844L4.51028 10.1353C4.03297 10.6126 4.03297 11.3865 4.51028 11.8638L9.75715 17.1107C10.2344 17.5879 11.0081 17.5879 11.4854 17.1107C11.9626 16.6334 11.9626 15.8597 11.4854 15.3824L7.96672 11.8638C7.48942 11.3865 7.48942 10.6126 7.96672 10.1353L11.4854 6.61667C11.9626 6.13943 11.9626 5.36568 11.4854 4.88844Z"
+                                  fill="currentColor" fill-opacity="0.6" />
+                            <path d="M15.8683 4.88844L10.6214 10.1353C10.1441 10.6126 10.1441 11.3865 10.6214 11.8638L15.8683 17.1107C16.3455 17.5879 17.1192 17.5879 17.5965 17.1107C18.0737 16.6334 18.0737 15.8597 17.5965 15.3824L14.0778 11.8638C13.6005 11.3865 13.6005 10.6126 14.0778 10.1353L17.5965 6.61667C18.0737 6.13943 18.0737 5.36568 17.5965 4.88844C17.1192 4.41121 16.3455 4.41121 15.8683 4.88844Z"
+                                  fill="currentColor" fill-opacity="0.38" />
+                        </svg>
+                    </a>
+                </div>
+
+                <div class="menu-inner-shadow"></div>
+
+                <ul class="menu-inner py-1" id="Menu">
+                </ul>
+
+
+                <!--
+                -->
+                <!--
+
+                <ul class="menu-inner py-1">
+
+
+                <li class='menu-item active open'>
+                    <a href="javascript:void(0);" class="menu-link menu-toggle">
+                        <i class="menu-icon tf-icons ri-home-smile-line"></i>
+                        <div data-i18n="Dashboards">Dashboards</div>
+                        <div class="badge bg-danger rounded-pill ms-auto">5</div>
+                    </a>
+                    <ul class="menu-sub">
+                        <li class='menu-item active'>
+                            <a class="menu-link" href="#" data-url="/HSW/DBDefault" onclick="expandir(this)" id="opcDBDefault">
+                                <div data-i18n="Analítica">Analítica</div>
+                            </a>
+                        </li>
+                        <li class='menu-item'>
+                            <a class="menu-link" href="#">
+                                <div data-i18n="CRM">CRM</div>
+                            </a>
+                        </li>
+                        <li class='menu-item'>
+                            <a class="menu-link" href="#">
+                                <div data-i18n="Comercio Electrónico">Comercio Electrónico</div>
+                            </a>
+                        </li>
+                        <li class='menu-item'>
+                            <a class="menu-link" href="#">
+                                <div data-i18n="Logística">Logística</div>
+                            </a>
+                        </li>
+                        <li class='menu-item'>
+                            <a class="menu-link" href="#">
+                                <div data-i18n="Academia">Academia</div>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                </ul>
+
+                -->
+
+
+
+            </aside>
+            <!-- / Menu -->
+            <!-- Layout page -->
+            <div class="layout-page">
+
+                <!-- Navbar -->
+                <nav class="layout-navbar container-xxl navbar navbar-expand-xl navbar-detached align-items-center bg-navbar-theme"
+                     id="layout-navbar">
+                    <div class="layout-menu-toggle navbar-nav align-items-xl-center me-4 me-xl-0 d-xl-none">
+                        <a class="nav-item nav-link px-0 me-xl-6" href="javascript:void(0)">
+                            <i class="ri-menu-fill ri-22px"></i>
+                        </a>
+                    </div>
+
+                    <div class="navbar-nav-right d-flex align-items-center" id="navbar-collapse">
+                        <!-- Search -->
+                        <div class="navbar-nav align-items-center d-flex">
+                        </div>
+                        <!-- /Search -->
+
+                        <ul class="navbar-nav flex-row align-items-center ms-auto">
+                            <!-- Language -->
+                            <!--
+                                                        <li class="nav-item dropdown-language dropdown">
+                                                            <a class="nav-link btn btn-text-secondary rounded-pill btn-icon dropdown-toggle hide-arrow"
+                                                               href="javascript:void(0);"
+                                                               data-bs-toggle="dropdown">
+                                                                <i class="ri-translate-2 ri-22px"></i>
+                                                            </a>
+                                                            <ul class="dropdown-menu dropdown-menu-end">
+                                                                <li>
+                                                                    <a class="dropdown-item" href="javascript:void(0);" data-language="en" data-text-direction="ltr">
+                                                                        <span class="align-middle">English</span>
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a class="dropdown-item" href="javascript:void(0);" data-language="fr" data-text-direction="ltr">
+                                                                        <span class="align-middle">French</span>
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a class="dropdown-item" href="javascript:void(0);" data-language="ar" data-text-direction="rtl">
+                                                                        <span class="align-middle">Arabic</span>
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a class="dropdown-item" href="javascript:void(0);" data-language="de" data-text-direction="ltr">
+                                                                        <span class="align-middle">German</span>
+                                                                    </a>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                            -->
+                            <!--/ Language -->
+                            <!-- Style Switcher -->
+                            <li class="nav-item dropdown-style-switcher dropdown me-1 me-xl-0">
+                                <a class="nav-link btn btn-text-secondary rounded-pill btn-icon dropdown-toggle hide-arrow"
+                                   href="javascript:void(0);"
+                                   data-bs-toggle="dropdown">
+                                    <i class="ri-22px"></i>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-end dropdown-styles">
+                                    <li>
+                                        <a class="dropdown-item" href="javascript:void(0);" data-theme="light">
+                                            <span class="align-middle"><i class="ri-sun-line ri-22px me-3"></i>Claro</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="javascript:void(0);" data-theme="dark">
+                                            <span class="align-middle"><i class="ri-moon-clear-line ri-22px me-3"></i>Oscuro</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="javascript:void(0);" data-theme="system">
+                                            <span class="align-middle"><i class="ri-computer-line ri-22px me-3"></i>Sistema</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <!-- / Style Switcher-->
+                            <!-- Quick links  -->
+                            <li class="nav-item dropdown-shortcuts navbar-dropdown dropdown me-1 me-xl-0">
+                                <a class="nav-link btn btn-text-secondary rounded-pill btn-icon dropdown-toggle hide-arrow"
+                                   href="javascript:void(0);"
+                                   data-bs-toggle="dropdown"
+                                   data-bs-auto-close="outside"
+                                   aria-expanded="false">
+                                    <i class="ri-star-smile-line ri-22px"></i>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-end py-0">
+                                    <div class="dropdown-menu-header border-bottom py-50">
+                                        <div class="dropdown-header d-flex align-items-center py-2">
+                                            <h6 class="mb-0 me-auto">Shortcuts</h6>
+                                            <a href="javascript:void(0)"
+                                               class="btn btn-text-secondary rounded-pill btn-icon dropdown-shortcuts-add text-heading"
+                                               data-bs-toggle="tooltip"
+                                               data-bs-placement="top"
+                                               title="Add shortcuts">
+                                                <i class="ri-add-line ri-24px"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="dropdown-shortcuts-list scrollable-container">
+                                        <div class="row row-bordered overflow-visible g-0">
+                                            <div class="dropdown-shortcuts-item col">
+                                                <span class="dropdown-shortcuts-icon rounded-circle mb-3">
+                                                    <i class="ri-calendar-line ri-26px text-heading"></i>
+                                                </span>
+                                                <a href="app-calendar.html" class="stretched-link">Calendar</a>
+                                                <small class="mb-0">Appointments</small>
+                                            </div>
+                                            <div class="dropdown-shortcuts-item col">
+                                                <span class="dropdown-shortcuts-icon rounded-circle mb-3">
+                                                    <i class="ri-file-text-line ri-26px text-heading"></i>
+                                                </span>
+                                                <a href="app-invoice-list.html" class="stretched-link">Invoice App</a>
+                                                <small class="mb-0">Manage Accounts</small>
+                                            </div>
+                                        </div>
+                                        <div class="row row-bordered overflow-visible g-0">
+                                            <div class="dropdown-shortcuts-item col">
+                                                <span class="dropdown-shortcuts-icon rounded-circle mb-3">
+                                                    <i class="ri-user-line ri-26px text-heading"></i>
+                                                </span>
+                                                <a href="app-user-list.html" class="stretched-link">User App</a>
+                                                <small class="mb-0">Manage Users</small>
+                                            </div>
+                                            <div class="dropdown-shortcuts-item col">
+                                                <span class="dropdown-shortcuts-icon rounded-circle mb-3">
+                                                    <i class="ri-computer-line ri-26px text-heading"></i>
+                                                </span>
+                                                <a href="app-access-roles.html" class="stretched-link">Role Management</a>
+                                                <small class="mb-0">Permission</small>
+                                            </div>
+                                        </div>
+                                        <div class="row row-bordered overflow-visible g-0">
+                                            <div class="dropdown-shortcuts-item col">
+                                                <span class="dropdown-shortcuts-icon rounded-circle mb-3">
+                                                    <i class="ri-pie-chart-2-line ri-26px text-heading"></i>
+                                                </span>
+                                                <a href="index.html" class="stretched-link">Dashboard</a>
+                                                <small class="mb-0">Analytics</small>
+                                            </div>
+                                            <div class="dropdown-shortcuts-item col">
+                                                <span class="dropdown-shortcuts-icon rounded-circle mb-3">
+                                                    <i class="ri-settings-4-line ri-26px text-heading"></i>
+                                                </span>
+                                                <a href="pages-account-settings-account.html" class="stretched-link">Setting</a>
+                                                <small class="mb-0">Account Settings</small>
+                                            </div>
+                                        </div>
+                                        <div class="row row-bordered overflow-visible g-0">
+                                            <div class="dropdown-shortcuts-item col">
+                                                <span class="dropdown-shortcuts-icon rounded-circle mb-3">
+                                                    <i class="ri-question-line ri-26px text-heading"></i>
+                                                </span>
+                                                <a href="pages-faq.html" class="stretched-link">FAQs</a>
+                                                <small class="mb-0">FAQs & Articles</small>
+                                            </div>
+                                            <div class="dropdown-shortcuts-item col">
+                                                <span class="dropdown-shortcuts-icon rounded-circle mb-3">
+                                                    <i class="ri-tv-2-line ri-26px text-heading"></i>
+                                                </span>
+                                                <a href="modal-examples.html" class="stretched-link">Modals</a>
+                                                <small class="mb-0">Useful Popups</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <!-- Quick links -->
+                            <!-- Notification -->
+                            <li class="nav-item dropdown-notifications navbar-dropdown dropdown me-4 me-xl-1">
+                                <a class="nav-link btn btn-text-secondary rounded-pill btn-icon dropdown-toggle hide-arrow"
+                                   href="javascript:void(0);"
+                                   data-bs-toggle="dropdown"
+                                   data-bs-auto-close="outside"
+                                   aria-expanded="false">
+                                    <i class="ri-notification-2-line ri-22px"></i>
+                                    <span class="position-absolute top-0 start-50 translate-middle-y badge badge-dot bg-danger mt-2 border"></span>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-end py-0">
+                                    <li class="dropdown-menu-header border-bottom py-50">
+                                        <div class="dropdown-header d-flex align-items-center py-2">
+                                            <h6 class="mb-0 me-auto">Notification</h6>
+                                            <div class="d-flex align-items-center">
+                                                <span class="badge rounded-pill bg-label-primary fs-xsmall me-2">8 New</span>
+                                                <a href="javascript:void(0)"
+                                                   class="btn btn-text-secondary rounded-pill btn-icon dropdown-notifications-all"
+                                                   data-bs-toggle="tooltip"
+                                                   data-bs-placement="top"
+                                                   title="Mark all as read">
+                                                    <i class="ri-mail-open-line text-heading ri-20px"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="dropdown-notifications-list scrollable-container">
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item list-group-item-action dropdown-notifications-item">
+                                                <div class="d-flex">
+                                                    <div class="flex-shrink-0 me-3">
+                                                        <div class="avatar">
+                                                            <img src="../../assets/img/avatars/1.png" class="rounded-circle" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex-grow-1">
+                                                        <h6 class="small mb-1">Congratulation Lettie 🎉</h6>
+                                                        <small class="mb-1 d-block text-body">Won the monthly best seller gold badge</small>
+                                                        <small class="text-muted">1h ago</small>
+                                                    </div>
+                                                    <div class="flex-shrink-0 dropdown-notifications-actions">
+                                                        <a href="javascript:void(0)" class="dropdown-notifications-read">
+                                                            <span class="badge badge-dot"></span>
+                                                        </a>
+                                                        <a href="javascript:void(0)" class="dropdown-notifications-archive">
+                                                            <span class="ri-close-line ri-20px"></span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="list-group-item list-group-item-action dropdown-notifications-item">
+                                                <div class="d-flex">
+                                                    <div class="flex-shrink-0 me-3">
+                                                        <div class="avatar">
+                                                            <span class="avatar-initial rounded-circle bg-label-danger">CF</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex-grow-1">
+                                                        <h6 class="mb-1 small">Charles Franklin</h6>
+                                                        <small class="mb-1 d-block text-body">Accepted your connection</small>
+                                                        <small class="text-muted">12hr ago</small>
+                                                    </div>
+                                                    <div class="flex-shrink-0 dropdown-notifications-actions">
+                                                        <a href="javascript:void(0)" class="dropdown-notifications-read">
+                                                            <span class="badge badge-dot"></span>
+                                                        </a>
+                                                        <a href="javascript:void(0)" class="dropdown-notifications-archive">
+                                                            <span class="ri-close-line ri-20px"></span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="list-group-item list-group-item-action dropdown-notifications-item marked-as-read">
+                                                <div class="d-flex">
+                                                    <div class="flex-shrink-0 me-3">
+                                                        <div class="avatar">
+                                                            <img src="../../assets/img/avatars/2.png" class="rounded-circle" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex-grow-1">
+                                                        <h6 class="mb-1 small">New Message ✉️</h6>
+                                                        <small class="mb-1 d-block text-body">You have new message from Natalie</small>
+                                                        <small class="text-muted">1h ago</small>
+                                                    </div>
+                                                    <div class="flex-shrink-0 dropdown-notifications-actions">
+                                                        <a href="javascript:void(0)" class="dropdown-notifications-read">
+                                                            <span class="badge badge-dot"></span>
+                                                        </a>
+                                                        <a href="javascript:void(0)" class="dropdown-notifications-archive">
+                                                            <span class="ri-close-line ri-20px"></span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="list-group-item list-group-item-action dropdown-notifications-item">
+                                                <div class="d-flex">
+                                                    <div class="flex-shrink-0 me-3">
+                                                        <div class="avatar">
+                                                            <span class="avatar-initial rounded-circle bg-label-success">
+                                                                <i class="ri-shopping-cart-2-line"></i>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex-grow-1">
+                                                        <h6 class="mb-1 small">Whoo! You have new order 🛒</h6>
+                                                        <small class="mb-1 d-block text-body">ACME Inc. made new order $1,154</small>
+                                                        <small class="text-muted">1 day ago</small>
+                                                    </div>
+                                                    <div class="flex-shrink-0 dropdown-notifications-actions">
+                                                        <a href="javascript:void(0)" class="dropdown-notifications-read">
+                                                            <span class="badge badge-dot"></span>
+                                                        </a>
+                                                        <a href="javascript:void(0)" class="dropdown-notifications-archive">
+                                                            <span class="ri-close-line ri-20px"></span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="list-group-item list-group-item-action dropdown-notifications-item marked-as-read">
+                                                <div class="d-flex">
+                                                    <div class="flex-shrink-0 me-3">
+                                                        <div class="avatar">
+                                                            <img src="../../assets/img/avatars/9.png" class="rounded-circle" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex-grow-1">
+                                                        <h6 class="mb-1 small">Application has been approved 🚀</h6>
+                                                        <small class="mb-1 d-block text-body">Your ABC project application has been approved.</small>
+                                                        <small class="text-muted">2 days ago</small>
+                                                    </div>
+                                                    <div class="flex-shrink-0 dropdown-notifications-actions">
+                                                        <a href="javascript:void(0)" class="dropdown-notifications-read">
+                                                            <span class="badge badge-dot"></span>
+                                                        </a>
+                                                        <a href="javascript:void(0)" class="dropdown-notifications-archive">
+                                                            <span class="ri-close-line ri-20px"></span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="list-group-item list-group-item-action dropdown-notifications-item marked-as-read">
+                                                <div class="d-flex">
+                                                    <div class="flex-shrink-0 me-3">
+                                                        <div class="avatar">
+                                                            <span class="avatar-initial rounded-circle bg-label-success">
+                                                                <i class="ri-pie-chart-2-line"></i>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex-grow-1">
+                                                        <h6 class="mb-1 small">Monthly report is generated</h6>
+                                                        <small class="mb-1 d-block text-body">July monthly financial report is generated </small>
+                                                        <small class="text-muted">3 days ago</small>
+                                                    </div>
+                                                    <div class="flex-shrink-0 dropdown-notifications-actions">
+                                                        <a href="javascript:void(0)" class="dropdown-notifications-read">
+                                                            <span class="badge badge-dot"></span>
+                                                        </a>
+                                                        <a href="javascript:void(0)" class="dropdown-notifications-archive">
+                                                            <span class="ri-close-line ri-20px"></span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="list-group-item list-group-item-action dropdown-notifications-item marked-as-read">
+                                                <div class="d-flex">
+                                                    <div class="flex-shrink-0 me-3">
+                                                        <div class="avatar">
+                                                            <img src="../../assets/img/avatars/5.png" class="rounded-circle" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex-grow-1">
+                                                        <h6 class="mb-1 small">Send connection request</h6>
+                                                        <small class="mb-1 d-block text-body">Peter sent you connection request</small>
+                                                        <small class="text-muted">4 days ago</small>
+                                                    </div>
+                                                    <div class="flex-shrink-0 dropdown-notifications-actions">
+                                                        <a href="javascript:void(0)" class="dropdown-notifications-read">
+                                                            <span class="badge badge-dot"></span>
+                                                        </a>
+                                                        <a href="javascript:void(0)" class="dropdown-notifications-archive">
+                                                            <span class="ri-close-line ri-20px"></span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="list-group-item list-group-item-action dropdown-notifications-item">
+                                                <div class="d-flex">
+                                                    <div class="flex-shrink-0 me-3">
+                                                        <div class="avatar">
+                                                            <img src="../../assets/img/avatars/6.png" class="rounded-circle" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex-grow-1">
+                                                        <h6 class="mb-1 small">New message from Jane</h6>
+                                                        <small class="mb-1 d-block text-body">Your have new message from Jane</small>
+                                                        <small class="text-muted">5 days ago</small>
+                                                    </div>
+                                                    <div class="flex-shrink-0 dropdown-notifications-actions">
+                                                        <a href="javascript:void(0)" class="dropdown-notifications-read">
+                                                            <span class="badge badge-dot"></span>
+                                                        </a>
+                                                        <a href="javascript:void(0)" class="dropdown-notifications-archive">
+                                                            <span class="ri-close-line ri-20px"></span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="list-group-item list-group-item-action dropdown-notifications-item marked-as-read">
+                                                <div class="d-flex">
+                                                    <div class="flex-shrink-0 me-3">
+                                                        <div class="avatar">
+                                                            <span class="avatar-initial rounded-circle bg-label-warning">
+                                                                <i class="ri-error-warning-line"></i>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex-grow-1">
+                                                        <h6 class="mb-1 small">CPU is running high</h6>
+                                                        <small class="mb-1 d-block text-body">CPU Utilization Percent is currently at 88.63%,</small>
+                                                        <small class="text-muted">5 days ago</small>
+                                                    </div>
+                                                    <div class="flex-shrink-0 dropdown-notifications-actions">
+                                                        <a href="javascript:void(0)" class="dropdown-notifications-read">
+                                                            <span class="badge badge-dot"></span>
+                                                        </a>
+                                                        <a href="javascript:void(0)" class="dropdown-notifications-archive">
+                                                            <span class="ri-close-line ri-20px"></span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="border-top">
+                                        <div class="d-grid p-4">
+                                            <a class="btn btn-primary btn-sm d-flex" href="javascript:void(0);">
+                                                <small class="align-middle">View all notifications</small>
+                                            </a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <!--/ Notification -->
+                            <!-- User -->
+                            <li class="nav-item navbar-dropdown dropdown-user dropdown">
+                                <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown">
+                                    <div class="avatar avatar-online">
+                                        <img src="../../assets/img/avatars/1.png" class="rounded-circle" />
+                                    </div>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-end">
+                                    <li>
+                                        <a class="dropdown-item" href="pages-account-settings-account.html">
+                                            <div class="d-flex">
+                                                <div class="flex-shrink-0 me-2">
+                                                    <div class="avatar avatar-online">
+                                                        <img src="../../assets/img/avatars/1.png" class="rounded-circle" />
+                                                    </div>
+                                                </div>
+                                                <div class="flex-grow-1">
+                                                    <span class="fw-medium d-block small">John Doe</span>
+                                                    <small class="text-muted">Admin</small>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <div class="dropdown-divider"></div>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="pages-profile-user.html">
+                                            <i class="ri-user-3-line ri-22px me-3"></i><span class="align-middle">My Profile</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="pages-account-settings-account.html">
+                                            <i class="ri-settings-4-line ri-22px me-3"></i><span class="align-middle">Settings</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="pages-account-settings-billing.html">
+                                            <span class="d-flex align-items-center align-middle">
+                                                <i class="flex-shrink-0 ri-file-text-line ri-22px me-3"></i>
+                                                <span class="flex-grow-1 align-middle">Billing</span>
+                                                <span class="flex-shrink-0 badge badge-center rounded-pill bg-danger">4</span>
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <div class="dropdown-divider"></div>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="pages-pricing.html">
+                                            <i class="ri-money-dollar-circle-line ri-22px me-3"></i><span class="align-middle">Pricing</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="pages-faq.html">
+                                            <i class="ri-question-line ri-22px me-3"></i><span class="align-middle">FAQ</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <div class="d-grid px-4 pt-2 pb-1">
+                                            <a class="btn btn-sm btn-danger d-flex" href="auth-login-cover.html" target="_blank">
+                                                <small class="align-middle">Logout</small>
+                                                <i class="ri-logout-box-r-line ms-2 ri-16px"></i>
+                                            </a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <!--/ User -->
+                        </ul>
+                    </div>
+
+                    <!-- Search Small Screens -->
+                    <!-- Search Small Screens
+                    <div class="navbar-search-wrapper search-input-wrapper d-none">
+                        <input type="text"
+                               class="form-control search-input container-xxl border-0"
+                               placeholder="Buscar..."
+                               aria-label="Search..." />
+                        <i class="ri-close-fill search-toggler cursor-pointer"></i>
+                    </div>
+                    -->
+
+                </nav>
+
+                <!-- / Navbar -->
+                <!-- Content wrapper -->
+                <div class="content-wrapper">
+
+                    <!-- Content -->
+
+
+                    <div class="container-xxl flex-grow-1 container-p-y">
+
+
+                        <!-- Ajax Sourced Server-side -->
+                        <div class="card">
+                            <h5 class="card-header text-md-start text-center">Ajax Sourced Server-side</h5>
+                            <div class="card-datatable text-nowrap">
+                                <div id="DataTables_Table_0_wrapper" class="dataTables_wrapper dt-bootstrap5 no-footer">
+                                    <div class="row"><div class="col-sm-12 col-md-6"><div class="dataTables_length" id="DataTables_Table_0_length"><label>Show <select name="DataTables_Table_0_length" aria-controls="DataTables_Table_0" class="form-select form-select-sm"><option value="10">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select> entries</label></div></div><div class="col-sm-12 col-md-6 d-flex justify-content-center justify-content-md-end"><div id="DataTables_Table_0_filter" class="dataTables_filter"><label>Search:<input type="search" class="form-control form-control-sm" placeholder="" aria-controls="DataTables_Table_0"></label></div></div></div><div class="table-responsive">
+                                        <table class="datatables-ajax table table-bordered dataTable no-footer" id="DataTables_Table_0" aria-describedby="DataTables_Table_0_info" style="width: 1215px;">
+                                            <thead>
+                                                <tr><th class="sorting sorting_asc" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Full name: activate to sort column descending" style="width: 168.2px;" aria-sort="ascending">Full name</th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Email: activate to sort column ascending" style="width: 203.2px;">Email</th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 245.2px;">Position</th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Office: activate to sort column ascending" style="width: 121.2px;">Office</th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Start date: activate to sort column ascending" style="width: 105.2px;">Start date</th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Salary: activate to sort column ascending" style="width: 108px;">Salary</th></tr>
+                                            </thead>
+                                            <tbody><tr class="odd"><td class="sorting_1">Airi Satou</td><td>airi@example.com</td><td>Accountant</td><td>Tokyo</td><td>2008/11/28</td><td>$162,700</td></tr><tr class="even"><td class="sorting_1">Angelica Ramos</td><td>angelica@example.com</td><td>Chief Executive Officer (CEO)</td><td>London</td><td>2009/10/09</td><td>$1,200,000</td></tr><tr class="odd"><td class="sorting_1">Ashton Cox</td><td>ashton@example.com</td><td>Junior Technical Author</td><td>San Francisco</td><td>2009/01/12</td><td>$86,000</td></tr><tr class="even"><td class="sorting_1">Bradley Greer</td><td>bradley@example.com</td><td>Software Engineer</td><td>London</td><td>2012/10/13</td><td>$132,000</td></tr><tr class="odd"><td class="sorting_1">Brenden Wagner</td><td>brenden@example.com</td><td>Software Engineer</td><td>San Francisco</td><td>2011/06/07</td><td>$206,850</td></tr><tr class="even"><td class="sorting_1">Brielle Williamson</td><td>brielle@example.com</td><td>Integration Specialist</td><td>New York</td><td>2012/12/02</td><td>$372,000</td></tr><tr class="odd"><td class="sorting_1">Bruno Nash</td><td>bruno@example.com</td><td>Software Engineer</td><td>London</td><td>2011/05/03</td><td>$163,500</td></tr><tr class="even"><td class="sorting_1">Caesar Vance</td><td>caesar@example.com</td><td>Pre-Sales Support</td><td>New York</td><td>2011/12/12</td><td>$106,450</td></tr><tr class="odd"><td class="sorting_1">Cara Stevens</td><td>cara@example.com</td><td>Sales Assistant</td><td>New York</td><td>2011/12/06</td><td>$145,600</td></tr><tr class="even"><td class="sorting_1">Cedric Kelly</td><td>cedric@example.com</td><td>Senior Javascript Developer</td><td>Edinburgh</td><td>2012/03/29</td><td>$433,060</td></tr></tbody>
+                                        </table>
+                                    </div><div class="row"><div class="col-sm-12 col-md-6"><div class="dataTables_info" id="DataTables_Table_0_info" role="status" aria-live="polite">Showing 1 to 10 of 57 entries</div></div><div class="col-sm-12 col-md-6"><div class="dataTables_paginate paging_simple_numbers" id="DataTables_Table_0_paginate"><ul class="pagination"><li class="paginate_button page-item previous disabled" id="DataTables_Table_0_previous"><a aria-controls="DataTables_Table_0" aria-disabled="true" role="link" data-dt-idx="previous" tabindex="-1" class="page-link"><i class="ri-arrow-left-s-line"></i></a></li><li class="paginate_button page-item active"><a href="#" aria-controls="DataTables_Table_0" role="link" aria-current="page" data-dt-idx="0" tabindex="0" class="page-link">1</a></li><li class="paginate_button page-item "><a href="#" aria-controls="DataTables_Table_0" role="link" data-dt-idx="1" tabindex="0" class="page-link">2</a></li><li class="paginate_button page-item "><a href="#" aria-controls="DataTables_Table_0" role="link" data-dt-idx="2" tabindex="0" class="page-link">3</a></li><li class="paginate_button page-item "><a href="#" aria-controls="DataTables_Table_0" role="link" data-dt-idx="3" tabindex="0" class="page-link">4</a></li><li class="paginate_button page-item "><a href="#" aria-controls="DataTables_Table_0" role="link" data-dt-idx="4" tabindex="0" class="page-link">5</a></li><li class="paginate_button page-item "><a href="#" aria-controls="DataTables_Table_0" role="link" data-dt-idx="5" tabindex="0" class="page-link">6</a></li><li class="paginate_button page-item next" id="DataTables_Table_0_next"><a href="#" aria-controls="DataTables_Table_0" role="link" data-dt-idx="next" tabindex="0" class="page-link"><i class="ri-arrow-right-s-line"></i></a></li></ul></div></div></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--/ Ajax Sourced Server-side -->
+
+                        <hr class="my-12">
+
+                        <!-- Column Search -->
+                        <div class="card">
+                            <h5 class="card-header text-center text-md-start">Column Search</h5>
+                            <div class="card-datatable text-nowrap">
+                                <div id="DataTables_Table_1_wrapper" class="dataTables_wrapper dt-bootstrap5">
+                                    <div class="row"><div class="col-sm-12 col-md-6"><div class="dataTables_length" id="DataTables_Table_1_length"><label>Show <select name="DataTables_Table_1_length" aria-controls="DataTables_Table_1" class="form-select form-select-sm"><option value="10">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select> entries</label></div></div><div class="col-sm-12 col-md-6 d-flex justify-content-center justify-content-md-end"><div id="DataTables_Table_1_filter" class="dataTables_filter"><label>Search:<input type="search" class="form-control form-control-sm" placeholder="" aria-controls="DataTables_Table_1"></label></div></div></div><div class="table-responsive">
+                                        <table class="dt-column-search table table-bordered dataTable" id="DataTables_Table_1" aria-describedby="DataTables_Table_1_info" style="width: 1216px;">
+                                            <thead>
+                                                <tr><th class="sorting sorting_asc" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-label="Name: activate to sort column descending" style="width: 160.2px;" aria-sort="ascending">Name</th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-label="Email: activate to sort column ascending" style="width: 233.2px;">Email</th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-label="Post: activate to sort column ascending" style="width: 229.2px;">Post</th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-label="City: activate to sort column ascending" style="width: 171.2px;">City</th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-label="Date: activate to sort column ascending" style="width: 76.2px;">Date</th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-label="Salary: activate to sort column ascending" style="width: 82px;">Salary</th></tr>
+                                                <tr><th rowspan="1" colspan="1" style="border-left: none;"><input type="text" class="form-control" placeholder="Search Name"></th><th rowspan="1" colspan="1" style="border-left: none;"><input type="text" class="form-control" placeholder="Search Email"></th><th rowspan="1" colspan="1" style="border-left: none;"><input type="text" class="form-control" placeholder="Search Post"></th><th rowspan="1" colspan="1" style="border-left: none;"><input type="text" class="form-control" placeholder="Search City"></th><th rowspan="1" colspan="1" style="border-left: none;"><input type="text" class="form-control" placeholder="Search Date"></th><th rowspan="1" colspan="1" style="border-left: none; border-right: none;"><input type="text" class="form-control" placeholder="Search Salary"></th></tr>
+                                            </thead>
+                                            <tbody><tr class="odd"><td class="sorting_1">Aila Quailadis</td><td>aquail29@prlog.org</td><td>Technical Writer</td><td>Shuangchahe</td><td>02/11/2021</td><td>$24137.29</td></tr><tr class="even"><td class="sorting_1">Aili De Coursey</td><td>adew@etsy.com</td><td>Environmental Specialist</td><td>Łazy</td><td>09/30/2021</td><td>$14082.44</td></tr><tr class="odd"><td class="sorting_1">Alaric Beslier</td><td>abeslier2n@zimbio.com</td><td>Tax Accountant</td><td>Ocucaje</td><td>04/16/2021</td><td>$19366.53</td></tr><tr class="even"><td class="sorting_1">Aliza MacElholm</td><td>amacelholm20@printfriendly.com</td><td>VP Sales</td><td>Sosnovyy Bor</td><td>11/17/2021</td><td>$16741.31</td></tr><tr class="odd"><td class="sorting_1">Allyson Moakler</td><td>amoakler8@shareasale.com</td><td>Safety Technician</td><td>Mogilany</td><td>12/29/2021</td><td>$11677.32</td></tr><tr class="even"><td class="sorting_1">Alma Harvatt</td><td>aharvatt11@addtoany.com</td><td>Administrative Assistant</td><td>Ulundi</td><td>11/04/2021</td><td>$21782.82</td></tr><tr class="odd"><td class="sorting_1">Annetta Glozman</td><td>aglozman1r@storify.com</td><td>Staff Accountant</td><td>Pendawanbaru</td><td>08/25/2021</td><td>$10745.32</td></tr><tr class="even"><td class="sorting_1">Babb Skirving</td><td>bskirving24@cbsnews.com</td><td>Analyst Programmer</td><td>Balky</td><td>09/27/2021</td><td>$24733.28</td></tr><tr class="odd"><td class="sorting_1">Bailie Coulman</td><td>bcoulman1@yolasite.com</td><td>VP Quality Control</td><td>Hinigaran</td><td>05/20/2021</td><td>$13633.69</td></tr><tr class="even"><td class="sorting_1">Beatrix Longland</td><td>blongland12@gizmodo.com</td><td>VP Quality Control</td><td>Damu</td><td>07/18/2021</td><td>$22794.60</td></tr></tbody>
+                                            <tfoot>
+                                                <tr><th rowspan="1" colspan="1">Name</th><th rowspan="1" colspan="1">Email</th><th rowspan="1" colspan="1">Post</th><th rowspan="1" colspan="1">City</th><th rowspan="1" colspan="1">Date</th><th rowspan="1" colspan="1">Salary</th></tr>
+                                            </tfoot>
+                                        </table>
+                                    </div><div class="row"><div class="col-sm-12 col-md-6"><div class="dataTables_info" id="DataTables_Table_1_info" role="status" aria-live="polite">Showing 1 to 10 of 100 entries</div></div><div class="col-sm-12 col-md-6"><div class="dataTables_paginate paging_simple_numbers" id="DataTables_Table_1_paginate"><ul class="pagination"><li class="paginate_button page-item previous disabled" id="DataTables_Table_1_previous"><a aria-controls="DataTables_Table_1" aria-disabled="true" role="link" data-dt-idx="previous" tabindex="-1" class="page-link"><i class="ri-arrow-left-s-line"></i></a></li><li class="paginate_button page-item active"><a href="#" aria-controls="DataTables_Table_1" role="link" aria-current="page" data-dt-idx="0" tabindex="0" class="page-link">1</a></li><li class="paginate_button page-item "><a href="#" aria-controls="DataTables_Table_1" role="link" data-dt-idx="1" tabindex="0" class="page-link">2</a></li><li class="paginate_button page-item "><a href="#" aria-controls="DataTables_Table_1" role="link" data-dt-idx="2" tabindex="0" class="page-link">3</a></li><li class="paginate_button page-item "><a href="#" aria-controls="DataTables_Table_1" role="link" data-dt-idx="3" tabindex="0" class="page-link">4</a></li><li class="paginate_button page-item "><a href="#" aria-controls="DataTables_Table_1" role="link" data-dt-idx="4" tabindex="0" class="page-link">5</a></li><li class="paginate_button page-item disabled" id="DataTables_Table_1_ellipsis"><a aria-controls="DataTables_Table_1" aria-disabled="true" role="link" data-dt-idx="ellipsis" tabindex="-1" class="page-link">…</a></li><li class="paginate_button page-item "><a href="#" aria-controls="DataTables_Table_1" role="link" data-dt-idx="9" tabindex="0" class="page-link">10</a></li><li class="paginate_button page-item next" id="DataTables_Table_1_next"><a href="#" aria-controls="DataTables_Table_1" role="link" data-dt-idx="next" tabindex="0" class="page-link"><i class="ri-arrow-right-s-line"></i></a></li></ul></div></div></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--/ Column Search -->
+
+                        <hr class="my-12">
+
+                        <!-- Advanced Search -->
+                        <div class="card">
+                            <h5 class="card-header">Advanced Search</h5>
+                            <!--Search Form -->
+                            <div class="card-body">
+                                <form class="dt_adv_search" method="GET">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="row g-5">
+                                                <div class="col-12 col-sm-6 col-lg-4">
+                                                    <div class="form-floating form-floating-outline">
+                                                        <input type="text" class="form-control dt-input dt-full-name" data-column="1" placeholder="Alaric Beslier" data-column-index="0">
+                                                        <label>Name</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-sm-6 col-lg-4">
+                                                    <div class="form-floating form-floating-outline">
+                                                        <input type="text" class="form-control dt-input" data-column="2" placeholder="demo@example.com" data-column-index="1">
+                                                        <label>Email</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-sm-6 col-lg-4">
+                                                    <div class="form-floating form-floating-outline">
+                                                        <input type="text" class="form-control dt-input" data-column="3" placeholder="Web designer" data-column-index="2">
+                                                        <label>Post</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-sm-6 col-lg-4">
+                                                    <div class="form-floating form-floating-outline">
+                                                        <input type="text" class="form-control dt-input" data-column="4" placeholder="Balky" data-column-index="3">
+                                                        <label>City</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-sm-6 col-lg-4">
+                                                    <div class="form-floating form-floating-outline">
+                                                        <input type="text" class="form-control dt-date flatpickr-range dt-input flatpickr-input" data-column="5" placeholder="StartDate to EndDate" data-column-index="4" id="dt_date" name="dt_date" readonly="readonly">
+                                                        <label for="dt_date">Date</label>
+                                                    </div>
+                                                    <input type="hidden" class="form-control dt-date start_date dt-input" data-column="5" data-column-index="4" name="value_from_start_date">
+                                                    <input type="hidden" class="form-control dt-date end_date dt-input" name="value_from_end_date" data-column="5" data-column-index="4">
+                                                </div>
+                                                <div class="col-12 col-sm-6 col-lg-4">
+                                                    <div class="form-floating form-floating-outline">
+                                                        <input type="text" class="form-control dt-input" data-column="6" placeholder="10000" data-column-index="5">
+                                                        <label>Salary</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <hr class="mt-0">
+                            <div class="card-datatable table-responsive">
+                                <div id="DataTables_Table_2_wrapper" class="dataTables_wrapper dt-bootstrap5">
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <table class="dt-advanced-search table table-bordered dataTable dtr-column" id="DataTables_Table_2" aria-describedby="DataTables_Table_2_info" style="width: 1213px;">
+                                                <thead>
+                                                    <tr><th class="control sorting_disabled sorting_asc dtr-hidden" rowspan="1" colspan="1" style="width: 0px; display: none;" aria-label=""></th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_2" rowspan="1" colspan="1" style="width: 153.2px;" aria-label="Name: activate to sort column ascending">Name</th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_2" rowspan="1" colspan="1" style="width: 233.2px;" aria-label="Email: activate to sort column ascending">Email</th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_2" rowspan="1" colspan="1" style="width: 228.2px;" aria-label="Post: activate to sort column ascending">Post</th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_2" rowspan="1" colspan="1" style="width: 170.2px;" aria-label="City: activate to sort column ascending">City</th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_2" rowspan="1" colspan="1" style="width: 76.2px;" aria-label="Date: activate to sort column ascending">Date</th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_2" rowspan="1" colspan="1" style="width: 82px;" aria-label="Salary: activate to sort column ascending">Salary</th></tr>
+                                                </thead>
+                                                <tbody><tr class="odd parent"><td class="control sorting_1 dtr-hidden" tabindex="0" style="display: none;"></td><td>Korrie O'Crevy</td><td>kocrevy0@thetimes.co.uk</td><td class="" style="">Nuclear Power Engineer</td><td class="" style="">Krasnosilka</td><td class="" style="">09/23/2021</td><td class="" style="">$23896.35</td></tr><tr class="even"><td class="control sorting_1 dtr-hidden" tabindex="0" style="display: none;"></td><td>Bailie Coulman</td><td>bcoulman1@yolasite.com</td><td class="" style="">VP Quality Control</td><td class="" style="">Hinigaran</td><td class="" style="">05/20/2021</td><td class="" style="">$13633.69</td></tr><tr class="odd"><td class="control sorting_1 dtr-hidden" tabindex="0" style="display: none;"></td><td>Stella Ganderton</td><td>sganderton2@tuttocitta.it</td><td class="" style="">Operator</td><td class="" style="">Golcowa</td><td class="" style="">03/24/2021</td><td class="" style="">$13076.28</td></tr><tr class="even"><td class="control sorting_1 dtr-hidden" tabindex="0" style="display: none;"></td><td>Dorolice Crossman</td><td>dcrossman3@google.co.jp</td><td class="" style="">Cost Accountant</td><td class="" style="">Paquera</td><td class="" style="">12/03/2021</td><td class="" style="">$12336.17</td></tr><tr class="odd"><td class="control sorting_1 dtr-hidden" tabindex="0" style="display: none;"></td><td>Harmonia Nisius</td><td>hnisius4@gnu.org</td><td class="" style="">Senior Cost Accountant</td><td class="" style="">Lucan</td><td class="" style="">08/25/2021</td><td class="" style="">$10909.52</td></tr><tr class="even"><td class="control sorting_1 dtr-hidden" tabindex="0" style="display: none;"></td><td>Genevra Honeywood</td><td>ghoneywood5@narod.ru</td><td class="" style="">Geologist</td><td class="" style="">Maofan</td><td class="" style="">06/01/2021</td><td class="" style="">$17803.80</td></tr><tr class="odd"><td class="control sorting_1 dtr-hidden" tabindex="0" style="display: none;"></td><td>Eileen Diehn</td><td>ediehn6@163.com</td><td class="" style="">Environmental Specialist</td><td class="" style="">Lampuyang</td><td class="" style="">10/15/2021</td><td class="" style="">$18991.67</td></tr><tr class="even"><td class="control sorting_1 dtr-hidden" tabindex="0" style="display: none;"></td><td>Richardo Aldren</td><td>raldren7@mtv.com</td><td class="" style="">Senior Sales Associate</td><td class="" style="">Skoghall</td><td class="" style="">11/05/2021</td><td class="" style="">$19230.13</td></tr><tr class="odd"><td class="control sorting_1 dtr-hidden" tabindex="0" style="display: none;"></td><td>Allyson Moakler</td><td>amoakler8@shareasale.com</td><td class="" style="">Safety Technician</td><td class="" style="">Mogilany</td><td class="" style="">12/29/2021</td><td class="" style="">$11677.32</td></tr><tr class="even"><td class="control sorting_1 dtr-hidden" tabindex="0" style="display: none;"></td><td>Merline Penhalewick</td><td>mpenhalewick9@php.net</td><td class="" style="">Junior Executive</td><td class="" style="">Kanuma</td><td class="" style="">04/19/2021</td><td class="" style="">$15939.52</td></tr></tbody>
+                                                <tfoot>
+                                                    <tr><th class="control dtr-hidden" rowspan="1" colspan="1" style="display: none;"></th><th rowspan="1" colspan="1">Name</th><th rowspan="1" colspan="1">Email</th><th rowspan="1" colspan="1" class="" style="">Post</th><th rowspan="1" colspan="1" class="" style="">City</th><th rowspan="1" colspan="1" class="" style="">Date</th><th rowspan="1" colspan="1" class="" style="">Salary</th></tr>
+                                                </tfoot>
+                                            </table>
+                                        </div>
+                                    </div><div class="row"><div class="col-sm-12 col-md-6"><div class="dataTables_info" id="DataTables_Table_2_info" role="status" aria-live="polite">Showing 1 to 10 of 100 entries</div></div><div class="col-sm-12 col-md-6 dataTables_pager"><div class="dataTables_paginate paging_simple_numbers" id="DataTables_Table_2_paginate"><ul class="pagination"><li class="paginate_button page-item previous disabled" id="DataTables_Table_2_previous"><a aria-controls="DataTables_Table_2" aria-disabled="true" role="link" data-dt-idx="previous" tabindex="-1" class="page-link"><i class="ri-arrow-left-s-line"></i></a></li><li class="paginate_button page-item active"><a href="#" aria-controls="DataTables_Table_2" role="link" aria-current="page" data-dt-idx="0" tabindex="0" class="page-link">1</a></li><li class="paginate_button page-item "><a href="#" aria-controls="DataTables_Table_2" role="link" data-dt-idx="1" tabindex="0" class="page-link">2</a></li><li class="paginate_button page-item "><a href="#" aria-controls="DataTables_Table_2" role="link" data-dt-idx="2" tabindex="0" class="page-link">3</a></li><li class="paginate_button page-item "><a href="#" aria-controls="DataTables_Table_2" role="link" data-dt-idx="3" tabindex="0" class="page-link">4</a></li><li class="paginate_button page-item "><a href="#" aria-controls="DataTables_Table_2" role="link" data-dt-idx="4" tabindex="0" class="page-link">5</a></li><li class="paginate_button page-item disabled" id="DataTables_Table_2_ellipsis"><a aria-controls="DataTables_Table_2" aria-disabled="true" role="link" data-dt-idx="ellipsis" tabindex="-1" class="page-link">…</a></li><li class="paginate_button page-item "><a href="#" aria-controls="DataTables_Table_2" role="link" data-dt-idx="9" tabindex="0" class="page-link">10</a></li><li class="paginate_button page-item next" id="DataTables_Table_2_next"><a href="#" aria-controls="DataTables_Table_2" role="link" data-dt-idx="next" tabindex="0" class="page-link"><i class="ri-arrow-right-s-line"></i></a></li></ul></div></div></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--/ Advanced Search -->
+
+                        <hr class="my-12">
+
+                        <!-- Responsive Datatable -->
+                        <div class="card">
+                            <h5 class="card-header text-center text-md-start">Responsive Datatable</h5>
+                            <div class="card-datatable table-responsive">
+                                <div id="DataTables_Table_3_wrapper" class="dataTables_wrapper dt-bootstrap5">
+                                    <div class="row"><div class="col-sm-12 col-md-6"><div class="dataTables_length" id="DataTables_Table_3_length"><label>Show <select name="DataTables_Table_3_length" aria-controls="DataTables_Table_3" class="form-select form-select-sm"><option value="10">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select> entries</label></div></div><div class="col-sm-12 col-md-6 d-flex justify-content-center justify-content-md-end"><div id="DataTables_Table_3_filter" class="dataTables_filter"><label>Search:<input type="search" class="form-control form-control-sm" placeholder="" aria-controls="DataTables_Table_3"></label></div></div></div><table class="dt-responsive table table-bordered dataTable dtr-column collapsed" id="DataTables_Table_3" aria-describedby="DataTables_Table_3_info" style="width: 1214px;">
+                                        <thead>
+                                            <tr><th class="control sorting_disabled sorting_asc" rowspan="1" colspan="1" style="width: 0.2px;" aria-label=""></th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_3" rowspan="1" colspan="1" style="width: 80.2px;" aria-label="Name: activate to sort column ascending">Name</th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_3" rowspan="1" colspan="1" style="width: 233.2px;" aria-label="Email: activate to sort column ascending">Email</th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_3" rowspan="1" colspan="1" style="width: 124.2px;" aria-label="Post: activate to sort column ascending">Post</th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_3" rowspan="1" colspan="1" style="width: 103.2px;" aria-label="City: activate to sort column ascending">City</th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_3" rowspan="1" colspan="1" style="width: 76.2px;" aria-label="Date: activate to sort column ascending">Date</th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_3" rowspan="1" colspan="1" style="width: 72.2px;" aria-label="Salary: activate to sort column ascending">Salary</th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_3" rowspan="1" colspan="1" style="width: 27.2px;" aria-label="Age: activate to sort column ascending">Age</th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_3" rowspan="1" colspan="1" style="width: 82.2px;" aria-label="Experience: activate to sort column ascending">Experience</th><th class="sorting dtr-hidden" tabindex="0" aria-controls="DataTables_Table_3" rowspan="1" colspan="1" style="width: 0px; display: none;" aria-label="Status: activate to sort column ascending">Status</th></tr>
+                                        </thead>
+                                        <tbody><tr class="odd parent"><td class="control sorting_1" tabindex="0" style=""></td><td>Korrie O'Crevy</td><td>kocrevy0@thetimes.co.uk</td><td class="" style="">Nuclear Power Engineer</td><td class="" style="">Krasnosilka</td><td class="" style="">09/23/2021</td><td class="" style="">$23896.35</td><td class="" style="">61</td><td class="" style="">1 Year</td><td class="dtr-hidden" style="display: none;"><span class="badge rounded-pill  bg-label-success">Professional</span></td></tr><tr class="even"><td class="control sorting_1" tabindex="0" style=""></td><td>Bailie Coulman</td><td>bcoulman1@yolasite.com</td><td class="" style="">VP Quality Control</td><td class="" style="">Hinigaran</td><td class="" style="">05/20/2021</td><td class="" style="">$13633.69</td><td class="" style="">63</td><td class="" style="">3 Years</td><td class="dtr-hidden" style="display: none;"><span class="badge rounded-pill  bg-label-success">Professional</span></td></tr><tr class="odd"><td class="control sorting_1" tabindex="0" style=""></td><td>Stella Ganderton</td><td>sganderton2@tuttocitta.it</td><td class="" style="">Operator</td><td class="" style="">Golcowa</td><td class="" style="">03/24/2021</td><td class="" style="">$13076.28</td><td class="" style="">66</td><td class="" style="">6 Years</td><td class="dtr-hidden" style="display: none;"><span class="badge rounded-pill  bg-label-info">Applied</span></td></tr><tr class="even"><td class="control sorting_1" tabindex="0" style=""></td><td>Dorolice Crossman</td><td>dcrossman3@google.co.jp</td><td class="" style="">Cost Accountant</td><td class="" style="">Paquera</td><td class="" style="">12/03/2021</td><td class="" style="">$12336.17</td><td class="" style="">22</td><td class="" style="">2 Years</td><td class="dtr-hidden" style="display: none;"><span class="badge rounded-pill  bg-label-success">Professional</span></td></tr><tr class="odd"><td class="control sorting_1" tabindex="0" style=""></td><td>Harmonia Nisius</td><td>hnisius4@gnu.org</td><td class="" style="">Senior Cost Accountant</td><td class="" style="">Lucan</td><td class="" style="">08/25/2021</td><td class="" style="">$10909.52</td><td class="" style="">33</td><td class="" style="">3 Years</td><td class="dtr-hidden" style="display: none;"><span class="badge rounded-pill  bg-label-success">Professional</span></td></tr><tr class="even"><td class="control sorting_1" tabindex="0" style=""></td><td>Genevra Honeywood</td><td>ghoneywood5@narod.ru</td><td class="" style="">Geologist</td><td class="" style="">Maofan</td><td class="" style="">06/01/2021</td><td class="" style="">$17803.80</td><td class="" style="">61</td><td class="" style="">1 Year</td><td class="dtr-hidden" style="display: none;"><span class="badge rounded-pill bg-label-primary">Current</span></td></tr><tr class="odd"><td class="control sorting_1" tabindex="0" style=""></td><td>Eileen Diehn</td><td>ediehn6@163.com</td><td class="" style="">Environmental Specialist</td><td class="" style="">Lampuyang</td><td class="" style="">10/15/2021</td><td class="" style="">$18991.67</td><td class="" style="">59</td><td class="" style="">9 Years</td><td class="dtr-hidden" style="display: none;"><span class="badge rounded-pill  bg-label-danger">Rejected</span></td></tr><tr class="even"><td class="control sorting_1" tabindex="0" style=""></td><td>Richardo Aldren</td><td>raldren7@mtv.com</td><td class="" style="">Senior Sales Associate</td><td class="" style="">Skoghall</td><td class="" style="">11/05/2021</td><td class="" style="">$19230.13</td><td class="" style="">55</td><td class="" style="">5 Years</td><td class="dtr-hidden" style="display: none;"><span class="badge rounded-pill  bg-label-danger">Rejected</span></td></tr><tr class="odd"><td class="control sorting_1" tabindex="0" style=""></td><td>Allyson Moakler</td><td>amoakler8@shareasale.com</td><td class="" style="">Safety Technician</td><td class="" style="">Mogilany</td><td class="" style="">12/29/2021</td><td class="" style="">$11677.32</td><td class="" style="">39</td><td class="" style="">9 Years</td><td class="dtr-hidden" style="display: none;"><span class="badge rounded-pill  bg-label-info">Applied</span></td></tr><tr class="even"><td class="control sorting_1" tabindex="0" style=""></td><td>Merline Penhalewick</td><td>mpenhalewick9@php.net</td><td class="" style="">Junior Executive</td><td class="" style="">Kanuma</td><td class="" style="">04/19/2021</td><td class="" style="">$15939.52</td><td class="" style="">23</td><td class="" style="">3 Years</td><td class="dtr-hidden" style="display: none;"><span class="badge rounded-pill  bg-label-success">Professional</span></td></tr></tbody>
+                                        <tfoot>
+                                            <tr><th class="control" rowspan="1" colspan="1" style=""></th><th rowspan="1" colspan="1">Name</th><th rowspan="1" colspan="1">Email</th><th rowspan="1" colspan="1" class="" style="">Post</th><th rowspan="1" colspan="1" class="" style="">City</th><th rowspan="1" colspan="1" class="" style="">Date</th><th rowspan="1" colspan="1" class="" style="">Salary</th><th rowspan="1" colspan="1" class="" style="">Age</th><th rowspan="1" colspan="1" class="" style="">Experience</th><th rowspan="1" colspan="1" class="dtr-hidden" style="display: none;">Status</th></tr>
+                                        </tfoot>
+                                    </table><div class="row"><div class="col-sm-12 col-md-6"><div class="dataTables_info" id="DataTables_Table_3_info" role="status" aria-live="polite">Showing 1 to 10 of 100 entries</div></div><div class="col-sm-12 col-md-6"><div class="dataTables_paginate paging_simple_numbers" id="DataTables_Table_3_paginate"><ul class="pagination"><li class="paginate_button page-item previous disabled" id="DataTables_Table_3_previous"><a aria-controls="DataTables_Table_3" aria-disabled="true" role="link" data-dt-idx="previous" tabindex="-1" class="page-link"><i class="ri-arrow-left-s-line"></i></a></li><li class="paginate_button page-item active"><a href="#" aria-controls="DataTables_Table_3" role="link" aria-current="page" data-dt-idx="0" tabindex="0" class="page-link">1</a></li><li class="paginate_button page-item "><a href="#" aria-controls="DataTables_Table_3" role="link" data-dt-idx="1" tabindex="0" class="page-link">2</a></li><li class="paginate_button page-item "><a href="#" aria-controls="DataTables_Table_3" role="link" data-dt-idx="2" tabindex="0" class="page-link">3</a></li><li class="paginate_button page-item "><a href="#" aria-controls="DataTables_Table_3" role="link" data-dt-idx="3" tabindex="0" class="page-link">4</a></li><li class="paginate_button page-item "><a href="#" aria-controls="DataTables_Table_3" role="link" data-dt-idx="4" tabindex="0" class="page-link">5</a></li><li class="paginate_button page-item disabled" id="DataTables_Table_3_ellipsis"><a aria-controls="DataTables_Table_3" aria-disabled="true" role="link" data-dt-idx="ellipsis" tabindex="-1" class="page-link">…</a></li><li class="paginate_button page-item "><a href="#" aria-controls="DataTables_Table_3" role="link" data-dt-idx="9" tabindex="0" class="page-link">10</a></li><li class="paginate_button page-item next" id="DataTables_Table_3_next"><a href="#" aria-controls="DataTables_Table_3" role="link" data-dt-idx="next" tabindex="0" class="page-link"><i class="ri-arrow-right-s-line"></i></a></li></ul></div></div></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--/ Responsive Datatable -->
+
+
+                    </div>
+
+
+
+                    <div class='container-xxl flex-grow-1 container-p-y' id="divPagina">
+
+                        <div class="card">
+                            <h5 class="card-header">Advanced Search</h5>
+                            <!--Search Form -->
+                            <div class="card-body">
+                                <form class="dt_adv_search" method="GET">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="row g-5">
+                                                <div class="col-12 col-sm-6 col-lg-4">
+                                                    <div class="form-floating form-floating-outline">
+                                                        <input type="text" class="form-control dt-input dt-full-name" data-column="1" placeholder="Alaric Beslier" data-column-index="0">
+                                                        <label>Name</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-sm-6 col-lg-4">
+                                                    <div class="form-floating form-floating-outline">
+                                                        <input type="text" class="form-control dt-input" data-column="2" placeholder="demo@example.com" data-column-index="1">
+                                                        <label>Email</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-sm-6 col-lg-4">
+                                                    <div class="form-floating form-floating-outline">
+                                                        <input type="text" class="form-control dt-input" data-column="3" placeholder="Web designer" data-column-index="2">
+                                                        <label>Post</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-sm-6 col-lg-4">
+                                                    <div class="form-floating form-floating-outline">
+                                                        <input type="text" class="form-control dt-input" data-column="4" placeholder="Balky" data-column-index="3">
+                                                        <label>City</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-sm-6 col-lg-4">
+                                                    <div class="form-floating form-floating-outline">
+                                                        <input type="text" class="form-control dt-date flatpickr-range dt-input flatpickr-input" data-column="5" placeholder="StartDate to EndDate" data-column-index="4" id="dt_date" name="dt_date" readonly="readonly">
+                                                        <label for="dt_date">Date</label>
+                                                    </div>
+                                                    <input type="hidden" class="form-control dt-date start_date dt-input" data-column="5" data-column-index="4" name="value_from_start_date">
+                                                    <input type="hidden" class="form-control dt-date end_date dt-input" name="value_from_end_date" data-column="5" data-column-index="4">
+                                                </div>
+                                                <div class="col-12 col-sm-6 col-lg-4">
+                                                    <div class="form-floating form-floating-outline">
+                                                        <input type="text" class="form-control dt-input" data-column="6" placeholder="10000" data-column-index="5">
+                                                        <label>Salary</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <hr class="mt-0">
+                            <div class="card-datatable table-responsive">
+                                <div id="DataTables_Table_2_wrapper" class="dataTables_wrapper dt-bootstrap5">
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <table class="dt-advanced-search table table-bordered dataTable dtr-column" id="DataTables_Table_2" aria-describedby="DataTables_Table_2_info" style="width: 1213px;">
+                                                <thead>
+                                                    <tr><th class="control sorting_disabled sorting_asc dtr-hidden" rowspan="1" colspan="1" style="width: 0px; display: none;" aria-label=""></th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_2" rowspan="1" colspan="1" style="width: 153.2px;" aria-label="Name: activate to sort column ascending">Name</th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_2" rowspan="1" colspan="1" style="width: 233.2px;" aria-label="Email: activate to sort column ascending">Email</th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_2" rowspan="1" colspan="1" style="width: 228.2px;" aria-label="Post: activate to sort column ascending">Post</th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_2" rowspan="1" colspan="1" style="width: 170.2px;" aria-label="City: activate to sort column ascending">City</th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_2" rowspan="1" colspan="1" style="width: 76.2px;" aria-label="Date: activate to sort column ascending">Date</th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_2" rowspan="1" colspan="1" style="width: 82px;" aria-label="Salary: activate to sort column ascending">Salary</th></tr>
+                                                </thead>
+                                                <tbody><tr class="odd parent"><td class="control sorting_1 dtr-hidden" tabindex="0" style="display: none;"></td><td>Korrie O'Crevy</td><td>kocrevy0@thetimes.co.uk</td><td class="" style="">Nuclear Power Engineer</td><td class="" style="">Krasnosilka</td><td class="" style="">09/23/2021</td><td class="" style="">$23896.35</td></tr><tr class="even"><td class="control sorting_1 dtr-hidden" tabindex="0" style="display: none;"></td><td>Bailie Coulman</td><td>bcoulman1@yolasite.com</td><td class="" style="">VP Quality Control</td><td class="" style="">Hinigaran</td><td class="" style="">05/20/2021</td><td class="" style="">$13633.69</td></tr><tr class="odd"><td class="control sorting_1 dtr-hidden" tabindex="0" style="display: none;"></td><td>Stella Ganderton</td><td>sganderton2@tuttocitta.it</td><td class="" style="">Operator</td><td class="" style="">Golcowa</td><td class="" style="">03/24/2021</td><td class="" style="">$13076.28</td></tr><tr class="even"><td class="control sorting_1 dtr-hidden" tabindex="0" style="display: none;"></td><td>Dorolice Crossman</td><td>dcrossman3@google.co.jp</td><td class="" style="">Cost Accountant</td><td class="" style="">Paquera</td><td class="" style="">12/03/2021</td><td class="" style="">$12336.17</td></tr><tr class="odd"><td class="control sorting_1 dtr-hidden" tabindex="0" style="display: none;"></td><td>Harmonia Nisius</td><td>hnisius4@gnu.org</td><td class="" style="">Senior Cost Accountant</td><td class="" style="">Lucan</td><td class="" style="">08/25/2021</td><td class="" style="">$10909.52</td></tr><tr class="even"><td class="control sorting_1 dtr-hidden" tabindex="0" style="display: none;"></td><td>Genevra Honeywood</td><td>ghoneywood5@narod.ru</td><td class="" style="">Geologist</td><td class="" style="">Maofan</td><td class="" style="">06/01/2021</td><td class="" style="">$17803.80</td></tr><tr class="odd"><td class="control sorting_1 dtr-hidden" tabindex="0" style="display: none;"></td><td>Eileen Diehn</td><td>ediehn6@163.com</td><td class="" style="">Environmental Specialist</td><td class="" style="">Lampuyang</td><td class="" style="">10/15/2021</td><td class="" style="">$18991.67</td></tr><tr class="even"><td class="control sorting_1 dtr-hidden" tabindex="0" style="display: none;"></td><td>Richardo Aldren</td><td>raldren7@mtv.com</td><td class="" style="">Senior Sales Associate</td><td class="" style="">Skoghall</td><td class="" style="">11/05/2021</td><td class="" style="">$19230.13</td></tr><tr class="odd"><td class="control sorting_1 dtr-hidden" tabindex="0" style="display: none;"></td><td>Allyson Moakler</td><td>amoakler8@shareasale.com</td><td class="" style="">Safety Technician</td><td class="" style="">Mogilany</td><td class="" style="">12/29/2021</td><td class="" style="">$11677.32</td></tr><tr class="even"><td class="control sorting_1 dtr-hidden" tabindex="0" style="display: none;"></td><td>Merline Penhalewick</td><td>mpenhalewick9@php.net</td><td class="" style="">Junior Executive</td><td class="" style="">Kanuma</td><td class="" style="">04/19/2021</td><td class="" style="">$15939.52</td></tr></tbody>
+                                                <tfoot>
+                                                    <tr><th class="control dtr-hidden" rowspan="1" colspan="1" style="display: none;"></th><th rowspan="1" colspan="1">Name</th><th rowspan="1" colspan="1">Email</th><th rowspan="1" colspan="1" class="" style="">Post</th><th rowspan="1" colspan="1" class="" style="">City</th><th rowspan="1" colspan="1" class="" style="">Date</th><th rowspan="1" colspan="1" class="" style="">Salary</th></tr>
+                                                </tfoot>
+                                            </table>
+                                        </div>
+                                    </div><div class="row"><div class="col-sm-12 col-md-6"><div class="dataTables_info" id="DataTables_Table_2_info" role="status" aria-live="polite">Showing 1 to 10 of 100 entries</div></div><div class="col-sm-12 col-md-6 dataTables_pager"><div class="dataTables_paginate paging_simple_numbers" id="DataTables_Table_2_paginate"><ul class="pagination"><li class="paginate_button page-item previous disabled" id="DataTables_Table_2_previous"><a aria-controls="DataTables_Table_2" aria-disabled="true" role="link" data-dt-idx="previous" tabindex="-1" class="page-link"><i class="ri-arrow-left-s-line"></i></a></li><li class="paginate_button page-item active"><a href="#" aria-controls="DataTables_Table_2" role="link" aria-current="page" data-dt-idx="0" tabindex="0" class="page-link">1</a></li><li class="paginate_button page-item "><a href="#" aria-controls="DataTables_Table_2" role="link" data-dt-idx="1" tabindex="0" class="page-link">2</a></li><li class="paginate_button page-item "><a href="#" aria-controls="DataTables_Table_2" role="link" data-dt-idx="2" tabindex="0" class="page-link">3</a></li><li class="paginate_button page-item "><a href="#" aria-controls="DataTables_Table_2" role="link" data-dt-idx="3" tabindex="0" class="page-link">4</a></li><li class="paginate_button page-item "><a href="#" aria-controls="DataTables_Table_2" role="link" data-dt-idx="4" tabindex="0" class="page-link">5</a></li><li class="paginate_button page-item disabled" id="DataTables_Table_2_ellipsis"><a aria-controls="DataTables_Table_2" aria-disabled="true" role="link" data-dt-idx="ellipsis" tabindex="-1" class="page-link">…</a></li><li class="paginate_button page-item "><a href="#" aria-controls="DataTables_Table_2" role="link" data-dt-idx="9" tabindex="0" class="page-link">10</a></li><li class="paginate_button page-item next" id="DataTables_Table_2_next"><a href="#" aria-controls="DataTables_Table_2" role="link" data-dt-idx="next" tabindex="0" class="page-link"><i class="ri-arrow-right-s-line"></i></a></li></ul></div></div></div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <!-- / Content -->
+                    <!-- Footer -->
+                    <footer class="content-footer footer bg-footer-theme">
+                        <div class="container-xxl">
+                            <div class="footer-container d-flex align-items-center justify-content-between py-4 flex-md-row flex-column">
+                                <div class="text-body mb-2 mb-md-0">
+                                    ©
+                                    <script>
+                                        document.write(new Date().getFullYear());
+                                    </script>
+                                    , hecho con <span class="text-danger"><i class="tf-icons ri-heart-fill"></i></span> por
+                                    <a href="https://www.hard-system.com/" target="_blank" class="footer-link">Hard System Web</a>
+                                </div>
+                                <div class="d-none d-lg-inline-block">
+                                    <a href="#" class="footer-link me-4" target="_blank">Licencia</a>
+
+                                    <a href="#"
+                                       target="_blank"
+                                       class="footer-link me-4">Documentación</a>
+
+                                    <a href="#" target="_blank" class="footer-link d-none d-sm-inline-block">Soporte</a>
+                                </div>
+                            </div>
+                        </div>
+                    </footer>
+                    <!-- / Footer -->
+
+                    <div class="content-backdrop fade"></div>
+                </div>
+                <!--/ Content wrapper -->
+
+            </div>
+            <!-- / Layout page -->
+        </div>
+
+        <!-- Overlay -->
+        <div class="layout-overlay layout-menu-toggle"></div>
+
+        <!-- Drag Target Area To SlideIn Menu On Small Screens -->
+        <div class="drag-target"></div>
+
+    </div>
+
+    <!--/ Layout Content -->
+    <!-- Core JS -->
+    <!-- build:js assets/vendor/js/core.js -->
+    <script src="~/assets/vendor/libs/jquery/jquery.js"></script>
+    <script src="~/assets/vendor/libs/popper/popper.js"></script>
+    <script src="~/assets/vendor/js/bootstrap.js"></script>
+    <script src="~/assets/vendor/libs/node-waves/node-waves.js"></script>
+    <script src="~/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
+    <script src="~/assets/vendor/libs/hammer/hammer.js"></script>
+    <script src="~/assets/vendor/libs/i18n/i18n.js"></script>
+    <!--
+    <script src="~/assets/vendor/libs/typeahead-js/typeahead.js"></script>
+    -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typeahead.js/0.11.1/typeahead.bundle.min.js"></script>
+    <script src="~/assets/vendor/js/menu.js"></script>
+    <!-- endbuild -->
+    <!-- Vendors JS -->
+    <script src="~/assets/vendor/libs/select2/select2.js"></script>
+    <script src="~/assets/vendor/libs/block-ui/block-ui.js"></script>
+    <script src="~/assets/vendor/libs/datatables-bs5/datatables-bootstrap5.js"></script>
+    <script src="~/assets/js/tables-datatables-extensions.js"></script>
+
+    <!--
+    <script src="~/assets/vendor/libs/cleavejs/cleave.js"></script>
+    <script src="~/assets/vendor/libs/tagify/tagify.js"></script>
+    <script src="~/assets/vendor/libs/cleavejs/cleave-phone.js"></script>
+    <script src="~/assets/vendor/libs/sweetalert2/sweetalert2.js"></script>
+    <script src="~/assets/vendor/libs/&#64;form-validation/popular.js"></script>
+    <script src="~/assets/vendor/libs/&#64;form-validation/bootstrap5.js"></script>
+    <script src="~/assets/vendor/libs/&#64;form-validation/auto-focus.js"></script>
+    <script src="~/assets/vendor/libs/bs-stepper/bs-stepper.js"></script>
+    <script src="~/assets/vendor/libs/bootstrap-maxlength/bootstrap-maxlength.js"></script>
+    <script src="~/assets/vendor/libs/jquery-repeater/jquery-repeater.js"></script>
+
+    <script src="~/assets/vendor/libs/flatpickr/flatpickr.js"></script>
+    <script src="~/assets/vendor/libs/apex-charts/apexcharts.js"></script>
+    <script src="~/assets/vendor/libs/swiper/swiper.js"></script>
+
+    <script src="~/assets/vendor/libs/moment/moment.js"></script>
+    <script src="~/assets/vendor/libs/datatables-bs5/datatables-bootstrap5.js"></script>
+    -->
+    <!-- Main JS -->
+    <script src="~/assets/js/main.js"></script>
+
+    <!-- Page JS
+    <script src="~/assets/js/tables-datatables-extensions.js"></script>
+    <script src="~/assets/js/dashboards-analytics.js"></script>
+    <script src="~/assets/js/app-invoice-list.js"></script> -->
+    <!-- Visual Studio Browser Link
+    <script type="text/javascript" src="/_vs/browserLink" async="async" id="__browserLink_initializationData" data-requestId="e7b9d0bda7384399a441fac1e75f499f" data-requestMappingFromServer="false" data-connectUrl="http://localhost:61204/7399209ae1c44bb88984f4f9963a250a/browserLink"></script>
+    -->
+    <!-- End Browser Link
+    <script src="/_framework/aspnetcore-browser-refresh.js"></script>
+    -->
+    <script type="text/javascript" src="~/scripts/hsw/Principal.js?n=1.000"></script>
+    <script>
+
+        get("/HSW/HSW_MenuGenerarCSV/?Data=0", generarMenu);
+        function generarMenu(rpta) {
+            // console.log(rpta);
+            if (rpta != "") {
+                $("#Menu").html(rpta);
+
+                // var script1 = document.createElement("script");
+                // script1.src = "/files/assets/js/pcoded.min.js";
+                // document.head.appendChild(script1);
+
+                // var script2 = document.createElement("script");
+                // script2.src = "/files/assets/js/vartical-layout.min.js";
+                // document.head.appendChild(script2);
+                // $("#div-cargando").hide();
+            }
+        }
+
+
+
+
+        /*
+                get("/hsw/obtenerContadorEmpresas/?Data=0", mostrarContadorEmpresas);
+                function mostrarContadorEmpresas(rpta) {
+                    if (rpta != "") {
+                        listas = rpta.split("¯");
+                        lista = listas[0].split("¬");
+                        crearCombo(lista, "cboContador", "** SELECCIONE ESTUDIO **");
+                    }
+                }
+
+                cboContador.onchange = function () {
+                    get("/hsw/obtenerContadorEmpresas/?Data=" + cboContador.value, mostrarEmpresas);
+                }
+                function mostrarEmpresas(rpta) {
+                    listas = rpta.split("¯");
+                    lista = listas[1].split("¬");
+                    crearCombo(lista, "cboContadorEmpresas", "** SELECCIONE EMPRESA **");
+                }
+
+
+                        var opcion = document.getElementById('opcDBDefault');
+                        opcion.click();
+
+        */
+
+    </script>
+</body>
+
+</html>

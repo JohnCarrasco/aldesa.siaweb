@@ -1,0 +1,32 @@
+﻿ <!-- Content -->
+<!-- Invoice List Table -->
+
+<div class="row mt-4">
+    <div class="d-grid gap-2 col-lg-3 mx-auto">
+    </div>
+    <div class="d-grid gap-2 col-lg-3 mx-auto">
+        <button class="btn btn-primary" type="button" id="btnEmitirGRR">Registrar Nueva G.R.mRemitente</button>
+    </div>
+</div>
+
+
+<div class="card">
+    <div class="card-datatable table-responsive">
+        <table id="tabla" class="clipro-lista table">
+            <thead>
+                <tr>
+                    <th>#Código</th>
+                    <th>Razón Social</th>
+                    <th class="text-truncate">Dirección</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+</div>
+</
+<!-- / Content -->
+<!-- Modal -->
+@await Html.PartialAsync("../_partials/_modals/GRRemitente")
+<!-- /Modal -->
+<script type="text/javascript" src="~/scripts/ModVentas/GRRConsulta.js?v=1.003"></script>

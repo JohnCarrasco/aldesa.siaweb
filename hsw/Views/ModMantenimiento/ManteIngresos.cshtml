@@ -1,0 +1,439 @@
+﻿<div id="lista-lst" class="card h-100 w-100">
+    <div class="card-header bg-primary">
+        <h5 class="card-title text-white m-0 me-2">Autorizaciones de Ingreso</h5>
+    </div>
+    <div class="card-body">
+        <div class="row mt-3">
+            <div class="col-12 col-md-2 mb-2">
+                <div class="form-floating form-floating-outline">
+                    <select class="form-select" tabindex="0" id="cboPeriodos"></select>
+                    <label for="cboPeriodos">Periodo *</label>
+                    <div class="invalid-feedback text-start">Por favor seleccione un periodo</div>
+                </div>
+            </div>
+        </div>
+        <div class="card-datatable">
+            <table id="tabla" class="table table-bordered table-striped table-hover table-responsive table-sm">
+                <thead>
+                    <tr style="background-color:#2F75B5;color:white;">
+                        <th class="text-center">Acciones</th>
+                        <th class="text-center">tipdep</th>
+                        <th class="text-center">Nº Autorización</th>
+                        <th class="text-center">Fecha de Emisión</th>
+                        <th class="text-center">Servicio</th>
+                        <th class="text-center">Nº Orden</th>
+                        <th class="text-center">Razón Social</th>
+                        <th class="text-center">Observaciones</th>
+                        <th class="text-center">Peso</th>
+                        <th class="text-center">Cantidad</th>
+                        <th class="text-center">Usuario Registro</th>
+                        <th class="text-center">Fecha/Hora Registro</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+    </div>
+</div>
+
+<!-- Autorización de Ingreso -->
+<div class="card h-100" id="listaAI-edt" hidden>
+    <div class="card-header bg-primary">
+        <h5 class="card-title text-white m-0 me-2 text-center"><span id="spnDesDoc"></span></h5>
+    </div>
+    <div class="card-body">
+        <div id="controlesAI">
+
+            <div class="row mt-1 mb-2 g-2">
+                <div class="col-xl-5 col-md-5 col-9">
+                    <div class="form-floating form-floating-outline">
+                        <select id="cboCliPro" class="select2 form-select"></select>
+                        <label for="cboCliPro">Cliente</label>
+                        <div class="invalid-feedback text-start" id="feedback-cboCliPro">Por favor, seleccione un cliente.</div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-md-3 col-8">
+                    <input type="text" id="txtTipDep" hidden />
+                    <input type="text" id="txtCodSer" hidden />
+                    <input type="text" id="txtNroTar" hidden />
+                    <div class="input-group input-group-merge">
+                        <span class="input-group-text" style="cursor:pointer" id="lupa"><i class="ri-search-line"></i></span>
+                        <div class="form-floating form-floating-outline">
+                            <input class="form-control" type="text" id="txtNroTarDes" placeholder="Número de Orden" readonly />
+                            <label for="txtNroTarDes">Número de Orden</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-md-6 col-12">
+                    <div class="form-floating form-floating-outline">
+                        <input type="text" id="txtNumDoc" class="form-control" disabled />
+                        <label for="txtNumDoc">N° Autorización de Ingreso</label>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-md-3 col-3">
+                    <div class="form-floating form-floating-outline">
+                        <input class="form-control" type="date" id="dtpFecha" />
+                        <label for="dtpFecha">Fecha de emisión *</label>
+                        <div class="invalid-feedback text-start">Por favor ingrese fecha de emisión</div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-1 mb-2 g-2">
+                <div class="col-xl-4 col-md-4 col-12">
+                    <div class="form-floating form-floating-outline">
+                        <input type="text" id="txtDesAge" class="form-control" disabled />
+                        <label for="txtDesAge">Agencia</label>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-md-3 col-12">
+                    <div class="form-floating form-floating-outline">
+                        <input type="text" id="txtDesDes" class="form-control" disabled />
+                        <label for="txtDesDes">Destino</label>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-md-3 col-12">
+                    <div class="form-floating form-floating-outline">
+                        <input class="form-control" type="text" id="txtDAM" disabled />
+                        <label for="txtDAM">DAM</label>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-md-3 col-12">
+                    <div class="form-floating form-floating-outline">
+                        <input class="form-control" type="text" id="txtFecha" disabled />
+                        <label for="txtFecha">Fecha DAM</label>
+                    </div>
+                </div>
+                <div class="col-xl-1 col-md-1 col-12">
+                    <div class="form-floating form-floating-outline">
+                        <input class="form-control" type="text" id="txtTipCam" disabled />
+                        <label for="txtTipCam">T/C DAM</label>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="row mt-1 mb-2 g-2">
+                <div class="col-xl-2 col-md-3 col-12">
+                    <div class="form-floating form-floating-outline">
+                        <input class="form-control" type="text" id="txtManifiesto" disabled />
+                        <label for="txtManifiesto">Manifiesto</label>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-md-3 col-12">
+                    <div class="form-floating form-floating-outline">
+                        <input class="form-control" type="text" id="txtBL" disabled />
+                        <label for="txtBL">BL</label>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-md-3 col-12">
+                    <div class="form-floating form-floating-outline">
+                        <input class="form-control text-end" type="text" id="txtFOB" disabled />
+                        <label for="txtFOB">FOB</label>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-md-3 col-12">
+                    <div class="form-floating form-floating-outline">
+                        <input class="form-control text-end" type="text" id="txtFlete" disabled />
+                        <label for="txtFlete">Flete</label>
+                    </div>
+                </div>
+                <div class="col-xl-1 col-md-1 col-12">
+                    <div class="form-floating form-floating-outline">
+                        <input class="form-control text-end" type="text" id="txtSeguro" disabled />
+                        <label for="txtSeguro">Seguro</label>
+                    </div>
+                </div>
+                <div class="col-xl-1 col-md-1 col-12">
+                    <div class="form-floating form-floating-outline">
+                        <input class="form-control text-end" type="text" id="txtAjuste" disabled />
+                        <label for="txtAjuste">Ajuste</label>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-md-3 col-12">
+                    <div class="form-floating form-floating-outline">
+                        <input class="form-control text-end" type="text" id="txtCIF" disabled />
+                        <label for="txtCIF">CIF</label>
+                    </div>
+                </div>
+            </div>
+
+            <hr />
+
+            <label style="display:block;text-align:center;"><b>DETALLE AUTORIZACIÓN DE INGRESO</b></label>
+@* 
+            <div class="row" id="divServiciosF">
+                <button class="col-3 btn btn-info waves-effect waves-light" type="button" id="btnAgregarServicioF">Agregar Servicio</button>
+            </div>
+ *@
+
+            <div class="col-md-12">
+
+                <div class="nav-align-top" id="ordenTabs">
+                    <ul class="nav nav-pills flex-column flex-md-row gap-2 gap-lg-0" role="tablist">
+
+                        <li class="nav-item">
+                            <button type="button"
+                                    class="nav-link"
+                                    role="tab"
+                                    data-bs-toggle="tab"
+                                    data-bs-target="#navs-detalle"
+                                    aria-controls="navs-detalle"
+                                    aria-selected="true">
+                                <i class="ri-lock-line me-2"></i>
+                                Detalle AI
+                            </button>
+                        </li>
+
+                        <li class="nav-item">
+                            <button type="button"
+                                    id="tabTickets"
+                                    class="nav-link"
+                                    role="tab"
+                                    data-bs-toggle="tab"
+                                    data-bs-target="#navs-tickets"
+                                    aria-controls="navs-tickets"
+                                    aria-selected="false">
+                                <i class="ri-link-m me-2"></i>
+                                Tickets Pesaje
+                            </button>
+                        </li>
+
+                        <li class="nav-item">
+                            <button type="button"
+                                    id="tabAdjuntos"
+                                    class="nav-link"
+                                    role="tab"
+                                    data-bs-toggle="tab"
+                                    data-bs-target="#navs-adjuntos"
+                                    aria-controls="navs-adjuntos"
+                                    aria-selected="false">
+                                <i class="ri-link-m me-2"></i>
+                                Documentos Adjuntos
+                            </button>
+                        </li>
+
+                    </ul>
+
+                    <div class="tab-content">
+
+                        <div class="tab-pane fade show active" id="navs-detalle" role="tabpanel">
+
+                            <table id="tabladet" class="table table-bordered table-striped table-hover table-responsive table-sm">
+                                <thead>
+                                    <tr>
+                                        <th class="text-center">Acc</th>
+                                        <th class="text-center">It</th>
+                                        <th class="text-center">Descripción</th>
+                                        <th class="text-center">Cantidad</th>
+                                        <th class="text-center">CIF USD</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                </tbody>
+                            </table>
+
+                        </div>
+
+                        <div class="tab-pane fade" id="navs-tickets" role="tabpanel">
+
+                            <table id="tablatkt" class="table table-bordered table-striped table-hover table-responsive table-sm">
+                                <thead>
+                                    <tr style="background-color:#2F75B5!important;color:white!important;">
+                                        <th class="text-center">Acciones</th>
+                                        <th class="text-center">Ticket</th>
+                                        <th class="text-center">Fecha</th>
+                                        <th class="text-center">Placa</th>
+                                        <th class="text-center">Licencia</th>
+                                        <th class="text-center">Producto</th>
+                                        <th class="text-center">Peso A </th>
+                                        <th class="text-center">Peso B</th>
+                                        <th class="text-center">Peso Neto</th>
+                                    </tr>
+                                </thead>
+                            </table>
+
+                        </div>
+
+                        <div class="tab-pane fade" id="navs-adjuntos" role="tabpanel">
+
+                            <table id="tabladoc" class="table table-bordered table-striped table-hover table-responsive table-sm">
+                                <thead>
+                                    <tr style="background-color:#2F75B5!important;color:white!important;">
+                                        <th class="text-center">Acciones</th>
+                                        <th class="text-center">Id</th>
+                                        <th class="text-center">Tipo Documento Anexado</th>
+                                        <th class="text-center">Observaciones</th>
+                                        <th class="text-center">Nombre de Archivo</th>
+                                        <th class="text-center">Tamaño</th>
+                                        <th class="text-center">Usuario que registra</th>
+                                        <th class="text-center">Fecha de registro</th>
+                                    </tr>
+                                </thead>
+                            </table>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="card-body px-3 pb-1 pt-1">
+                    <div class="row">
+                        <div class="col-md-8 mb-md-0 mb-3 form-floating form-floating-outline">
+                            <textarea class="form-control h-px-100"
+                                      id="txtObs"
+                                      placeholder="Observaciones aquí..." maxlength="500" oninput="this.value=this.value.toUpperCase();"></textarea>
+                            <label for="txtObs">Observaciones</label>
+                        </div>
+                        <div class="col-md-4 d-flex justify-content-md-end mt-0">
+                            <div class="invoice-calculations">
+                                <div class="d-flex align-items-center mb-1">
+                                    <span class="me-6">Total Bultos</span> <h6 class="mb-0 text-end ms-auto" id="lblTotCantid">0.00</h6>
+                                    <span class="w-px-40"></span>
+                                </div>
+                                <div class="d-flex align-items-center mb-1">
+                                    <span class="me-6">Total CIF US$</span> <h6 class="mb-0 text-end ms-auto" id="lblTotCIFDol">0.00</h6>
+                                    <span class="w-px-40"></span>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <span class="me-6">Total CIF S/</span> <h6 class="mb-0 text-end ms-auto" id="lblTotCIFSol">0.00</h6>
+                                    <span class="w-px-40"></span>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <span class="me-6">Total Peso</span> <h6 class="mb-0 text-end ms-auto" id="lblTotPeso">0.00</h6>
+                                    <span class="w-px-40"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="card-footer d-flex justify-content-center">
+        <div class="d-grid gap-3 col-lg-3 me-3">
+            <button class="btn btn-outline-secondary" type="button" id="btnRegresarLista">Cancelar</button>
+        </div>
+        <div class="d-grid gap-3 col-lg-3">
+            <button class="btn btn-primary" type="button" id="btnGuardar">Grabar Autorización de Ingreso</button>
+        </div>
+    </div>
+</div>
+<!-- /Autorización de Ingreso -->
+
+<!-- Modal Mostrar Ordenes -->
+<div class="modal fade" id="MostrarTarjetas" tabindex="-1" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+    <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header bg-primary">
+                <h4 class="modal-title text-white" id="modalCenterTitle">Seleccionar Tarjeta</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="card-datatable">
+                    <table id="tablatarjetas" class="table table-responsive table-hover table-striped table-valign-middle table-sm">
+                        <thead class="bg-custom-table">
+                            <tr>
+                                <th style="text-align:center">Opc</th>
+                                <th style="display:none">codser</th>
+                                <th style="text-align:center">Servicio</th>
+                                <th style="text-align:center">Orden</th>
+                                <th style="text-align:center">Fecha</th>
+                                <th style="text-align:center">Manifiesto</th>
+                                <th style="text-align:center">Descripción</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="modal-footer d-flex justify-content-center">
+                <div class="d-grid gap-3 col-lg-3">
+                    <button class="btn btn-outline-secondary" id="btnCerrarListaTarjetas" data-bs-dismiss="modal">Regresar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /Modal Mostrar Ordenes -->
+
+<!-- Modal Mostrar Tickets por Cliente -->
+<div class="modal fade" id="MostrarTickets" tabindex="-1" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+    <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header bg-primary">
+                <h4 class="modal-title text-white" id="modalCenterTitleTkt">Seleccionar Ticket</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="card-datatable">
+                    <table id="tablatickets" class="table table-responsive table-hover table-striped table-valign-middle table-sm">
+                        <thead class="bg-custom-table">
+                            <tr>
+                                <th class="text-center">Opc</th>
+                                <th class="text-center">Ticket</th>
+                                <th class="text-center">Fecha</th>
+                                <th class="text-center">Placa</th>
+                                <th class="text-center">Licencia</th>
+                                <th class="text-center">Producto</th>
+                                <th class="text-center">Peso A </th>
+                                <th class="text-center">Peso B</th>
+                                <th class="text-center">Peso Neto</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="modal-footer d-flex justify-content-center">
+                <div class="d-grid gap-3 col-lg-3">
+                    <button class="btn btn-outline-secondary" id="btnCerrarListaTickets" data-bs-dismiss="modal">Regresar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /Modal Mostrar Tickets por Cliente -->
+
+<!-- Modal Mostrar Documentos para aplicar la N/C -->
+<div class="modal fade" id="MostrarDocumentos" tabindex="-1" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header bg-primary">
+                <h4 class="modal-title text-white" id="modalCenterTitleNC">Seleccionar Documento</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="card-datatable">
+                    <table id="tabladocumentos" class="table table-responsive table-hover table-striped table-valign-middle table-sm">
+                        <thead class="bg-custom-table">
+                            <tr>
+                                <th style="text-align:center">Opc</th>
+                                <th style="display:none">tipdoc</th>
+                                <th style="text-align:center">Nº Documento</th>
+                                <th style="text-align:center">Fecha Emisión</th>
+                                <th style="text-align:center">Fecha Vcmto.</th>
+                                <th style="text-align:center">Moneda</th>
+                                <th style="text-align:center">Imp.Total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="modal-footer d-flex justify-content-center">
+                <div class="d-grid gap-3 col-lg-3">
+                    <button class="btn btn-outline-secondary" id="btnCerrarListaDocumentos" data-bs-dismiss="modal">Regresar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /Modal Modal Mostrar Documentos para aplicar la N/C -->
+
+<script type="text/javascript" src="~/scripts/ModMantenimiento/ManteIngresos.js?v=1.0020"></script>

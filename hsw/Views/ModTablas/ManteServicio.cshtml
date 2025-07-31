@@ -1,0 +1,93 @@
+﻿<!-- Content -->
+<!-- Invoice List Table -->
+
+<div id="lista">
+    <div class="card h-100">
+        <h5 class="card-header bg-primary text-white">Servicios</h5>
+        <div class="card-body">
+            <div class="card-datatable">
+                <table id="tabla" class="dt-scrollableTable table table-bordered table-striped table-hover table-sm">
+                    <thead>
+                        <tr style="background-color:#2F75B5;color:white;">
+                            <th class="text-center">Acciones</th>
+                            <th class="text-center">Id</th>
+                            <th class="text-center">id_grp_servicio</th>
+                            <th class="text-center">Grupo Servicio</th>
+                            <th class="text-center">Descripción Servicio</th>
+                            <th class="text-center">Cuenta</th>
+                            <th class="text-center">Estado</th>
+                        </tr>
+                    </thead>
+                </table>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--/ Scrollable -->
+<!-- Modal -->
+<div class="modal fade" id="ListaAdiMod" tabindex="-1" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header bg-primary">
+                <h4 class="modal-title text-white" id="modalCenterTitle">Crear Servicio</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row mb-4 g-3">
+                    <div class="col-6 col-md-2">
+                        <div class="form-floating form-floating-outline">
+                            <input type="text" id="txtId" name="txtId" class="form-control" disabled />
+                            <label for="txtDescri">Id</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mb-4 g-3">
+                    <div class="col-12 col-md-12">
+                        <div class="form-floating form-floating-outline">
+                            <select id="cboGrupo" class="select2 form-select">
+                            </select>
+                            <label for="cboGrupo">Grupo de Servicios</label>
+                            <div class="invalid-feedback text-start">Por favor seleccione grupo de servicios</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mb-4 g-3">
+                    <div class="col-12 col-md-12">
+                        <div class="form-floating form-floating-outline">
+                            <input type="text" id="txtDescri" name="txtDescri" class="form-control" placeholder="Descripción *" oninput="this.value=this.value.toUpperCase();" maxlength="45" autocomplete="off" />
+                            <label for="txtDescri">Descripción de servicio *</label>
+                            <div class="invalid-feedback text-start">Por favor ingrese descripción</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mb-4 g-3">
+                    <div class="col-6 col-md-6">
+                        <div class="form-floating form-floating-outline">
+                            <input type="text" id="txtCuenta" name="txtCuenta" class="form-control" placeholder="Cuenta *" oninput="this.value=this.value.toUpperCase();" maxlength="45" autocomplete="off" />
+                            <label for="txtCuenta">Cuenta *</label>
+                            <div class="invalid-feedback text-start">Por favor ingrese cuenta</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="modal-footer d-flex justify-content-center">
+                <div class="d-grid gap-3 col-lg-3">
+                    <button class="btn btn-outline-secondary" type="reset" data-bs-dismiss="modal">Cancelar</button>
+                </div>
+                <div class="d-grid gap-3 col-lg-3">
+                    <button class="btn btn-primary" type="button" id="btnGuardarLista">Guardar</button>
+                </div>
+             </div>
+        </div>
+    </div>
+</div>
+
+<!-- /Modal -->
+
+<script type="text/javascript" src="~/scripts/ModTablas/ManteServicio.js?v=1.0005"></script>

@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121.
+-->
+<Project>
+  <PropertyGroup>
+    <_PublishTargetUrl>F:\Aldesa\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\sistemas.web\asttex\hsw\bin\Release\net8.0\publish\</_PublishTargetUrl>
+    <History>True|2024-06-23T01:58:13.1458181Z;True|2024-06-22T20:55:26.5813006-05:00;True|2024-06-22T20:51:06.1172645-05:00;True|2024-06-22T20:42:33.3159145-05:00;True|2024-06-22T19:21:53.2721752-05:00;True|2024-06-22T10:26:47.2795797-05:00;True|2024-05-27T00:49:38.9349321-05:00;True|2024-05-26T23:23:27.2955672-05:00;False|2024-05-26T23:12:16.2553633-05:00;False|2024-05-26T23:11:06.6847956-05:00;False|2024-05-26T23:07:13.8590117-05:00;False|2024-05-26T23:00:05.5040088-05:00;False|2024-05-26T22:57:53.3084304-05:00;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+</Project>

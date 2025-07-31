@@ -1,0 +1,62 @@
+﻿<style>
+    .misc-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: 77vh;
+        justify-content: center;
+        position: relative;
+        padding: 1.25rem;
+    }
+
+    .misc-bg {
+        inline-size: 100%;
+        position: absolute;
+        inset-inline-start: 0;
+        bottom: 50px;
+    }
+
+    .misc-object {
+        position: absolute;
+        bottom: 8%;
+        z-index: 1;
+    }
+
+    html:not([dir=rtl]) .misc-object {
+        left: 16%;
+    }
+
+    [dir=rtl] .misc-object {
+        right: 10%;
+    }
+</style>
+
+<!--Under Maintenance -->
+<div class="misc-wrapper">
+    <h4 class="mb-2 mx-2">En mantenimiento! 🚧</h4>
+    <p class="mb-2 mx-sm-2 text-center">
+        Disculpe las molestias, pero estamos realizando tareas de mantenimiento en estos momentos.
+    </p>
+
+    <div class="d-flex justify-content-center mt-9">
+        <img src="~/img/hsw/hsw-exagono.png"
+             alt="misc-under-maintenance"
+             class="img-fluid misc-object d-none d-lg-inline-block"
+             width="170" />
+
+        <img src="~/img/hsw/hsw-piso.png"
+             alt="misc-under-maintenance"
+             class="misc-bg d-none d-lg-inline-block" />
+
+        <div class="d-flex flex-column align-items-center">
+            <img src="~/img/hsw/hsw-mantenimiento.png"
+                 alt="misc-under-maintenance"
+                 class="img-fluid z-1"
+                 width="200"/>
+        </div>
+
+    </div>
+
+</div>
+<!-- /Under Maintenance -->
+<script type="text/javascript" src="~/scripts/hsw/PaginaError.js?v=1.000"></script>

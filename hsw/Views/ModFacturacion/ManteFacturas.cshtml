@@ -1,0 +1,753 @@
+﻿<div id="lista-lst" class="card h-100 w-100">
+    <div class="card-header bg-primary">
+        <h5 class="card-title text-white m-0 me-2">Documentos emitidos</h5>
+    </div>
+    <div class="card-body">
+        <div class="row mt-3">
+            <div class="col-12 col-md-3 mb-2">
+                <div class="form-floating form-floating-outline">
+                    <select class="form-select" tabindex="0" id="cboPeriodos"></select>
+                    <label for="cboPeriodos">Periodo *</label>
+                    <div class="invalid-feedback text-start">Por favor seleccione un periodo</div>
+                </div>
+            </div>
+        </div>
+        <div class="card-datatable">
+            <table id="tabla" class="table table-bordered table-striped table-hover table-responsive table-sm">
+                <thead>
+                    <tr style="background-color:#2F75B5;color:white;">
+                        <th class="text-center">Acciones</th>
+                        <th class="text-center">tipdoc</th>
+                        <th class="text-center">interno</th>
+                        <th class="text-center">T/D</th>
+                        <th class="text-center">Nro. Documento</th>
+                        <th class="text-center">Fecha de emisión</th>
+                        <th class="text-center">Documento</th>
+                        <th class="text-center">Razón Social</th>
+                        <th class="text-center">T/M</th>
+                        <th class="text-center">Total</th>
+                        <th class="text-center">Estado</th>
+                        <th class="text-center">Envio a DataSmart</th>
+                        <th class="text-center">Estado<br />SUNAT</th>
+                        <th class="text-center">Correo<br />enviado</th>
+                        <th class="text-center">Mensaje SUNAT</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+    </div>
+</div>
+
+<!-- Factura -->
+<div class="card h-100" id="listaF-edt" hidden>
+    <div class="card-header bg-primary">
+        <h5 class="card-title text-white m-0 me-2 text-center"><span id="spnDesDocF"></span></h5>
+    </div>
+    <div class="card-body">
+        <div id="controlesF">
+            <div class="row mt-1 mb-2 g-5">
+                <div class="col-xl-4 col-md-6 col-12">
+                    <input type="text" id="txtTipDocF" hidden />
+                    <div class="form-floating form-floating-outline">
+                        <select id="cboServicioF" class="select2 form-select"></select>
+                        <label for="cboServicioF">Servicio</label>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-md-6 col-12">
+                    <div class="form-floating form-floating-outline">
+                        <input type="text" id="txtNumDocF" class="form-control" disabled />
+                        <label for="txtNumDocF">N° Comprobante</label>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-md-6 col-12">
+                    <div class="form-floating form-floating-outline">
+                        <select id="cboMonedaF" class="select2 form-select"></select>
+                        <label for="cboMonedaF">Moneda</label>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-md-6 col-12">
+                    <div class="form-floating form-floating-outline">
+                        <select id="cboForPagF" class="select2 form-select"></select>
+                        <label for="cboForPagF">Forma de pago</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-1 mb-2 g-5">
+                <div class="col-xl-2 col-md-3 col-3">
+                    <div class="form-floating form-floating-outline">
+                        <input class="form-control" type="date" id="dtpFechaF" />
+                        <label for="dtpFechaF">Fecha de emisión *</label>
+                        <div class="invalid-feedback text-start">Por favor ingrese fecha de emisión</div>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-md-5 col-9">
+                    <div class="form-floating form-floating-outline">
+                        <select id="cboCliProF" class="select2 form-select"></select>
+                        <label for="cboCliProF">Cliente</label>
+                        <div class="invalid-feedback text-start">Por favor seleccione cliente</div>
+                    </div>
+                </div>
+                <div class="col-xl-1 col-md-1 col-4 d-flex align-items-center">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="chkVariasF">
+                        <label class="form-check-label" for="chkVariasF">
+                            Varias Tarjetas
+                        </label>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-md-3 col-8">
+                    <input type="text" id="txtCodSerF" hidden />
+                    <input type="text" id="txtNroTarF" hidden />
+                    <div class="input-group input-group-merge">
+                        <span class="input-group-text" style="cursor:pointer" id="lupaF"><i class="ri-search-line"></i></span>
+                        <div class="form-floating form-floating-outline">
+                            <input class="form-control" type="text" id="txtNroTarDesF" placeholder="Número de Tarjeta" readonly />
+                            <label for="txtNroTarDesF">Número de Tarjeta</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-1 mb-2 g-5">
+                <div class="col-xl-4 col-md-3 col-12">
+                    <div class="form-floating form-floating-outline">
+                        <input class="form-control" type="text" id="txtCorreoF" placeholder="Ingrese Correo" autocomplete="off" />
+                        <label for="txtCorreoF">Correo</label>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-md-3 col-12">
+                    <div class="form-floating form-floating-outline">
+                        <input class="form-control" type="text" id="txtDUAF" disabled />
+                        <label for="txtDUAF">DAM</label>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-md-3 col-12">
+                    <input type="text" id="txtId_CotizacionF" hidden />
+                    <div class="form-floating form-floating-outline">
+                        <input class="form-control" type="text" id="txtNroCarF" disabled />
+                        <label for="txtNroCarF">N° Carta</label>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-md-3 col-12">
+                    <div class="form-floating form-floating-outline">
+                        <input class="form-control" type="text" id="txtFecCarF" disabled />
+                        <label for="txtFecCarF">Fecha Carta</label>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-md-3 col-12">
+                    <div class="form-floating form-floating-outline">
+                        <input class="form-control" type="text" id="txtFecNumF" disabled />
+                        <label for="txtFecNumF">Fecha Numeración</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-1 mb-2 g-5">
+                <div class="col-xl-2 col-md-3 col-4">
+                    <div class="form-floating form-floating-outline">
+                        <input class="form-control" type="date" id="dtpFecIni_PerF" />
+                        <label for="dtpFecIni_PerF">Desde *</label>
+                        <div class="invalid-feedback text-start">Por favor ingrese fecha de inicio</div>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-md-2 col-2">
+                    <div class="form-floating form-floating-outline">
+                        <input class="form-control" type="number" id="txtDias_PerF" value="30" autocomplete="off" />
+                        <label for="txtDias_PerF">Dias Facturar</label>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-md-3 col-4">
+                    <div class="form-floating form-floating-outline">
+                        <input class="form-control" type="text" id="txtFecFin_PerF" disabled />
+                        <label for="txtFecFin_PerF">Hasta</label>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-md-2 col-3">
+                    <div class="form-floating form-floating-outline">
+                        <input class="form-control" type="text" id="txtTipCamF" disabled />
+                        <label for="txtTipCamF">Tipo de cambio</label>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-md-2 col-3">
+                    <div class="form-floating form-floating-outline">
+                        <input class="form-control" type="text" id="txtDiasF" autocomplete="off" />
+                        <label for="txtDiasF">Dias crédito</label>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-md-2 col-4">
+                    <div class="form-floating form-floating-outline">
+                        <input class="form-control" type="text" id="txtFecVenF" disabled />
+                        <label for="txtFecVenF">Vencimiento</label>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-md-2 col-4" id="divAdicional1F">
+                    <div class="form-floating form-floating-outline">
+                        <input class="form-control" type="text" id="txtBultosF" placeholder="Ingrese cantidad" autocomplete="off" disabled />
+                        <label for="txtBultosF">Cantidad Facturar</label>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-md-2 col-4" id="divAdicional2F">
+                    <div class="form-floating form-floating-outline">
+                        <input class="form-control" type="text" id="txtMontoF" placeholder="Ingrese monto" autocomplete="off" disabled />
+                        <label for="txtMontoF">Valor Facturar</label>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-md-2 col-4" id="divAdicional3F">
+                    <div class="form-floating form-floating-outline">
+                        <input class="form-control" type="text" id="txtDetPorF" autocomplete="off" disabled />
+                        <label for="txtDetPorF">Detracción %</label>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-md-2 col-4" id="divAdicional4F">
+                    <div class="form-floating form-floating-outline">
+                        <input class="form-control" type="text" id="txtDetSolF" autocomplete="off" disabled />
+                        <label for="txtDetSolF">Detracción Soles</label>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-md-2 col-4" id="divAdicional5F">
+                    <div class="form-floating form-floating-outline">
+                        <input class="form-control" type="text" id="txtDetDolF" autocomplete="off" disabled />
+                        <label for="txtDetDolF">Detracción Dólares</label>
+                    </div>
+                </div>
+            </div>
+            <hr />
+
+            <label style="display:block;text-align:center;"><b>DETALLE DE FACTURA</b></label>
+
+            <div class="row" id="divServiciosF">
+                <button class="col-3 btn btn-info waves-effect waves-light" type="button" id="btnAgregarServicioF">Agregar Servicio</button>
+                <hr />
+                <div class="col-12" id="serviciosF">
+                    <div class="col-12 col-md-12 mb-2">
+                        <div class="form-floating form-floating-outline">
+                            <select id="cboServiciosGrpF" class="select2 form-select">
+                            </select>
+                            <label for="cboServicioGrpF">Grupo de Servicios</label>
+                        </div>
+
+                        <div class="col-12 table-responsive">
+                            <table class="table">
+                                <tbody id="tbl_serviciosF">
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="d-grid">
+                            <button type="button" id="btnCerrarServicioF" class="btn btn-secondary waves-effect waves-light">Cerrar</button>
+                        </div>
+                    </div>
+                    <hr />
+                </div>
+            </div>
+
+            <div class="row" id="detF">
+                <table id="tabfac_detF" class="table table-bordered table-striped table-hover table-responsive table-sm">
+                    <thead>
+                        <tr>
+                            <th class="text-center">It</th>
+                            <th class="text-center">id_servicio</th>
+                            <th class="text-center">Descripción</th>
+                            <th class="text-center">CIF S/.</th>
+                            <th class="text-center">CIF USD</th>
+                            <th class="text-center">% Tarif</th>
+                            <th class="text-center">Valor</th>
+                            <th class="text-center">Tar. Mínima</th>
+                            <th class="text-center">Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+            <div class="row" id="det_serF">
+                <table id="tabfac_det_serF" class="table table-bordered table-striped table-hover table-responsive table-sm">
+                    <thead>
+                        <tr>
+                            <th class="text-center">Acc</th>
+                            <th class="text-center">It</th>
+                            <th class="text-center">Cód.Servicio</th>
+                            <th class="text-center">Descripción</th>
+                            <th class="text-center">Cantidad</th>
+                            <th class="text-center">Precio</th>
+                            <th class="text-center">Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="row">
+
+                <div class="card-body px-3 pb-6">
+                    <div class="row">
+                        <div class="col-md-8 mb-md-0 mb-3 form-floating form-floating-outline">
+                            <textarea class="form-control h-px-100"
+                                      id="txtObsF"
+                                      placeholder="Observaciones aquí..." maxlength="500" oninput="this.value=this.value.toUpperCase();"></textarea>
+                            <label for="txtObsF">Observaciones</label>
+                        </div>
+                        <div class="col-md-4 d-flex justify-content-md-end mt-0">
+                            <div class="invoice-calculations">
+                                <div class="d-flex justify-content-between mb-1">
+                                    <span class="w-px-150">Valor Venta</span>
+                                    <h6 class="mb-0" id="lblVVF">0.00</h6>
+                                </div>
+                                <div class="d-flex justify-content-between mb-1">
+                                    <input type="text" id="txtPorIGVF" hidden />
+                                    <span class="w-px-150" id="lblPorIGVF"></span>
+                                    <h6 class="mb-0" id="lblIGVF">0.00</h6>
+                                </div>
+                                <hr class="my-2" />
+                                <div class="d-flex justify-content-between">
+                                    <span class="w-px-150">TOTAL</span>
+                                    <h6 class="mb-0" id="lblTotalF">0.00</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card-footer d-flex justify-content-center">
+        <div class="d-grid gap-3 col-lg-3 me-3">
+            <button class="btn btn-outline-secondary" type="button" id="btnRegresarListaF">Cancelar</button>
+        </div>
+        <div class="d-grid gap-3 col-lg-3">
+            <button class="btn btn-primary" type="button" id="btnGuardarF">Grabar Factura</button>
+        </div>
+    </div>
+</div>
+<!-- /Factura -->
+
+<!-- Boleta de Venta -->
+<div class="card h-100" id="listaB-edt" hidden>
+    <div class="card-header btn-info">
+        <h5 class="card-title text-white m-0 me-2 text-center"><span id="spnDesDocB"></span></h5>
+    </div>
+    <div class="card-body">
+        <div id="controlesB">
+            <div class="row mt-1 mb-2 g-5">
+                <div class="col-xl-4 col-md-6 col-12">
+                    <input type="text" id="txtTipDocB" hidden />
+                    <div class="form-floating form-floating-outline">
+                        <select id="cboServicioB" class="select2 form-select"></select>
+                        <label for="cboServicioB">Servicio</label>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-md-6 col-12">
+                    <div class="form-floating form-floating-outline">
+                        <input type="text" id="txtNumDocB" class="form-control" disabled />
+                        <label for="txtNumDocB">N° Comprobante</label>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-md-6 col-12">
+                    <div class="form-floating form-floating-outline">
+                        <select id="cboMonedaB" class="select2 form-select"></select>
+                        <label for="cboMonedaB">Moneda</label>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-md-6 col-12">
+                    <div class="form-floating form-floating-outline">
+                        <select id="cboForPagB" class="select2 form-select"></select>
+                        <label for="cboForPagB">Forma de pago</label>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-md-6 col-12">
+                    <div class="form-floating form-floating-outline">
+                        <input class="form-control" type="text" id="txtTipCamB" disabled />
+                        <label for="txtTipCamB">Tipo de cambio</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-1 mb-2 g-5">
+                <div class="col-xl-6 col-md-5 col-9">
+                    <div class="form-floating form-floating-outline">
+                        <select id="cboCliProB" class="select2 form-select"></select>
+                        <label for="cboCliProB">Cliente</label>
+                        <div class="invalid-feedback text-start">Por favor seleccione cliente</div>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-md-5 col-9">
+                    <div class="form-floating form-floating-outline">
+                        <input class="form-control" type="text" id="txtDireccB" autocomplete="off" />
+                        <label for="txtDireccB">Dirección</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-1 mb-2 g-5">
+                <div class="col-xl-2 col-md-3 col-3">
+                    <div class="form-floating form-floating-outline">
+                        <input class="form-control" type="date" id="dtpFechaB" />
+                        <label for="dtpFechaB">Fecha de emisión *</label>
+                        <div class="invalid-feedback text-start">Por favor ingrese fecha de emisión</div>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-md-2 col-3">
+                    <div class="form-floating form-floating-outline">
+                        <input class="form-control" type="text" id="txtDiasB" autocomplete="off" />
+                        <label for="txtDiasB">Dias crédito</label>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-md-2 col-4">
+                    <div class="form-floating form-floating-outline">
+                        <input class="form-control" type="text" id="txtFecVenB" disabled />
+                        <label for="txtFecVenB">Vencimiento</label>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-3 col-12">
+                    <div class="form-floating form-floating-outline">
+                        <input class="form-control" type="text" id="txtCorreoB" placeholder="Ingrese Correo" autocomplete="off" />
+                        <label for="txtCorreoB">Correo</label>
+                    </div>
+                </div>
+                <div class="col-xl-1 col-md-1 col-4 d-flex align-items-center">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="chkGratuita">
+                        <label class="form-check-label" for="chkGratuita">
+                            Transferencia Gratuita
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <hr />
+
+            <label style="display:block;text-align:center;"><b>DETALLE DE COMPROBANTE</b></label>
+
+            <div class="row" id="divServiciosB">
+                <button class="col-3 btn btn-info waves-effect waves-light" type="button" id="btnAgregarServicioB">Agregar Servicio</button>
+                <hr />
+                <div class="col-12" id="serviciosB">
+                    <div class="col-12 col-md-12 mb-2">
+                        <div class="form-floating form-floating-outline">
+                            <select id="cboServiciosGrpB" class="select2 form-select">
+                            </select>
+                            <label for="cboServicioGrpB">Grupo de Servicios</label>
+                        </div>
+
+                        <div class="col-12 table-responsive">
+                            <table class="table">
+                                <tbody id="tbl_serviciosB">
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="d-grid">
+                            <button type="button" id="btnCerrarServicioB" class="btn btn-secondary waves-effect waves-light">Cerrar</button>
+                        </div>
+                    </div>
+                    <hr />
+                </div>
+            </div>
+
+            <div class="row" id="det_serB">
+                <table id="tabfac_det_serB" class="table table-bordered table-striped table-hover table-responsive table-sm">
+                    <thead>
+                        <tr>
+                            <th class="text-center">Acc</th>
+                            <th class="text-center">It</th>
+                            <th class="text-center">Cód.Servicio</th>
+                            <th class="text-center">Descripción</th>
+                            <th class="text-center">Cantidad</th>
+                            <th class="text-center">Precio</th>
+                            <th class="text-center">Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="row">
+                <div class="card-body px-3 pb-6">
+                    <div class="row">
+                        <div class="col-md-8 mb-md-0 mb-3 form-floating form-floating-outline">
+                            <textarea class="form-control h-px-100"
+                                      id="txtObsB"
+                                      placeholder="Observaciones aquí..." maxlength="500" oninput="this.value=this.value.toUpperCase();"></textarea>
+                            <label for="txtObsB">Observaciones</label>
+                        </div>
+                        <div class="col-md-4 d-flex justify-content-md-end mt-0">
+                            <div class="invoice-calculations">
+                                <div class="d-flex justify-content-between mb-1">
+                                    <span class="w-px-150">Valor Venta</span>
+                                    <h6 class="mb-0" id="lblVVB">0.00</h6>
+                                </div>
+                                <div class="d-flex justify-content-between mb-1">
+                                    <input type="text" id="txtPorIGVB" hidden />
+                                    <span class="w-px-150" id="lblPorIGVB"></span>
+                                    <h6 class="mb-0" id="lblIGVB">0.00</h6>
+                                </div>
+                                <hr class="my-2" />
+                                <div class="d-flex justify-content-between">
+                                    <span class="w-px-150">TOTAL</span>
+                                    <h6 class="mb-0" id="lblTotalB">0.00</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card-footer d-flex justify-content-center">
+        <div class="d-grid gap-3 col-lg-3 me-3">
+            <button class="btn btn-outline-secondary" type="button" id="btnRegresarListaB">Cancelar</button>
+        </div>
+        <div class="d-grid gap-3 col-lg-3">
+            <button class="btn btn-info" type="button" id="btnGuardarB">Grabar Boleta</button>
+        </div>
+    </div>
+</div>
+<!-- /Boleta de Venta -->
+
+<!-- Nota de Crédito -->
+<div class="card h-100" id="listaNC-edt" hidden>
+    <div class="card-header btn-warning">
+        <h5 class="card-title text-white m-0 me-2 text-center"><span id="spnDesDocNC"></span></h5>
+    </div>
+    <div class="card-body">
+        <div id="controlesNC">
+            <div class="row mt-1 mb-2 g-5">
+                <div class="col-xl-4 col-md-6 col-12">
+                    <input type="text" id="txtTipDocNC" hidden />
+                    <div class="form-floating form-floating-outline">
+                        <select id="cboServicioNC" class="select2 form-select"></select>
+                        <label for="cboServicioNC">Servicio</label>
+                        <div class="invalid-feedback text-start" id="feedback-cboServicioNC">Por favor, seleccione Serie</div>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-md-6 col-12">
+                    <div class="form-floating form-floating-outline">
+                        <input type="text" id="txtNumDocNC" class="form-control" disabled />
+                        <label for="txtNumDocNC">N° Comprobante</label>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-md-6 col-12">
+                    <div class="form-floating form-floating-outline">
+                        <input class="form-control" type="date" id="dtpFechaNC" />
+                        <label for="dtpFechaNC">Fecha de emisión *</label>
+                        <div class="invalid-feedback text-start">Por favor, ingrese fecha de emisión</div>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-md-6 col-12">
+                    <div class="form-floating form-floating-outline">
+                        <select id="cboMonedaNC" class="select2 form-select"></select>
+                        <label for="cboMonedaNC">Moneda</label>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-md-6 col-12">
+                    <div class="form-floating form-floating-outline">
+                        <input class="form-control" type="text" id="txtTipCamNC" disabled />
+                        <label for="txtTipCamNC">Tipo de cambio</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-1 mb-2 g-5">
+                <div class="col-xl-6 col-md-6 col-12">
+                    <div class="form-floating form-floating-outline">
+                        <select id="cboCliProNC" class="select2 form-select"></select>
+                        <label for="cboCliProNC">Cliente</label>
+                        <div class="invalid-feedback text-start" id="feedback-cboCliProNC">Por favor, seleccione cliente</div>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-md-6 col-12">
+                    <div class="form-floating form-floating-outline">
+                        <input class="form-control" type="text" id="txtCorreoNC" placeholder="Ingrese Correo" autocomplete="off" />
+                        <label for="txtCorreoNC">Correo</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-1 mb-2 g-5">
+                <div class="col-xl-6 col-md-6 col-12">
+                    <input type="text" id="txtDocRef" hidden />
+                    <input type="text" id="txtNumRef" hidden />
+                    <input type="text" id="txtFecRef" hidden />
+                    <div class="input-group input-group-merge">
+                        <span class="input-group-text" style="cursor:pointer" id="lupaNC"><i class="ri-search-line"></i></span>
+                        <div class="form-floating form-floating-outline">
+                            <input class="form-control" type="text" id="txtNumDocNCRef" placeholder="Documento de Referencia" readonly />
+                            <label for="txtNumDocNCRef">Documento de Referencia</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-md-6 col-12">
+                    <div class="form-floating form-floating-outline">
+                        <select id="cboTabMotNC" class="select2 form-select"></select>
+                        <label for="cboTabMotNC">Motivo de Nota de Crédito</label>
+                        <div class="invalid-feedback text-start" id="feedback-cboTabMotNC">Por favor, seleccione tipo de nota de crédito</div>
+                    </div>
+                </div>
+            </div>
+
+            <hr />
+
+            <label style="display:block;text-align:center;"><b>DETALLE DE COMPROBANTE</b></label>
+
+            <div class="row" id="detFNC">
+                <table id="tabfac_detFNC" class="table table-bordered table-striped table-hover table-responsive table-sm">
+                    <thead>
+                        <tr>
+                            <th class="text-center">It</th>
+                            <th class="text-center">id_servicio</th>
+                            <th class="text-center">Descripción</th>
+                            <th class="text-center">CIF S/.</th>
+                            <th class="text-center">CIF USD</th>
+                            <th class="text-center">% Tarif</th>
+                            <th class="text-center">Valor</th>
+                            <th class="text-center">Tar. Mínima</th>
+                            <th class="text-center">Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="row" id="det_serFNC">
+                <table id="tabfac_det_serFNC" class="table table-bordered table-striped table-hover table-responsive table-sm">
+                    <thead>
+                        <tr>
+                            <th class="text-center">Acc</th>
+                            <th class="text-center">It</th>
+                            <th class="text-center">Cód.Servicio</th>
+                            <th class="text-center">Descripción</th>
+                            <th class="text-center">Cantidad</th>
+                            <th class="text-center">Precio</th>
+                            <th class="text-center">Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="row">
+                <div class="card-body px-3 pb-6">
+                    <div class="row">
+                        <div class="col-md-8 mb-md-0 mb-3 form-floating form-floating-outline">
+                            <textarea class="form-control h-px-100"
+                                      id="txtObsFNC"
+                                      placeholder="Observaciones aquí..." maxlength="500" oninput="this.value=this.value.toUpperCase();"></textarea>
+                            <label for="txtObsNC">Observaciones</label>
+                        </div>
+                        <div class="col-md-4 d-flex justify-content-md-end mt-0">
+                            <div class="invoice-calculations">
+                                <div class="d-flex justify-content-between mb-1">
+                                    <span class="w-px-150">Valor Venta</span>
+                                    <h6 class="mb-0" id="lblVVFNC">0.00</h6>
+                                </div>
+                                <div class="d-flex justify-content-between mb-1">
+                                    <input type="text" id="txtPorIGVFNC" hidden />
+                                    <span class="w-px-150" id="lblPorIGVFNC"></span>
+                                    <h6 class="mb-0" id="lblIGVFNC">0.00</h6>
+                                </div>
+                                <hr class="my-2" />
+                                <div class="d-flex justify-content-between">
+                                    <span class="w-px-150">TOTAL</span>
+                                    <h6 class="mb-0" id="lblTotalFNC">0.00</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card-footer d-flex justify-content-center">
+        <div class="d-grid gap-3 col-lg-3 me-3">
+            <button class="btn btn-outline-secondary" type="button" id="btnRegresarListaNC">Cancelar</button>
+        </div>
+        <div class="d-grid gap-3 col-lg-3">
+            <button class="btn btn-warning" type="button" id="btnGuardarNC">Grabar Nota de Crédito</button>
+        </div>
+    </div>
+</div>
+<!-- /Nota de Crédito -->
+
+<!-- Modal Mostrar Ordenes -->
+<div class="modal fade" id="MostrarTarjetas" tabindex="-1" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+    <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header bg-primary">
+                <h4 class="modal-title text-white" id="modalCenterTitle">Seleccionar Tarjeta</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="card-datatable">
+                    <table id="tablatarjetas" class="table table-responsive table-hover table-striped table-valign-middle table-sm">
+                        <thead class="bg-custom-table">
+                            <tr>
+                                <th style="text-align:center">Opc</th>
+                                <th style="display:none">codser</th>
+                                <th style="text-align:center">Servicio</th>
+                                <th style="text-align:center">Tarjeta</th>
+                                <th style="text-align:center">Fecha</th>
+                                <th style="text-align:center">Manifiesto</th>
+                                <th style="text-align:center">Descripción</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="modal-footer d-flex justify-content-center">
+                <div class="d-grid gap-3 col-lg-3">
+                    <button class="btn btn-outline-secondary" id="btnCerrarListaTarjetas" data-bs-dismiss="modal">Regresar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /Modal Mostrar Ordenes -->
+
+<!-- Modal Mostrar Documentos para aplicar la N/C -->
+<div class="modal fade" id="MostrarDocumentos" tabindex="-1" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header bg-primary">
+                <h4 class="modal-title text-white" id="modalCenterTitleNC">Seleccionar Documento</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="card-datatable">
+                    <table id="tabladocumentos" class="table table-responsive table-hover table-striped table-valign-middle table-sm">
+                        <thead class="bg-custom-table">
+                            <tr>
+                                <th style="text-align:center">Opc</th>
+                                <th style="display:none">tipdoc</th>
+                                <th style="text-align:center">Nº Documento</th>
+                                <th style="text-align:center">Fecha Emisión</th>
+                                <th style="text-align:center">Fecha Vcmto.</th>
+                                <th style="text-align:center">Moneda</th>
+                                <th style="text-align:center">Imp.Total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="modal-footer d-flex justify-content-center">
+                <div class="d-grid gap-3 col-lg-3">
+                    <button class="btn btn-outline-secondary" id="btnCerrarListaDocumentos" data-bs-dismiss="modal">Regresar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /Modal Modal Mostrar Documentos para aplicar la N/C -->
+
+<script type="text/javascript" src="~/scripts/ModFacturacion/ManteFacturas.js?v=1.0065"></script>

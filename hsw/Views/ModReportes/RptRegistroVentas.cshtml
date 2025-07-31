@@ -1,0 +1,51 @@
+﻿<style>
+    .btn-excel {
+        background-color: #217346; /* Color verde de Excel */
+        color: white; /* Texto blanco para mejor contraste */
+        border-color: #217346; /* Opcional: para que el borde también sea verde */
+    }
+
+        .btn-excel:hover {
+            background-color: #1a5a37; /* Color más oscuro al pasar el ratón */
+            color: white; /* Texto blanco para mejor contraste */
+            border-color: #1a5a37;
+        }
+</style>
+
+<!-- Content -->
+<div id="lista">
+    <div class="card h-100">
+        <h5 class="card-header text-center">REPORTE DE VENTAS</h5>
+
+        <div class="card-body">
+
+            <div class="row mt-1 mb-2 g-5 justify-content-center">
+                <div class="col-xl-3 col-md-4 col-5">
+                    <div class="form-floating form-floating-outline d-flex justify-content-center">
+                        <input class="form-control" type="date" id="dtpFecIni" />
+                        <label for="dtpFecIni">Del *</label>
+                        <div class="invalid-feedback text-start">Por favor ingrese fecha de inicio</div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-md-4 col-5">
+                    <div class="form-floating form-floating-outline d-flex justify-content-center">
+                        <input class="form-control" type="date" id="dtpFecFin" />
+                        <label for="dtpFecFin">Al *</label>
+                        <div class="invalid-feedback text-start">Por favor ingrese fecha de fin</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card-footer d-flex justify-content-center">
+            <div class="d-grid gap-3 col-lg-3">
+                <button class="btn btn-excel" type="button" id="btnExportar">
+                    <i class="ri-file-excel-line ri-20px me-1_5"></i> Exportar Excel
+                </button>
+            </div>
+        </div>
+
+    </div>
+</div>
+<!--/ Scrollable -->
+<script type="text/javascript" src="~/scripts/ModReportes/RptRegistroVentas.js?v=1.0002"></script>

@@ -1,0 +1,134 @@
+﻿/* Estilo para el borde del combo Select2 cuando tiene un error */
+.select2-container--default .select2-selection--single.is-invalid {
+    border-color: #ff6e6b; /* Color rojo de error de Bootstrap */
+    border-width: 2px; /* <--- ¡Asegura que este valor esté presente! */
+    padding-right: calc(1.5em + 0.75rem); /* Ajuste para el icono de validación */
+    /*
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='%23dc3545'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e");
+*/
+
+    background-repeat: no-repeat;
+    background-position: right calc(0.375em + 0.1875rem) center;
+    background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
+}
+    /* Asegura que el borde rojo persista cuando el combo Select2 está inválido Y el mouse pasa por encima */
+    .select2-container--default .select2-selection--single.is-invalid:hover {
+        border-color: #ff6e6b; /* Mismo color rojo personalizado para el error */
+        /* Opcional: Si quieres que la sombra también persista en hover, podrías añadirla aquí */
+        /* box-shadow: 0 0 0 0.25rem rgba(255, 110, 107, 0.25); */
+    }
+
+    /* Es crucial también tener esta regla para el efecto de sombra al enfocar */
+    .select2-container--default .select2-selection--single.is-invalid:focus,
+    .select2-container--default.select2-container--open .select2-selection--single.is-invalid {
+        border-color: #ff6e6b !important; /* Color rojo de error personalizado */
+        /*box-shadow: 0 0 0 0.25rem rgba(255, 110, 107, 0.25); /* Sombra roja de Bootstrap */
+    }
+
+    /* Para asegurar que el color del texto seleccionado dentro del combo también sea rojo si hay un error */
+    .select2-container--default .select2-selection--single.is-invalid .select2-selection__rendered {
+        color: #ff6e6b; /* Rojo de error */
+    }
+
+/* Para aplicar el mismo estilo de validación al buscador dentro del dropdown de Select2 */
+.select2-container--open .select2-dropdown .select2-search__field.is-invalid {
+    border-color: #ff6e6b !important;
+}
+
+/*
+     * Opcional: Para asegurar que la flecha sea roja incluso cuando no está abierta
+     * pero el combo es inválido (apuntando hacia abajo).
+     */
+.select2-container--default .select2-selection--single.is-invalid .select2-selection__arrow b {
+    /* Aquí la flecha apunta hacia abajo, usando border-top-color. */
+    border-color: #ff6e6b transparent transparent transparent !important;
+}
+
+/*
+     * Asegura que la flechita del combo Select2 sea roja
+     * cuando el combo está inválido y abierto.
+     */
+.select2-container--default.select2-container--open .select2-selection--single.is-invalid .select2-selection__arrow b {
+    /* El color de la flecha se define por border-color.
+         * En estado "open", la flecha apunta hacia arriba, usando border-bottom-color.
+         * Por si acaso, ponemos todos los bordes transparentes excepto el de abajo.
+         */
+    border-color: transparent transparent #ff6e6b transparent !important; /* <--- ¡Ajuste clave aquí! */
+}
+
+/* Estilos para filas alternas en TODAS las tablas DataTables */
+.dataTable tbody tr:nth-child(odd) {
+    background-color: #f2f3f4 !important; /* Color impar */
+}
+
+.dataTable tbody tr:nth-child(even) {
+    background-color: #ffffff !important; /* Color par */
+}
+
+/* Estilo para la fila seleccionada en TODAS las tablas DataTables */
+.dataTable tbody tr.fila-seleccionada {
+    background-color: #dcdcdc !important; /* !important es útil para sobrescribir estilos de librerías */
+    color: #000 !important; /* Asegura un buen contraste de texto */
+}
+
+div.dt-buttons {
+    float: left;
+}
+/*
+
+div.dataTables_wrapper div.dataTables_filter {
+    text-align: right;
+}
+
+    div.dataTables_wrapper div.dataTables_filter label {
+        font-weight: normal;
+        white-space: nowrap;
+        text-align: left;
+    }
+
+    div.dataTables_wrapper div.dataTables_filter input {
+        margin-left: 0.5em;
+        display: inline-block;
+        width: auto;
+    }
+
+div.dataTables_wrapper div.dataTables_length,
+div.dataTables_wrapper div.dataTables_filter {
+    /*margin-top: 1.25rem;
+    margin-bottom: 1.25rem;*/
+    /*
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+*/
+
+/* estilos para controlar checkbox del datatable del jquery
+.controls {
+    display: flex; Para alinear los elementos en la misma línea
+    align-items: center; Centrar verticalmente
+    margin-bottom: 10px; Espacio debajo de la barra de controles
+}
+*/
+/*
+.dt-buttons {
+    margin-right: 15px; Espacio entre los botones y el checkbox
+}
+*/
+/*
+.filtro-buscador {
+    display: flex;
+    align-items: center;
+    margin-right: auto; Empuja el buscador a la derecha
+}
+
+.filtro-buscador input[type="checkbox"] {
+    margin-right: 5px;
+}
+ */
+.dataTables_filter {
+    /* No necesitamos estilos de margen específicos aquí ya que se controla con margin-right: auto en .filtro-buscador */
+}
+
+.dataTables_empty {
+    text-align: center; /* Para centrar mensaje que se muestra cuando la tabla esta vacia */
+}

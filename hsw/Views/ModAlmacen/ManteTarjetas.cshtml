@@ -1,0 +1,538 @@
+﻿<div  class="card h-100 w-100" id="tarjeta-lst">
+    <h5 class="card-header bg-primary text-white text-center">LISTADO DE ORDENES</h5>
+    <div class="card-body">
+        <div class="row mt-3">
+            <div class="col-12 col-md-4 mb-3">
+                <div class="form-floating form-floating-outline">
+                    <select class="form-select" tabindex="4" id="cboServicio"></select>
+                    <label for="cboServicio">Servicio *</label>
+                    <div class="invalid-feedback text-start">Por favor seleccione un servicio</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card-datatable">
+            <table id="tabla" class="table table-bordered table-striped table-hover table-responsive table-sm" tabindex="0">
+                <thead>
+                    <tr style="background-color:#2F75B5;color:white;">
+                        <th class="text-center">Acciones</th>
+                        <th class="text-center">N° Orden</th>
+                        <th class="text-center">Fecha Apertura</th>
+                        <th class="text-center">Código</th>
+                        <th class="text-center">Razón Social</th>
+                        <th class="text-center">Peso</th>
+                        <th class="text-center">Bultos</th>
+                        <th class="text-center">CIF US$</th>
+                        <th class="text-center">CIF S/.</th>
+                        <th class="text-center">Observaciones</th>
+                        <th class="text-center">N° DAM</th>
+                        <th class="text-center">Fecha DAM</th>
+                        <th class="text-center">Fecha Vencmto</th>
+                        <th class="text-center">N° Declaración</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+    </div>
+</div>
+<div class="card mt-2" id="tarjeta-det" hidden>
+    <h5 class="card-header text-center">DETALLE DE ORDEN</h5>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-12">
+                <div class="card-datatable table-responsive">
+                    <table id='tablamov' class='table dt-scrollableTable table-bordered table-striped table-hover table-sm'>
+                        <thead>
+                            <tr style="background-color:#2F75B5;color:white;">
+                                <th class="text-center">Acción</th>
+                                <th class="text-center">N° Aut</th>
+                                <th class="text-center">Fecha</th>
+                                <th class="text-center">Descripción</th>
+                                <th class="text-center">Cant Ing</th>
+                                <th class="text-center">CIF US$ Ing</th>
+                                <th class="text-center">Cant Sal</th>
+                                <th class="text-center">CIF US$ Sal</th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--/ Scrollable -->
+<div class="card" id="tarjeta-edt" hidden>
+    <h5 class="card-header bg-primary text-white text-center">EDICIÓN ORDEN</h5>
+    <div class="card-body">
+
+        <div class="row mt-1 mb-2 g-5">
+            <div class="col-md-4">
+                <div class="form-floating form-floating-outline">
+                    <input type="text" id="txtNroTar" name="txtNroTar" class="form-control" placeholder="N° Orden" oninput="this.value=this.value.toUpperCase();" autocomplete="off" disabled  />
+                    <label for="txtNroTar">N° Orden *</label>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-floating form-floating-outline">
+                    <input type="text" id="txtDesSer" name="txtDesSer" class="form-control" placeholder="N° Orden" oninput="this.value=this.value.toUpperCase();" autocomplete="off" disabled />
+                    <label for="txtDeSer">Vía Transporte *</label>
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="form-floating form-floating-outline">
+                    <input class="form-control" type="date" id="dtpFecha" />
+                    <label for="dtpFecha">Fecha *</label>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6">
+                <div class="form-floating form-floating-outline">
+                    <select id="cboCliPro" class="select2 form-select">
+                    </select>
+                    <label for="cboCliPro">Cliente</label>
+                    <div class="invalid-feedback text-start" id="feedback-cboCliPro">Por favor, seleccione un cliente.</div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="form-floating form-floating-outline">
+                    <input type="text" id="txtDirecc" name="txtDirecc" class="form-control" placeholder="Dirección" oninput="this.value=this.value.toUpperCase();" autocomplete="off" disabled />
+                    <label for="txtDirecc">Dirección *</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-12">
+
+            <div class="nav-align-top" id="ordenTabs">
+                <ul class="nav nav-pills flex-column flex-md-row gap-2 gap-lg-0" role="tablist">
+
+                    <li class="nav-item">
+                        <button type="button"
+                                class="nav-link active"
+                                role="tab"
+                                data-bs-toggle="tab"
+                                data-bs-target="#navs-datos-cotizacion"
+                                aria-controls="navs-datos-cotizacion"
+                                aria-selected="true">
+                            <i class="ri-group-line me-2"></i>
+                            Cotización
+                        </button>
+                    </li>
+
+                    <li class="nav-item">
+                        <button type="button"
+                                class="nav-link"
+                                role="tab"
+                                data-bs-toggle="tab"
+                                data-bs-target="#navs-datos-detalle"
+                                aria-controls="navs-datos-detalle"
+                                aria-selected="false">
+                            <i class="ri-lock-line me-2"></i>
+                            Detalle Orden
+                        </button>
+                    </li>
+
+                    <li class="nav-item">
+                        <button type="button"
+                                class="nav-link"
+                                role="tab"
+                                data-bs-toggle="tab"
+                                data-bs-target="#navs-datos-mercancia"
+                                aria-controls="navs-datos-mercancia"
+                                aria-selected="false">
+                            <i class="ri-bookmark-line me-2"></i>
+                            Mercancía
+                        </button>
+                    </li>
+
+                    <li class="nav-item">
+                        <button type="button"
+                                id="tabAdjuntos"
+                                class="nav-link"
+                                role="tab"
+                                data-bs-toggle="tab"
+                                data-bs-target="#navs-adjuntos"
+                                aria-controls="navs-adjuntos"
+                                aria-selected="false">
+                            <i class="ri-link-m me-2"></i>
+                            Archivos Adjuntos
+                        </button>
+                    </li>
+
+                </ul>
+
+                <div class="tab-content">
+                    <div class="tab-pane fade show active mb-2" id="navs-datos-cotizacion" role="tabpanel">
+
+                        <div class="row mb-2 g-5">
+                            <div class="col-12 col-md-3">
+                                <div class="form-floating form-floating-outline">
+                                    <input type="text" id="txtid_cotizacion" name="txtid_cotizacion" class="form-control" placeholder="N° Orden" oninput="this.value=this.value.toUpperCase();" autocomplete="off" tabindex="0" disabled />
+                                    <label for="txtid_cotizacion">Cotización</label>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-3">
+                                <div class="form-floating form-floating-outline">
+                                    <input class="form-control" type="date" id="dtpFechaC" disabled/>
+                                    <label for="dtpFechaC">Fecha *</label>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-3">
+                                <div class="form-floating form-floating-outline">
+                                    <input type="text" id="txtNroCar" name="txtNroCar" class="form-control" placeholder="N° Carta" oninput="this.value=this.value.toUpperCase();" autocomplete="off" tabindex="0" disabled />
+                                    <label for="txtNroCar">N° Carta</label>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-3">
+                                <div class="form-floating form-floating-outline">
+                                    <input type="text" id="txtMoneda" name="txtMoneda" class="form-control" placeholder="Moneda" oninput="this.value=this.value.toUpperCase();" autocomplete="off" tabindex="0" disabled />
+                                    <label for="txtMoneda">Moneda</label>
+                                </div>
+                            </div>
+
+                            <h6 class="card-header text-center">SERVICIOS DE LA COTIZACIÓN</h6>
+                            <div class="card-datatable" id="div_cotidet">
+                                <h6>Uso de Montacarga</h6>
+                                <table class="table table-bordered table-striped table-hover table-sm">
+                                    <thead>
+                                        <tr>
+                                            <th class="text-center" style="background-color:#2F75B5!important;color:white;">Servicio</th>
+                                            <th class="text-center" style="background-color:#2F75B5!important;color:white;">Precio</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td style="text-align:left">MOVILIZACION DE CARGA (DESPACHO)</td>
+                                            <td style="text-align:right">99.00</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align:left">MOVILIZACION DE CARGA (DESPACHO)</td>
+                                            <td style="text-align:right">99.00</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align:left">MOVILIZACION DE CARGA (DESPACHO)</td>
+                                            <td style="text-align:right">99.00</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <h6>Uso de Montacarga</h6>
+                                <table class="dt-scrollableTable table table-bordered table-striped table-hover table-sm">
+                                    <tr>
+                                        <th class="text-center" style="background-color:#2F75B5!important;color:white;">Servicio</th>
+                                        <th class="text-center" style="background-color:#2F75B5!important;color:white;">Precio</th>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="tab-pane fade" id="navs-datos-detalle" role="tabpanel">
+
+                        <div class="row mb-2 g-5">
+                            <div class="col-12 col-md-6">
+                                <div class="form-floating form-floating-outline">
+                                    <select id="cboAgencia" class="select2 form-select">
+                                    </select>
+                                    <label for="cboAgencia">Agencia de Aduana</label>
+                                    <div class="invalid-feedback text-start" id="feedback-cboAgencia">Por favor, seleccione una agencia de aduana.</div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-3">
+                                <div class="form-floating form-floating-outline">
+                                    <input type="text" id="txtNroDUAx" name="txtNroDUAx" class="form-control" placeholder="N° Declaración" oninput="this.value=this.value.toUpperCase();" autocomplete="off" tabindex="0">
+                                    <label for="txtNroDUAx">N° Declaración *</label>
+                                    <div class="invalid-feedback text-start">Por favor, ingrese N° Declaración.</div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-3">
+                                <div class="form-floating form-floating-outline">
+                                    <input class="form-control" type="date" id="dtpFecDUA" />
+                                    <label for="dtpFecDUA">Fecha Numeración *</label>
+                                    <div class="invalid-feedback text-start">Por favor, ingrese Fecha Numeración.</div>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-md-6">
+                                <div class="form-floating form-floating-outline">
+                                    <select id="cboDestinacion" class="select2 form-select">
+                                    </select>
+                                    <label for="cboDestinacion">Destino</label>
+                                    <div class="invalid-feedback text-start" id="feedback-cboDestinacion">Por favor, seleccione destino.</div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-3">
+                                <div class="form-floating form-floating-outline">
+                                    <input type="text" id="txtManifiesto" name="txtManifiesto" class="form-control" placeholder="Manifiesto" oninput="this.value=this.value.toUpperCase();" autocomplete="off" tabindex="0">
+                                    <label for="txtManifiesto">Manifiesto *</label>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-3">
+                                <div class="form-floating form-floating-outline">
+                                    <input class="form-control" type="date" id="dtpFecVen" />
+                                    <label for="dtpFecVen">Fecha Vencimiento *</label>
+                                    <div class="invalid-feedback text-start">Por favor, ingrese Fecha Vencimiento.</div>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-md-6">
+                                <div class="form-floating form-floating-outline">
+                                    <select id="cboUbicacion" class="select2 form-select">
+                                    </select>
+                                    <label for="cboUbicacion">Ubicación</label>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-3">
+                                <div class="form-floating form-floating-outline">
+                                    <input type="text" id="txtDetalle_Manifiesto" name="txtDetalle_Manifiesto" class="form-control" placeholder="Detalle Manifiesto" oninput="this.value=this.value.toUpperCase();" autocomplete="off" tabindex="0"maxlength="10">
+                                    <label for="txtDetalle_Manifiesto">Detalle de manifiesto</label>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-3">
+                                <div class="form-floating form-floating-outline">
+                                    <input type="text" id="txtDAM" name="txtDAM" class="form-control" placeholder="DAM" oninput="this.value=this.value.toUpperCase();" autocomplete="off" tabindex="0" maxlength="20">
+                                    <label for="txtDAM">DAM</label>
+                                    <div class="invalid-feedback text-start">Por favor, ingrese Nro. DAM.</div>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-md-6">
+                                <div class="form-floating form-floating-outline">
+                                    <select id="cboTemporal" class="select2 form-select">
+                                    </select>
+                                    <label for="cboTemporal">Dep. temporal</label>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-3">
+                                <div class="form-floating form-floating-outline">
+                                    <input type="text" id="txtArancel" name="txtArancel" class="form-control" placeholder="Subpartida Nacional" oninput="this.value=this.value.toUpperCase();" autocomplete="off" tabindex="0" maxlength="20">
+                                    <label for="txtArancel">Subpartida Nacional</label>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-3">
+                                <div class="form-floating form-floating-outline">
+                                    <input class="form-control" type="date" id="dtpFecRef" />
+                                    <label for="dtpFecRef">Fecha de Factura Comercial</label>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-md-3">
+                                <div class="form-floating form-floating-outline">
+                                    <input type="text" id="txtRefer" name="txtRefer" class="form-control" placeholder="Factura Comercial" oninput="this.value=this.value.toUpperCase();" autocomplete="off" tabindex="0" maxlength="50">
+                                    <label for="txtRefer">Factura Comercial</label>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-3">
+                                <div class="form-floating form-floating-outline">
+                                    <input type="text" id="txtVAPAVI" name="txtVAPAVI" class="form-control" placeholder="VAP / AVI" oninput="this.value=this.value.toUpperCase();" autocomplete="off" tabindex="0" maxlength="30">
+                                    <label for="txtVAPAVI">VAP / AVI</label>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="form-floating form-floating-outline">
+                                    <input type="text" id="txtNroCon" name="txtNroCon" class="form-control" placeholder="Documento Transporte" oninput="this.value=this.value.toUpperCase();" autocomplete="off" tabindex="0" maxlength="20">
+                                    <label for="txtNroCon">Documento Transporte</label>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-md-6">
+                                <div class="form-floating form-floating-outline">
+                                    <textarea id="txtObs" name="txtObs" class="form-control" rows="2" placeholder="Observaciones" oninput="this.value=this.value.toUpperCase();" autocomplete="off"></textarea>
+                                    <label for="txtObs">Observaciones</label>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-2">
+                                <div class="form-floating form-floating-outline">
+                                    <input type="text" id="txtCont20" name="txtCont20" class="form-control" placeholder="# Cont 20&quot;" oninput="this.value=this.value.toUpperCase();" autocomplete="off" tabindex="0">
+                                    <label for="txtCont20"># Cont 20"</label>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-2">
+                                <div class="form-floating form-floating-outline">
+                                    <input type="text" id="txtCont40" name="txtCont40" class="form-control" placeholder="# Cont 40&quot;" oninput="this.value=this.value.toUpperCase();" autocomplete="off" tabindex="0">
+                                    <label for="txtCont40"># Cont 40"</label>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-2">
+                                <div class="form-floating form-floating-outline">
+                                    <input type="text" id="txtMercancia_suelta" name="txtMercancia_suelta" class="form-control" placeholder="Mercancía suelta M3" oninput="this.value=this.value.toUpperCase();" autocomplete="off" tabindex="0">
+                                    <label for="txtMercancia_suelta">Mercancía suelta M3</label>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="tab-pane fade" id="navs-datos-mercancia" role="tabpanel">
+
+                        <div class="row mb-2 g-5 align-items-start">
+                            <div class="col-12 col-md-9">
+                                <div class="form-floating form-floating-outline">
+                                    <select id="cboTipoMercancia" class="select2 form-select">
+                                    </select>
+                                    <label for="cboTipoMercancia">Tipo Mercancía</label>
+                                    <div class="invalid-feedback text-start" id="feedback-cboTipoMercancia">Por favor, seleccione tipo de mercancía.</div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-3">
+                                <div class="form-floating form-floating-outline">
+                                    <select id="cbo_tipo_flamabilidad" class="select2 form-select">
+                                        <option value="-1">** SEL.FLAMABILIDAD **</option>
+                                        <option value="1">Flamabilidad 10%</option>
+                                        <option value="2">Flamabilidad 20%</option>
+                                    </select>
+                                    <label for="cbo_tipo_flamabilidad">Flamabilidad</label>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-md-9">
+                                <div class="form-floating form-floating-outline">
+                                    <select id="cboBultos" class="select2 form-select">
+                                    </select>
+                                    <label for="cboBultos">Bulto</label>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-3">
+                                <div class="form-floating form-floating-outline">
+                                    <input type="text" id="txtFOB" name="txtFOB" class="form-control text-end" placeholder="FOB" autocomplete="off" tabindex="0">
+                                    <label for="txtFOB">FOB</label>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-md-9">
+                                <div class="form-floating form-floating-outline">
+                                    <textarea id="txtDesMer" name="txtDesMer" class="form-control" rows="2" placeholder="Descripción" oninput="this.value=this.value.toUpperCase();" autocomplete="off"></textarea>
+                                    <label for="txtDesMer">Descripción Mercancía</label>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-3">
+                                <div class="form-floating form-floating-outline">
+                                    <input type="text" id="txtFlete" name="txtFlete" class="form-control text-end" placeholder="Flete" autocomplete="off" tabindex="0">
+                                    <label for="txtFlete">Flete</label>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-md-6">
+                                <div class="form-floating form-floating-outline">
+                                    <input type="text" id="txtPrecinto" name="txtPrecinto" class="form-control" placeholder="Precinto" oninput="this.value=this.value.toUpperCase();" autocomplete="off" tabindex="0">
+                                    <label for="txtPrecinto">Precinto</label>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-3">
+                                <div class="form-check form-check-inline mt-3 mt-md-0 justify-content-end">
+                                    <input class="form-check-input" type="checkbox" id="chkMarca" />
+                                    <label class="form-check-label" for="chkMarca">Levante de Mercadería</label>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-md-3">
+                                <div class="form-floating form-floating-outline">
+                                    <input type="text" id="txtSeguro" name="txtSeguro" class="form-control text-end" placeholder="Seguro" oninput="this.value=this.value.toUpperCase();" autocomplete="off" tabindex="0">
+                                    <label for="txtSeguro">Seguro</label>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-md-9">
+                            </div>
+                            <div class="col-12 col-md-3">
+                                <div class="form-floating form-floating-outline">
+                                    <input type="text" id="txtAjuste" name="txtAjuste" class="form-control text-end" placeholder="Ajuste" oninput="this.value=this.value.toUpperCase();" autocomplete="off" tabindex="0">
+                                    <label for="txtAjuste">Ajuste</label>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-md-9">
+                            </div>
+                            <div class="col-12 col-md-3">
+                                <div class="form-floating form-floating-outline">
+                                    <input type="text" id="txtCIF" name="txtCIF" class="form-control text-end" placeholder="CIF" disabled >
+                                    <label for="txtCIF">CIF</label>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="tab-pane fade" id="navs-adjuntos" role="tabpanel">
+
+                        <div class="card-datatable">
+                            <table id="tabladoc" class="dt-scrollableTable table table-bordered table-striped table-hover table-sm">
+                                <thead>
+                                    <tr style="background-color:#2F75B5!important;color:white!important;">
+                                        <th class="text-center">Acciones</th>
+                                        <th class="text-center">Id</th>
+                                        <th class="text-center">Tipo Documento Anexado</th>
+                                        <th class="text-center">Observaciones</th>
+                                        <th class="text-center">Nombre de Archivo</th>
+                                        <th class="text-center">Tamaño</th>
+                                        <th class="text-center">Usuario que registra</th>
+                                        <th class="text-center">Fecha de registro</th>
+                                    </tr>
+                                </thead>
+                            </table>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="card-footer d-flex justify-content-center">
+        <div class="d-grid gap-3 col-lg-3 me-3">
+            <button class="btn btn-outline-secondary" type="button" id="btnRegresarLista">Regresar Lista</button>
+        </div>
+        <div class="d-grid gap-3 col-lg-3">
+            <button class="btn btn-primary" type="button" id="btnGuardarTarjeta">Grabar Tarjeta</button>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="tarjeta-doc" tabindex="-1" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header bg-primary">
+                <h4 class="modal-title text-white" id="modalTitulo">Adjuntar Documentos a la Orden</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+
+                <div class="row mb-4 g-3">
+                    <div class="col-12 col-md-12">
+                        <div class="form-floating form-floating-outline">
+                            <select id="cboTarjeta_td" class="select2 form-select">
+                            </select>
+                            <label for="cboTarjeta_td">Tipo Documento a adjuntar</label>
+                            <div class="invalid-feedback text-start" id="feedback-cboAgencia">Por favor, seleccione un tipo de documento.</div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-12">
+                        <div class="form-floating form-floating-outline">
+                            <textarea id="txtObsD" name="txtObsD" class="form-control h-px-100" placeholder="Observaciones" maxlength="500" oninput="this.value=this.value.toUpperCase();" autocomplete="off"></textarea>
+                            <label for="txtObsD">Observaciones</label>
+                        </div>
+                    </div>
+
+                    <div class="mb-4">
+                        <input class="form-control" type="file" id="fileAdjuntar" accept=".pdf" />
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="modal-footer d-flex justify-content-center">
+                <div class="d-grid gap-3 col-lg-3">
+                    <button class="btn btn-outline-secondary" type="reset" data-bs-dismiss="modal">Cancelar</button>
+                </div>
+                <div class="d-grid gap-3 col-lg-3">
+                    <button class="btn btn-primary" type="button" id="btnGuardarDoc">Guardar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /Modal -->
+<script type="text/javascript" src="~/scripts/ModAlmacen/ManteTarjetas.js?v=1.054"></script>

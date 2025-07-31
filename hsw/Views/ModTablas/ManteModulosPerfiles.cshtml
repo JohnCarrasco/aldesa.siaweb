@@ -1,0 +1,239 @@
+﻿ <!-- Content -->
+<!-- Invoice List Table -->
+
+<div id="lista-lst" class="nav-align-top">
+    <ul class="nav nav-pills flex-column flex-md-row mb-6 gap-2 gap-lg-0" role="tablist">
+        <li class="nav-item">
+            <button type="button"
+                    class="nav-link"
+                    role="tab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#navs-datos-modulos"
+                    aria-controls="navs-datos-modulos"
+                    aria-selected="false">
+                <i class="ri-lock-line me-2"></i>
+                Módulos
+            </button>
+        </li>
+        <li class="nav-item">
+            <button type="button"
+                    class="nav-link active"
+                    role="tab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#navs-datos-asignar"
+                    aria-controls="navs-datos-asignar"
+                    aria-selected="false">
+                <i class="ri-bookmark-line me-2"></i>
+                Asignar Módulo a Perfil
+            </button>
+        </li>
+    </ul>
+    <div class="tab-content">
+        <div class="tab-pane fade mb-2" id="navs-datos-modulos" role="tabpanel">
+            <div class="row">
+
+                <div class="col-md-6 col-lg-8">
+                    <div class="card">
+                        <h5 class="card-header bg-primary text-white">Listado de Módulos</h5>
+                        <div class="card-body">
+                            <div class="card-datatable">
+                                <table id="tablaModulos" class="dt-scrollableTable table table-bordered table-striped table-hover table-sm">
+                                    <thead>
+                                        <tr style="background-color:#2F75B5;color:white;">
+                                            <th class="text-center">Acciones</th>
+                                            <th class="text-center">Id</th>
+                                            <th class="text-center">Ord</th>
+                                            <th class="text-center">Módulo</th>
+                                            <th class="text-center">Módulo Padre</th>
+                                            <th class="text-center">Vista</th>
+                                            <th class="text-center">Icono</th>
+                                            <th class="text-center">Estado</th>
+                                            <th class="text-center">Creación</th>
+                                            <th class="text-center">Actualización</th>
+                                        </tr>
+                                    </thead>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card">
+                        <h5 class="card-header bg-primary text-white">Organizar Módulos</h5>
+                        <div class="card-body">
+                            <div>Módulos del Sistema</div>
+                            <div id="arbolModulos"></div>
+                            <div class="row m-2">
+                                <div class="col md-12">
+                                    <button class="btn btn-success" id="btnReordenarModulos">Organizar Módulos</button>
+                                </div>
+                                <div class="col md-12">
+                                    <button class="btn btn-warning" id="btnReiniciar">Estado Inicial</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade show active mb-2" id="navs-datos-asignar" role="tabpanel">
+            <div class="row">
+
+                <div class="col-md-6 col-lg-8">
+                    <div class="card">
+                        <h5 class="card-header bg-primary text-white">Listado de Perfiles</h5>
+                        <div class="card-body">
+                            <div class="card-datatable">
+                                <table id="tablaPerfiles" class="dt-scrollableTable table table-bordered table-striped table-hover table-sm">
+                                    <thead>
+                                        <tr style="background-color:#2F75B5;color:white;">
+                                            <th class="text-center">Acciones</th>
+                                            <th class="text-center">Id</th>
+                                            <th class="text-center">Perfil</th>
+                                            <th class="text-center">Estado</th>
+                                            <th class="text-center">Creación</th>
+                                            <th class="text-center">Actualización</th>
+                                        </tr>
+                                    </thead>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card">
+                        <h5 class="card-header bg-primary text-white">Módulos</h5>
+                        <div class="card-body">
+                            <div class="row m-2">
+                                <div class="col md-6">
+                                    <button class="btn btn-success btn-small m-0 p-0 w-100" id="btnMarcarModulos" disabled>Marcar Todo</button>
+                                </div>
+                                <div class="col md-6">
+                                    <button class="btn btn-danger btn-small m-0 p-0 w-100" id="btnDesmarcarModulos" disabled>Desmarcar Todo</button>
+                                </div>
+                            </div>
+                            <div id="modulos" class="overflow-auto"></div>
+                            <hr />
+                            <div class="col-12 col-md-12">
+                                <div class="form-floating form-floating-outline">
+                                    <select id="select_modulos" class="select2 form-select">
+                                        <option value="0">--No hay modulos seleccionados--</option>
+                                    </select>
+                                    <label for="select_modulos">Selecciones el módulo de incio</label>
+                                </div>
+                            </div>
+
+                            <div class="row m-2">
+                                <div class="col md-12">
+                                    <button class="btn btn-success w-50" id="btnAsignarModulos" disabled>Asignar</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!--/ Scrollable -->
+
+<!-- Modal -->
+<div class="modal fade" id="PerfilAdiMod" tabindex="-1" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header bg-primary">
+                <h4 class="modal-title text-white" id="modalCenterTitle">Perfil</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row mb-4 g-3">
+                    <div class="col-6 col-md-2">
+                        <div class="form-floating form-floating-outline">
+                            <input type="text" id="txtId_Perfil" name="txtId_Perfil" class="form-control" disabled />
+                            <label for="txtId_Perfil">Id</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-4 g-3">
+                    <div class="col-12 col-md-12">
+                        <div class="form-floating form-floating-outline">
+                            <input type="text" id="txtDescriPerfil" name="txtDescriPerfil" class="form-control" placeholder="Descripción *" oninput="this.value=this.value.toUpperCase();" maxlength="50" autocomplete="off" />
+                            <label for="txtDescriPerfil">Descripción *</label>
+                            <div class="invalid-feedback text-start">Por favor ingrese descripción del perfil</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer d-flex justify-content-center">
+                <div class="d-grid gap-3 col-lg-3">
+                    <button class="btn btn-outline-secondary" type="button" id="btnCancelarPerfil">Cancelar</button>
+                </div>
+                <div class="d-grid gap-3 col-lg-3">
+                    <button class="btn btn-primary" type="button" id="btnGuardarPerfil">Guardar</button>
+                </div>
+             </div>
+        </div>
+    </div>
+</div>
+<!-- /Modal -->
+
+<!-- Modal -->
+<div class="modal fade" id="ModuloAdiMod" tabindex="-1" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header bg-primary">
+                <h4 class="modal-title text-white" id="modalCenterTitle">Módulo</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row mb-4 g-3">
+                    <div class="col-6 col-md-2">
+                        <div class="form-floating form-floating-outline">
+                            <input type="text" id="txtId_Modulo" name="txtId_Modulo" class="form-control" disabled />
+                            <label for="txtId_Modulo">Id</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-4 g-3">
+                    <div class="col-12 col-md-12">
+                        <div class="form-floating form-floating-outline">
+                            <input type="text" id="txtDescriModulo" name="txtDescriModulo" class="form-control" placeholder="Descripción *" maxlength="50" autocomplete="off" />
+                            <label for="txtDescriModulo">Descripción *</label>
+                            <div class="invalid-feedback text-start">Por favor ingrese descripción del módulo</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-4 g-3">
+                    <div class="col-12 col-md-6">
+                        <div class="form-floating form-floating-outline">
+                            <input type="text" id="txtRuta_Vista" name="txtRuta_Vista" class="form-control" placeholder="Vista Módulo" maxlength="50" autocomplete="off" />
+                            <label for="txtRuta_Vista">Vista Módulo</label>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="form-floating form-floating-outline">
+                            <input type="text" id="txtIcon_Menu" name="txtIcon_Menu" class="form-control" placeholder="Icono" maxlength="50" autocomplete="off" value="far fa-circle" />
+                            <label for="txtIcon_Menu">Icono</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer d-flex justify-content-center">
+                <div class="d-grid gap-3 col-lg-3">
+                    <button class="btn btn-outline-secondary" type="button" id="btnCancelarModulo">Cancelar</button>
+                </div>
+                <div class="d-grid gap-3 col-lg-3">
+                    <button class="btn btn-primary" type="button" id="btnGuardarModulo">Guardar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /Modal -->
+
+<script type="text/javascript" src="~/scripts/ModTablas/ManteModulosPerfiles.js?v=1.017"></script>

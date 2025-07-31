@@ -1,0 +1,266 @@
+﻿<style>
+
+    #CliProAdiMod .modal-dialog {
+        max-width: 60%;
+        min-width: 30%;
+        margin: auto; /* Center horizontally */
+    }
+
+    #CliProAdiMod .modal-content {
+        max-height: 60vh;
+    }
+
+    #CliProAdiMod .tab-content {
+        min-height: 52vh; /* Ajusta esta altura según tus necesidades */
+        max-height: 52vh; /* Ajusta esta altura según tus necesidades */
+        overflow-y: auto;
+    }
+
+
+    /* Estilo para el contenedor del checkbox */
+    .form-check {
+        display: flex; /* Habilitar el diseño flexbox */
+        align-items: center; /* Alinear los elementos verticalmente */
+    }
+
+    /* Estilo para el input del checkbox */
+    .form-check-input {
+        margin-right: 10px; /* Agregar un margen derecho para el espaciado */
+    }
+
+    /* Estilo para el label del checkbox */
+    .form-check-label {
+        cursor: pointer; /* Permitir hacer clic en el label para activar el checkbox */
+    }
+
+</style>
+
+ <!-- Create App Modal -->
+<div class="modal fade" id="CliProAdiMod" tabindex="-1" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header" style="background-color:#5478F1">
+                <h4 class="modal-title" style="color:white" id="modalCenterTitle">Cliente / Proveedor</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <div class="modal-body p-0">
+
+                <div class="card text-center mb-4">
+                    <div class="card-header p-0">
+                        <div class="nav-align-top">
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li class="nav-item">
+                                    <button type="button"
+                                            class="nav-link d-flex flex-column gap-1 active"
+                                            role="tab"
+                                            data-bs-toggle="tab"
+                                            data-bs-target="#navs-informacion-card"
+                                            aria-controls="navs-informacion-card"
+                                            aria-selected="true">
+                                        <i class="tf-icons ri-home-smile-line"></i> Información
+                                    </button>
+                                </li>
+                                <li class="nav-item">
+                                    <button type="button"
+                                            class="nav-link d-flex flex-column gap-1"
+                                            role="tab"
+                                            data-bs-toggle="tab"
+                                            data-bs-target="#navs-direcciones-card"
+                                            aria-controls="navs-direcciones-card"
+                                            aria-selected="false">
+                                        <i class="tf-icons ri-user-3-line"></i> Direcciones
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="card-body">
+                        <div class="tab-content pb-0">
+                            <div class="tab-pane fade show active" id="navs-informacion-card" role="tabpanel">
+                                <label style="display:none" id="lblCodigo">Codigo</label>
+                                <div class="row mb-4">
+                                    <div class="col-12 col-sm-6 col-md-3">
+                                        <div class="form-check form-check-success">
+                                            <input class="form-check-input" type="checkbox" value="" id="chkCliente"/>
+                                            <label class="form-check-label" for="chkCliente">Cliente</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-6 col-md-3">
+                                        <div class="form-check form-check-success">
+                                            <input class="form-check-input" type="checkbox" value="" id="chkProveedor"/>
+                                            <label class="form-check-label" for="chkProveedor">Proveedor</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-6 col-md-3">
+                                        <div class="form-check form-check-success">
+                                            <input class="form-check-input" type="checkbox" value="" id="chkTrabajador" disabled />
+                                            <label class="form-check-label" for="chkTrabajador">Trabajador</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-lg-6 col-sm-12">
+                                        <div class="form-floating form-floating-outline mb-4">
+                                            <select class="form-select" tabindex="0" id="cboTipDocPer" style="min-width: 250px;"></select>
+                                            <label for="cboTipDocPer">Tipo de documento *</label>
+                                            <div class="invalid-feedback text-start">Por favor seleccione un tpo de documento</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-sm-12">
+                                        <div class="form-floating form-floating-outline mb-4">
+                                            <input class="form-control bootstrap-maxlength-example" placeholder="Ingrese número de documento..." type="text" value="" tabindex="1" id="txtNroDoc" autocomplete="off" maxlength="20" />
+                                            <label for="txtNroDoc">Número de documento *</label>
+                                            <div class="invalid-feedback text-start">Por favor ingrese número de documento</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-12 col-sm-12">
+                                        <div class="form-floating form-floating-outline mb-4">
+                                            <input class="form-control" placeholder="Ingrese nombre o razón social..." type="text" value="" tabindex="2" id="txtRazSoc" autocomplete="off" oninput="this.value=this.value.toUpperCase();" />
+                                            <label for="txtRazSoc">Nombre o razón social *</label>
+                                            <div class="invalid-feedback text-start">Por favor ingrese razón social</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6 col-sm-12">
+                                        <div class="form-floating form-floating-outline mb-4">
+                                            <input class="form-control" placeholder="Ingrese nombre comercial..." type="text" value="" tabindex="3" id="txtRazSoc_Comercial" autocomplete="off" oninput="this.value=this.value.toUpperCase();" />
+                                            <label for="txtRazSoc_Comercial">Nombre comercial *</label>
+                                            <div class="invalid-feedback text-start">Por favor ingrese nombre comercial</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-sm-12">
+                                        <div class="form-floating form-floating-outline mb-4">
+                                            <select class="form-select" tabindex="4" id="cboNacionalidad"></select>
+                                            <label for="cboNacionalidad">Nacionalidad *</label>
+                                            <div class="invalid-feedback text-start">Por favor seleccine nacionalidad</div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="form-check form-check-primary" id="divAgente" style="display:none">
+                                            <input class="form-check-input" type="checkbox" value="" id="chkAgente" />
+                                            <label class="form-check-label" for="chkAgente">¿ Es agente de percepción ?</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-floating form-floating-outline mb-4" id="divPorcentaje" style="display:none">
+                                            <input class="form-control" placeholder="0" type="text" value="" tabindex="0" id="txtAgente_Porcen" />
+                                            <label for="txtPorcentaje">Porcentaje de percepción</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="tab-pane fade" id="navs-direcciones-card" role="tabpanel">
+
+                                <div id="cliproOriginal">
+
+                                    <div class="formulario">
+                                        <h5 class="form-title">Dirección Principal</h5>
+                                        <div class="row">
+                                            <div class="col-sm-4">
+                                                <div class="form-floating form-floating-outline mb-4">
+                                                    <select class="form-select cboPais" id="cboPais"></select>
+                                                    <label for="cboPais">País *</label>
+                                                    <div class="invalid-feedback text-start">Por favor seleccione un país</div>
+                                                </div>
+                                            </div>
+                                            <label style="display:none" id="lblUbiGeo">UbiGeo</label>
+                                            <div class="col-sm-8">
+                                                <div class="input-group input-group-merge mb-4">
+                                                    <div class="form-floating form-floating-outline">
+                                                        <input class="form-control" placeholder="ubigeo *" type="text" value="" tabindex="2" id="txtUbiGeo" autocomplete="off" />
+                                                        <label for="txtUbiGeo">Ubigeo *</label>
+                                                    </div>
+                                                    <span class="input-group-text rounded-end cursor-pointer">
+                                                        <i class="ri-search-line"></i>
+                                                    </span>
+                                                    <div class="invalid-feedback text-start">Por favor ingrese ubigeo</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <div class="form-floating form-floating-outline mb-4">
+                                                    <input class="form-control" placeholder="Ingrese dirección *" type="text" value="" tabindex="3" id="txtDirecc" oninput="this.value=this.value.toUpperCase();" />
+                                                    <label for="txtDirecc">Dirección *</label>
+                                                    <div class="invalid-feedback text-start">Por favor ingrese dirección</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <div class="form-floating form-floating-outline mb-4">
+                                                    <input class="form-control" placeholder="Ingrese teléfono" type="text" value="" tabindex="3" id="txtTelefono" />
+                                                    <label for="txtTelefono">Teléfono</label>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-sm-6">
+                                                <div class="form-floating form-floating-outline mb-4">
+                                                    <input class="form-control" placeholder="Ingrese celular" type="text" value="" tabindex="3" id="txtCelular" />
+                                                    <label for="txtCelular">Celular</label>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <div class="form-floating form-floating-outline mb-4">
+                                                    <input class="form-control" placeholder="Ingrese contacto" type="text" value="" tabindex="3" id="txtContacto" oninput="this.value=this.value.toUpperCase();" />
+                                                    <label for="txtContacto">Contacto</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6" style="display:none">
+                                                <div class="col-sm-12 d-flex align-items-center">
+                                                    <button class="btn btn-outline-danger btnEliminar w-100">
+                                                        <i class="ri-delete-bin-6-line me-2"></i>Eliminar Dirección
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <hr class="mt-0" />
+                                    </div>
+
+                                </div>
+
+                                <div id="cliproCopias">
+                                </div>
+
+                                <div class="d-grid gap-2 col-lg-12 mx-auto">
+                                    <button type="button" class="btn btn-outline-primary" id="btnDireccionRepetir">+ Agregar Dirección</button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mb-2">
+                        <div class="d-grid gap-2 col-lg-3 mx-auto">
+                        </div>
+                        <div class="d-grid gap-2 col-lg-3 mx-auto">
+                            <button class="btn btn-outline-secondary" type="reset" data-bs-dismiss="modal">Cancelar</button>
+                        </div>
+                        <div class="d-grid gap-2 col-lg-3 mx-auto">
+                            <button class="btn btn-primary" type="button" id="btnGuardarCliPro">Guardar</button>
+                        </div>
+                        <div class="d-grid gap-2 col-lg-3 mx-auto">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /Modal -->
+@await Html.PartialAsync("../_partials/_modals/Buscador")
+<!--/ Create App Modal -->
+<script type="text/javascript" src="~/scripts/_partials/_modals/CliProAdiMod.js?v=1.011"></script>

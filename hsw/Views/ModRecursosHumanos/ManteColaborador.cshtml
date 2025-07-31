@@ -1,0 +1,562 @@
+﻿<style>
+    .card {
+        min-height:77vh;
+        display: flex;
+        flex-direction: column;
+    }
+    .card-body {
+        flex: 1; /* Permite que el contenido se expanda para ocupar todo el espacio disponible */
+    }
+
+    div.dataTables_wrapper div.dataTables_filter {
+        text-align: right;
+    }
+
+        div.dataTables_wrapper div.dataTables_filter label {
+            font-weight: normal;
+            white-space: nowrap;
+            text-align: left;
+        }
+
+        div.dataTables_wrapper div.dataTables_filter input {
+            margin-left: 0.5em;
+            display: inline-block;
+            width: auto;
+        }
+
+    div.dt-buttons {
+        float:left;
+    }
+
+div.dataTables_wrapper div.dataTables_length,
+div.dataTables_wrapper div.dataTables_filter {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+
+/*     .btn-group,
+    .btn-group-vertical {
+        position: relative;
+        display: inline-flex;
+        vertical-align: middle;
+    }
+
+        .btn-group > .btn,
+        .btn-group-vertical > .btn {
+            position: relative;
+            flex: 1 1 auto;
+        } */
+</style>
+
+ <!-- Content -->
+<!-- Invoice List Table -->
+<div class="card" id="colaborador-lst">
+    <h5 class="card-header bg-primary text-white">Listado de Colaboradores</h5>
+    <div class="card-body">
+
+        <div class="card-datatable table-responsive text-nowrap">
+
+            <div class="row mt-3 mb-2">
+                <div class="col-lg-4 col-sm-12">
+                    <div class="form-floating form-floating-outline">
+                        <select class="form-select" tabindex="4" id="cboEstablecimientos"></select>
+                        <label for="cboEstablecimientos">Establecimiento *</label>
+                        <div class="invalid-feedback text-start">Por favor seleccione establecimiento</div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-12">
+                    <div class="form-floating form-floating-outline">
+                        <select class="form-select" tabindex="4" id="cboTabMot"></select>
+                        <label for="cboTabMot">Motivo *</label>
+                        <div class="invalid-feedback text-start">Por favor seleccione motivo</div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-12">
+                    <div class="form-floating form-floating-outline">
+                        <select class="form-select" tabindex="4" id="cboTabCat"></select>
+                        <label for="cboTabCat">Categoría *</label>
+                        <div class="invalid-feedback text-start">Por favor seleccione categoría</div>
+                    </div>
+                </div>
+            </div>
+
+            <table id="tabla" class="dt-scrollableTable table table-bordered table-striped table-hover table-sm w-100">
+                <thead>
+                    <tr>
+                        <th class="text-center">Acciones</th>
+                        <th style="text-align:center;vertical-align:middle;">Código</th>
+                        <th style="text-align:center;vertical-align:middle;">Categ</th>
+                        <th style="text-align:center;vertical-align:middle;">T/D</th>
+                        <th style="text-align:center;vertical-align:middle;">Documento</th>
+                        <th style="text-align:center;vertical-align:middle;">Nombres</th>
+                        <th style="text-align:center;vertical-align:middle;">Ocupación</th>
+                        <th style="text-align:center;vertical-align:middle;">Establecimiento</th>
+                        <th style="text-align:center;vertical-align:middle;">F.Ingreso</th>
+                        <th style="text-align:center;vertical-align:middle;">F.I.Contr</th>
+                        <th style="text-align:center;vertical-align:middle;">F.F.Contr</th>
+                        <th style="text-align:center;vertical-align:middle;">F.Cese</th>
+                        <th style="text-align:center;vertical-align:middle;">Motivo</th>
+                        <th style="text-align:center;vertical-align:middle;">BL</th>
+                        <th style="text-align:center;vertical-align:middle;">CodMot</th>
+                        <th style="text-align:center;vertical-align:middle;">Grp.Riesgo</th>
+                        <th style="text-align:center;vertical-align:middle;">Usuario Creador</th>
+                        <th style="text-align:center;vertical-align:middle;">Fecha/Hora Creación</th>
+                        <th style="text-align:center;vertical-align:middle;">Usuario Modifica</th>
+                        <th style="text-align:center;vertical-align:middle;">Fecha/Hora Modifica</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+    </div>
+</div>
+
+<!--/ Scrollable -->
+
+<div class="container-xxl flex-grow-1 container-p-y" id="colaborador-edt" style="display:none">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="nav-align-top">
+                <ul class="nav nav-pills flex-column flex-md-row mb-6 gap-2 gap-lg-0" role="tablist">
+
+                    <li class="nav-item">
+                        <button type="button"
+                                class="nav-link active"
+                                role="tab"
+                                data-bs-toggle="tab"
+                                data-bs-target="#navs-datos-personales"
+                                aria-controls="navs-datos-personales"
+                                aria-selected="true">
+                            <i class="ri-group-line me-2"></i>
+                            Datos personales
+                        </button>
+                    </li>
+
+                    <li class="nav-item">
+                        <button type="button"
+                                class="nav-link"
+                                role="tab"
+                                data-bs-toggle="tab"
+                                data-bs-target="#navs-datos-familiares"
+                                aria-controls="navs-datos-familiares"
+                                aria-selected="false">
+                            <i class="ri-lock-line me-2"></i>
+                            Datos familiares
+                        </button>
+                    </li>
+
+                    <li class="nav-item">
+                        <button type="button"
+                                class="nav-link"
+                                role="tab"
+                                data-bs-toggle="tab"
+                                data-bs-target="#navs-periodos-laborales"
+                                aria-controls="navs-periodos-laborales"
+                                aria-selected="false">
+                            <i class="ri-bookmark-line me-2"></i>
+                            Periodos laborales
+                        </button>
+                    </li>
+
+                    <li class="nav-item">
+                        <button type="button"
+                                class="nav-link"
+                                role="tab"
+                                data-bs-toggle="tab"
+                                data-bs-target="#navs-estudios-realizados"
+                                aria-controls="navs-estudios-realizados"
+                                aria-selected="false">
+                            <i class="ri-notification-4-line me-2"></i>
+                            Estudios reaizados
+                        </button>
+                    </li>
+
+                    <li class="nav-item">
+                        <button type="button"
+                                class="nav-link"
+                                role="tab"
+                                data-bs-toggle="tab"
+                                data-bs-target="#navs-documentos"
+                                aria-controls="navs-documentos"
+                                aria-selected="false">
+                            <i class="ri-link-m me-2"></i>
+                            Documentos
+                        </button>
+                    </li>
+
+                    <li class="nav-item">
+                        <button type="button"
+                                class="nav-link"
+                                role="tab"
+                                data-bs-toggle="tab"
+                                data-bs-target="#navs-categorias"
+                                aria-controls="navs-categorias"
+                                aria-selected="false">
+                            <i class="ri-link-m me-2"></i>
+                            Categorías
+                        </button>
+                    </li>
+
+                </ul>
+
+                <div class="tab-content">
+                    <div class="tab-pane fade show active mb-6" id="navs-datos-personales" role="tabpanel">
+
+                        <!-- Account -->
+                        <div class="card-body">
+                            <div class="d-flex align-items-start align-items-sm-center gap-6">
+                                <img src="../../assets/img/avatars/1.png"
+                                     alt="user-avatar"
+                                     class="d-block w-px-100 h-px-100 rounded-4"
+                                     id="uploadedAvatar" />
+                                <div class="button-wrapper">
+                                    <label for="upload" class="btn btn-primary me-3 mb-4" tabindex="0">
+                                        <span class="d-none d-sm-block">Subir nueva foto</span>
+                                        <i class="ri-upload-2-line d-block d-sm-none"></i>
+                                        <input type="file"
+                                               id="upload"
+                                               class="account-file-input"
+                                               hidden
+                                               accept="image/png, image/jpeg" />
+                                    </label>
+                                    <button type="button" class="btn btn-outline-danger account-image-reset mb-4">
+                                        <i class="ri-refresh-line d-block d-sm-none"></i>
+                                        <span class="d-none d-sm-block">Restablecer</span>
+                                    </button>
+
+                                    <div>Se permiten archivos JPG, GIF o PNG. Tamaño máximo de 800K</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body pt-0">
+                            <div class="row mt-1 g-5">
+                                <div class="col-md-2">
+                                    <div class="form-floating form-floating-outline">
+                                        <input class="form-control" type="text" name="txtCodigo" id="txtCodigo" value="00001" disabled />
+                                        <label for="txtCodigo">Código</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-floating form-floating-outline">
+                                        <select id="cboTabCat1" class="select2 form-select">
+                                        </select>
+                                        <label for="cboTabCat1">Categoría</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-floating form-floating-outline">
+                                        <select id="cboTipDocPer" class="select2 form-select">
+                                        </select>
+                                        <label for="cboTipDocPer">Tipo de documento *</label>
+                                        <div class="invalid-feedback text-start">Por favor seleccione tipo de documento</div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="form-floating form-floating-outline">
+                                        <input type="text" id="txtNroDoc" name="txtNroDoc" class="form-control" placeholder="Nro. de documento" oninput="this.value=this.value.toUpperCase();" autocomplete="off" tabindex="0" />
+                                        <label for="txtNroDoc">Nro. de documento *</label>
+                                        <div class="invalid-feedback text-start">Por favor ingrese número de documento</div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="form-floating form-floating-outline">
+                                        <input type="text" id="txtApePat" name="txtApePat" class="form-control" placeholder="Apellido paterno" oninput="this.value=this.value.toUpperCase();" autocomplete="off" tabindex="0" />
+                                        <label for="txtApeMat">Apellido paterno *</label>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="form-floating form-floating-outline">
+                                        <input type="text" id="txtApeMat" name="txtApeMat" class="form-control" placeholder="Apellido materno" oninput="this.value=this.value.toUpperCase();" autocomplete="off" tabindex="1" />
+                                        <label for="txtApeMat">Apellido materno *</label>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-md-6">
+                                    <div class="form-floating form-floating-outline">
+                                        <input type="text" id="txtNombre" name="txtNombre" class="form-control" placeholder="Nombre(s)" oninput="this.value=this.value.toUpperCase();" autocomplete="off" tabindex="1" />
+                                        <label for="txtNombre">Nombres(s) *</label>
+                                        <div class="invalid-feedback text-start">Por favor ingrese nombre(s)</div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-md-6">
+                                    <div class="form-floating form-floating-outline">
+                                        <input type="text" id="txtDirecc" name="txtDirecc" class="form-control" placeholder="Dirección" oninput="this.value=this.value.toUpperCase();" autocomplete="off" tabindex="1" />
+                                        <label for="txtDirecc">Dirección</label>
+                                    </div>
+                                </div>
+
+                                <label style="display:none" id="lblUbiGeo">UbiGeo</label>
+                                <div class="col-12 col-md-6">
+                                    <div class="input-group input-group-merge">
+                                        <div class="form-floating form-floating-outline">
+                                            <input class="form-control" placeholder="ubigeo dirección *" type="text" value="" tabindex="2" id="txtUbiGeo" autocomplete="off" />
+                                            <label for="txtUbiGeo">Ubigeo dirección *</label>
+                                        </div>
+                                        <span class="input-group-text cursor-pointer">
+                                            <i class="ri-search-line"></i>
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-md-3">
+                                    <div class="form-floating form-floating-outline">
+                                        <input type="text" id="txtTelef1" name="txtTelef1" class="form-control" placeholder="Teléfono 1" oninput="this.value=this.value.toUpperCase();" autocomplete="off" tabindex="1" />
+                                        <label for="txtTelef1">Teléfono 1</label>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-md-3">
+                                    <div class="form-floating form-floating-outline">
+                                        <input type="text" id="txtTelef2" name="txtTelef2" class="form-control" placeholder="Teléfono 2" oninput="this.value=this.value.toUpperCase();" autocomplete="off" tabindex="1" />
+                                        <label for="txtTelef2">Teléfono 2</label>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-md-6">
+                                    <div class="form-floating form-floating-outline">
+                                        <input type="text" id="txtCorreo" name="txtCorreo" class="form-control" placeholder="Correo" autocomplete="off" tabindex="1" />
+                                        <label for="txtCorreo">Correo</label>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-md-3">
+                                    <div class="form-floating form-floating-outline">
+                                        <input class="form-control" type="date" id="dtpFecNac" />
+                                        <label for="dtpFecNac">Fecha de nacimiento *</label>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-md-3">
+                                    <div class="form-floating form-floating-outline">
+                                        <input class="form-control" type="text" name="txtEdad" id="txtEdad" disabled />
+                                        <label for="txtEdad">Edad</label>
+                                    </div>
+                                </div>
+
+                                <label style="display:none" id="lblUbiGeoN">UbiGeoN</label>
+                                <div class="col-12 col-md-6">
+                                    <div class="input-group input-group-merge">
+                                        <div class="form-floating form-floating-outline">
+                                            <input class="form-control" placeholder="ubigeo nacimiento *" type="text" value="" tabindex="2" id="txtUbiGeoN" autocomplete="off" />
+                                            <label for="txtUbiGeoN">Ubigeo nacimimento *</label>
+                                        </div>
+                                        <span class="input-group-text cursor-pointer">
+                                            <i class="ri-search-line"></i>
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-md-2">
+                                    <div class="form-floating form-floating-outline">
+                                        <select id="cboEstCiv" class="select2 form-select">
+                                        </select>
+                                        <label for="cboEstCiv">Estado civil</label>
+                                        <div class="invalid-feedback text-start">Por favor seleccione estado civil</div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-md-1">
+                                    <div class="form-floating form-floating-outline">
+                                        <input class="form-control" type="text" name="txtNroHij" id="txtNroHij" />
+                                        <label for="txtNroHij">Hijos</label>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-md-2">
+                                    <div class="form-floating form-floating-outline">
+                                        <select id="cboSexo" class="select2 form-select">
+                                            <option value="-1">** SELECCIONE **</option>
+                                            <option value="M">MASCULINO</option>
+                                            <option value="F">FEMENINO</option>
+                                        </select>
+                                        <label for="cboSexo">Sexo</label>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="form-floating form-floating-outline">
+                                        <select id="cboTabEst" class="select2 form-select">
+                                        </select>
+                                        <label for="cboTabEst">Establecimiento *</label>
+                                        <div class="invalid-feedback text-start">Por favor seleccione un establecimiento</div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="form-floating form-floating-outline">
+                                        <select id="cboTabOcu" class="select2 form-select">
+                                        </select>
+                                        <label for="cboTabOcu">Ocupación *</label>
+                                        <div class="invalid-feedback text-start">Por favor seleccione una ocupación</div>
+                                    </div>
+                                </div>
+
+                                <div class="mt-6">
+                                    <button type="submit" class="btn btn-primary me-3">Grabar Cambios</button>
+                                    <button type="reset" class="btn btn-outline-secondary">Regresar</button>
+                                </div>
+
+                            </div>
+
+
+                        </div>
+                        <!-- /Account -->
+
+                    </div>
+                    <div class="tab-pane fade" id="navs-datos-familiares" role="tabpanel">
+                        <p>
+                            En construcción ...
+                        </p>
+                    </div>
+                    <div class="tab-pane fade" id="navs-periodos-laborales" role="tabpanel">
+                        <p>
+                            En construcción ...
+                        </p>
+                    </div>
+                    <div class="tab-pane fade" id="navs-estudios-realizados" role="tabpanel">
+                        <p>
+                            En construcción ...
+                        </p>
+                    </div>
+                    <div class="tab-pane fade" id="navs-documentos" role="tabpanel">
+                        <p>
+                            En construcción ...
+                        </p>
+                    </div>
+                    <div class="tab-pane fade" id="navs-categorias" role="tabpanel">
+                        <p>
+                            En construcción ...
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="EmpresaAdiMod" tabindex="-1" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header bg-primary">
+                <h4 class="modal-title text-white" id="modalCenterTitle">Crear Empresa</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <div class="modal-body">
+
+                <label style="display:none" id="lblid_empresa">id_empresa</label>
+
+                <div class="row mb-4 g-3">
+                    <div class="col-12 col-md-6">
+                        <div class="form-floating form-floating-outline">
+                            <input type="text" id="txtRUC" name="txtRUC" class="form-control" placeholder="RUC *" autocomplete="off" />
+                            <label for="txtRUC">RUC *</label>
+                            <div class="invalid-feedback text-start">Por favor ingrese RUC</div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6">
+                    </div>
+
+                    <div class="col-12 col-md-8">
+                        <div class="form-floating form-floating-outline">
+                            <input type="text" id="txtDescri" name="txtDescri" class="form-control" placeholder="Razón Social *" oninput="this.value=this.value.toUpperCase();" autocomplete="off" tabindex="1" />
+                            <label for="txtDescri">Razón Social *</label>
+                            <div class="invalid-feedback text-start">Por favor ingrese razón social</div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="form-floating form-floating-outline">
+                            <input type="text" id="txtDesAbr" name="txtDesAbr" class="form-control" placeholder="Razón Abreviada *" oninput="this.value=this.value.toUpperCase();" autocomplete="off" tabindex="2" />
+                            <label for="txtDesAbr">Razón Abreviado *</label>
+                            <div class="invalid-feedback text-start">Por favor ingrese razón social abrev</div>
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="form-floating form-floating-outline">
+                            <input type="text" id="txtDirecc" name="txtDirecc" class="form-control" placeholder="Dirección" oninput="this.value=this.value.toUpperCase();" autocomplete="off" tabindex="3" />
+                            <label for="txtDirecc">Dirección</label>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-8">
+                        <div class="form-floating form-floating-outline">
+                            <input type="text" id="txtContacto" name="txtContacto" class="form-control" placeholder="Contacto" oninput="this.value=this.value.toUpperCase();" autocomplete="off" tabindex="4" />
+                            <label for="txtContacto">Contacto</label>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="form-floating form-floating-outline">
+                            <input type="text" id="txtTelefono" name="txtTelefono" class="form-control" placeholder="Teléfono" oninput="this.value=this.value.toUpperCase();" autocomplete="off" tabindex="5" />
+                            <label for="txtTelefono">Teléfono</label>
+                        </div>
+                    </div>
+
+                </div>
+
+                <h4 class="onboarding-title text-body mb-0" style="color:red!important;">Datos SUNAT</h4>
+                <div class="row mb-4 g-3">
+                    <div class="col-12 col-md-6">
+                        <div class="form-floating form-floating-outline">
+                            <input type="text" id="txtUsuario" name="txtUsuario" class="form-control" placeholder="Usuario" tabindex="6" />
+                            <label for="txtUsuario">Usuario</label>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="form-floating form-floating-outline">
+                            <input type="text" id="txtClave" name="txtClave" class="form-control" placeholder="Clave" tabindex="7" />
+                            <label for="txtClave">Clave</label>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="form-floating form-floating-outline">
+                            <input type="text" id="txtclient_id" name="txtclient_id" class="form-control" placeholder="CLIENT_ID" tabindex="8" />
+                            <label for="txtclient_id">CLIENT_ID</label>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="form-floating form-floating-outline">
+                            <input type="text" id="txtcliente_secret" name="txtcliente_secret" class="form-control" placeholder="CLIENT_SECRET" tabindex="9" />
+                            <label for="txtcliente_secret">CLIENT_SECRET</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mb-2">
+                    <div class="d-grid gap-2 col-lg-3 mx-auto">
+                    </div>
+                    <div class="d-grid gap-2 col-lg-3 mx-auto">
+                        <button class="btn btn-outline-secondary" type="reset" data-bs-dismiss="modal">Cancelar</button>
+                    </div>
+                    <div class="d-grid gap-2 col-lg-3 mx-auto">
+                        <button class="btn btn-primary" type="button" id="btnGuardarEmpresa" tabindex="10">Guardar</button>
+                    </div>
+                    <div class="d-grid gap-2 col-lg-3 mx-auto">
+                    </div>
+                </div>
+
+
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- /Modal -->
+@await Html.PartialAsync("../_partials/_modals/Buscador")
+<script type="text/javascript" src="~/scripts/ModRecursosHumanos/ManteColaborador.js?v=1.007"></script>

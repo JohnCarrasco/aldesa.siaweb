@@ -1,0 +1,294 @@
+﻿<div id="lista-lst">
+    <div class="card h-100">
+        <div class="card-header bg-primary">
+            <h5 class="card-title text-white m-0 me-2">Cotizaciones</h5>
+        </div>
+        <div class="card-body">
+            <div class="card-datatable">
+                <table id="tabla" class="table table-bordered table-striped table-hover table-responsive table-sm">
+                    <thead>
+                        <tr style="background-color:#2F75B5;color:white;">
+                            <th class="text-center">Acciones</th>
+                            <th class="text-center">Id</th>
+                            <th class="text-center">RUC</th>
+                            <th class="text-center">Razón Social</th>
+                            <th class="text-center">T/M</th>
+                            <th>st</th>
+                            <th class="text-center">Estado</th>
+                            <th class="text-center">Fecha de Registro</th>
+                            <th class="text-center">Fecha de Aprobación</th>
+                            <th class="text-center">Fecha de Vigencia</th>
+                            <th class="text-center">N° de Carta Asignada</th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--/ Scrollable -->
+
+<div class="card h-100" id="lista-edt" hidden>
+    <div class="card-header bg-primary">
+        <h5 class="card-title text-white m-0 me-2">Edición Cotización</h5>
+    </div>
+    <div class="card-body">
+        <input type="text" id="txtid_cotizacion" hidden />
+        <div class="row mt-1 mb-2 g-5" id="controles">
+            <div class="col-12 col-md-6">
+                <div class="form-floating form-floating-outline">
+                    <select id="cboCliPro" class="select2 form-select"></select>
+                    <label for="cboCliPro">Cliente</label>
+                    <div class="invalid-feedback text-start">Por favor seleccione cliente</div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6">
+                <div class="form-floating form-floating-outline">
+                    <input type="text" id="txtDirecc" name="txtDirecc" class="form-control" placeholder="Dirección" disabled />
+                    <label for="txtDirecc">Dirección *</label>
+                </div>
+            </div>
+            <div class="col-12 col-md-3">
+                <div class="form-floating form-floating-outline">
+                    <input class="form-control" type="text" id="txtFecAdi" disabled />
+                    <label for="txtFecAdi">Fecha de Registro</label>
+                </div>
+            </div>
+            <div class="col-12 col-md-3">
+                <div class="form-floating form-floating-outline">
+                    <input class="form-control" type="text" id="txtEstado" disabled />
+                    <label for="txtEstado">Estado</label>
+                </div>
+            </div>
+            <div class="col-12 col-md-3">
+                <div class="form-floating form-floating-outline">
+                    <input class="form-control" type="text" id="txtFecha_Aprobacion" disabled />
+                    <label for="txtFecha_Aprobacion">Fecha de Aprobación</label>
+                </div>
+            </div>
+            <div class="col-12 col-md-3">
+                <div class="form-floating form-floating-outline">
+                    <input class="form-control" type="text" id="txtFecha_Vigencia" disabled />
+                    <label for="txtFecha_Vigencia">Fecha de Vigencia</label>
+                </div>
+            </div>
+            <div class="col-12 col-md-3">
+                <div class="form-floating form-floating-outline">
+                    <input type="text" id="txtNroCar" name="txtNroCar" class="form-control" placeholder="N° Carta" disabled />
+                    <label for="txtNroCar">N° Carta</label>
+                    <div class="invalid-feedback text-start">Por favor ingrese número de carta</div>
+                </div>
+            </div>
+            <div class="col-12 col-md-3">
+                <div class="form-floating form-floating-outline">
+                    <select id="cboMoneda" class="select2 form-select">
+                        <option value="PEN">SOLES</option>
+                        <option value="USD">US DOLLAR</option>
+                    </select>
+                    <label for="cboMoneda">Moneda</label>
+                </div>
+            </div>
+            <div class="col-12 col-md-6">
+                <div class="form-floating form-floating-outline">
+                    <input type="text" id="txtRefer" name="txtRefer" class="form-control" placeholder="Referencia" oninput="this.value=this.value.toUpperCase();" autocomplete="off" tabindex="0" />
+                    <label for="txtRefer">Referencia</label>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-6">
+                <h6 class="mb-0">Almacenaje</h6>
+            </div>
+            <div class="col-6 col-md-6">
+                <h6 class="mb-0">Seguro</h6>
+            </div>
+
+            <div class="col-12 col-md-3">
+                <div class="form-floating form-floating-outline">
+                    <input type="text" id="txtPor_Alm" name="txtPor_Alm" class="form-control" placeholder="% Almacenaje" oninput="this.value=this.value.toUpperCase();" autocomplete="off" />
+                    <label for="txtPor_Alm">% Almacenaje</label>
+                </div>
+            </div>
+            <div class="col-12 col-md-3">
+                <div class="form-floating form-floating-outline">
+                    <input type="text" id="txtTar_Min_Alm" name="txtTar_Min_Alm" class="form-control" placeholder="Tarifa Mínima" oninput="this.value=this.value.toUpperCase();" autocomplete="off" />
+                    <label for="txtTar_Min_Alm">Tarifa Mínima</label>
+                </div>
+            </div>
+            <div class="col-12 col-md-3">
+                <div class="form-floating form-floating-outline">
+                    <input type="text" id="txtPor_Seg" name="txtPor_Alm" class="form-control" placeholder="% Seguro" oninput="this.value=this.value.toUpperCase();" autocomplete="off" />
+                    <label for="txtPor_Alm">% Seguro</label>
+                </div>
+            </div>
+            <div class="col-12 col-md-3">
+                <div class="form-floating form-floating-outline">
+                    <input type="text" id="txtTar_Min_Seg" name="txtTar_Min_Seg" class="form-control" placeholder="Seguro Mínima" oninput="this.value=this.value.toUpperCase();" autocomplete="off" />
+                    <label for="txtTar_Min_Seg">Seguro Mínimo</label>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-12">
+                <h6 class="mb-0">Datos para Facturación</h6>
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="form-floating form-floating-outline">
+                    <input type="text" id="txtAtencion" name="txtAtencion" class="form-control" placeholder="Atención" oninput="this.value=this.value.toUpperCase();" autocomplete="off"maxlength="100"/>
+                    <label for="txtAtencion">Atención</label>
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="form-floating form-floating-outline">
+                    <input type="text" id="txtCorreo" name="txtCorreo" class="form-control" placeholder="Correo" autocomplete="off" maxlength="100"/>
+                    <label for="txtCorreo">Correo</label>
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="form-floating form-floating-outline">
+                    <input type="text" id="txtCelular" name="txtCelular" class="form-control" placeholder="Celular" oninput="this.value=this.value.toUpperCase();" autocomplete="off" maxlength="50" />
+                    <label for="txtCelular">Celular</label>
+                </div>
+            </div>
+        </div>
+        <hr />
+        <label style="display:block;text-align:center;"><b>LISTA DE SERVICIOS</b></label>
+        <button class="btn btn-info waves-effect waves-light" type="button" id="btnAgregarServicio">Agregar Servicio</button>
+        <hr />
+
+        <div class="col-12" id="servicios" hidden>
+
+            <div class="col-12 col-md-12 mb-2">
+                <div class="form-floating form-floating-outline">
+                    <select id="cboServiciosGrp" class="select2 form-select">
+                    </select>
+                    <label for="cboServicioGrp">Grupo de Servicios</label>
+                </div>
+
+                <div class="col-12 table-responsive">
+                    <table class="table">
+                        <tbody id="tbl_servicios">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="d-grid">
+                    <button type="button" id="btnCerrarServicio" class="btn btn-secondary waves-effect waves-light">Cerrar</button>
+                </div>
+            </div>
+            <hr />
+        </div>
+
+        <div class="col-12 table-responsive">
+            <div>
+                <table id="tabla_servicios" class="table table-hover table-striped table-valign-middle table-sm">
+                    <thead class="bg-custom-table">
+                        <tr>
+                            <th>Opción</th>
+                            <th style="display:none">correl</th>
+                            <th style="display:none">id_servicio</th>
+                            <th style="text-align:center">Grupo</th>
+                            <th style="text-align:center">Servicio</th>
+                            <th style="text-align:center">Precio</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tabla_servicios_detalle">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="card-footer d-flex justify-content-center">
+        <div class="d-grid gap-3 col-lg-3 me-3">
+            <button class="btn btn-outline-secondary" type="button" id="btnRegresarLista">Cancelar</button>
+        </div>
+        <div class="d-grid gap-3 col-lg-3">
+            <button class="btn btn-primary" type="button" id="btnGuardarCotizacion">Grabar Cotización</button>
+        </div>
+    </div>
+
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="AprobarCotizacion" tabindex="-1" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header bg-primary">
+                <h4 class="modal-title text-white" id="modalCenterTitle">Aprobar Cotización</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <input type="text" id="txtid_cotizacion_aprobar" hidden />
+                <div class="row mt-1 mb-2 g-5">
+                    <div class="col-12 col-md-6">
+                        <div class="form-floating form-floating-outline">
+                            <input class="form-control" type="date" id="dtpFecApr" />
+                            <label for="dtpFecApr">Fecha de Aprobación *</label>
+                            <div class="invalid-feedback text-start">Por favor ingrese fecha de aprobación</div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="form-floating form-floating-outline">
+                            <input class="form-control" type="date" id="dtpFecVig" />
+                            <label for="dtpFecVig">Fecha de vigencia *</label>
+                            <div class="invalid-feedback text-start">Por favor ingrese fecha de vigencia</div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="form-floating form-floating-outline">
+                            <input type="text" id="txtNroCarAsignada" name="txtNroCarAsignada" class="form-control" placeholder="Nro. de carta asignado" disabled />
+                            <label for="txtNroCarAsignada">Nro. de carta asignado *</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer d-flex justify-content-center">
+                <div class="d-grid gap-3 col-lg-3">
+                    <button class="btn btn-outline-secondary" type="reset" data-bs-dismiss="modal">Cancelar</button>
+                </div>
+                <div class="d-grid gap-3 col-lg-3">
+                    <button class="btn btn-primary" type="button" id="btnAprobar">Aprobar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /Modal -->
+
+<!-- Modal -->
+<div class="modal fade" id="DesaprobarCotizacion" tabindex="-1" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+    <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header bg-primary">
+                <h4 class="modal-title text-white" id="modalCenterTitle">Desaprobar Cotización</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <input type="text" id="txtid_cotizacion_desaprobar" hidden />
+                <div class="row mt-1 mb-2 g-5">
+                    <div class="form-floating form-floating-outline">
+                        <textarea class="form-control h-px-100"
+                                  id="txtMotivoDesaprobacion"
+                                  placeholder="Motivo ..." maxlength="500"></textarea>
+                        <label for="txtObs">Motivo desaprobación</label>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer d-flex justify-content-center">
+                <div class="d-grid col-sm-4">
+                    <button class="btn btn-outline-secondary" type="reset" data-bs-dismiss="modal">Cancelar</button>
+                </div>
+                <div class="d-grid col-sm-4">
+                    <button class="btn btn-primary" type="button" id="btnDesaprobar">Desaprobar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /Modal -->
+
+<script type="text/javascript" src="~/scripts/ModCotizaciones/ManteCotizaciones.js?v=1.033"></script>

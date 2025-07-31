@@ -1,0 +1,181 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = hsw
+build_property.RootNamespace = hsw
+build_property.ProjectDir = D:\sistemas.web\aldesa\siaweb\hsw\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = D:\sistemas.web\aldesa\siaweb\hsw
+build_property._RazorSourceGeneratorDebug = 
+build_property.EffectiveAnalysisLevelStyle = 8.0
+build_property.EnableCodeStyleSeverity = 
+
+[D:/sistemas.web/aldesa/siaweb/hsw/Views/Clientes/Clientes.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZXNcQ2xpZW50ZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/sistemas.web/aldesa/siaweb/hsw/Views/Clientes/Ordenes.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZXNcT3JkZW5lcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/sistemas.web/aldesa/siaweb/hsw/Views/hsw/DBDefault.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcaHN3XERCRGVmYXVsdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/sistemas.web/aldesa/siaweb/hsw/Views/hsw/Inicio.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcaHN3XEluaWNpby5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/sistemas.web/aldesa/siaweb/hsw/Views/hsw/Inicio20241112.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcaHN3XEluaWNpbzIwMjQxMTEyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/sistemas.web/aldesa/siaweb/hsw/Views/hsw/Inicio20241121.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcaHN3XEluaWNpbzIwMjQxMTIxLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/sistemas.web/aldesa/siaweb/hsw/Views/hsw/Inicio20250601.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcaHN3XEluaWNpbzIwMjUwNjAxLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/sistemas.web/aldesa/siaweb/hsw/Views/hsw/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcaHN3XExvZ2luLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/sistemas.web/aldesa/siaweb/hsw/Views/hsw/PaginaError.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcaHN3XFBhZ2luYUVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/sistemas.web/aldesa/siaweb/hsw/Views/hsw/Tablero.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcaHN3XFRhYmxlcm8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/sistemas.web/aldesa/siaweb/hsw/Views/ModAlmacen/ManteTarjetas.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW9kQWxtYWNlblxNYW50ZVRhcmpldGFzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/sistemas.web/aldesa/siaweb/hsw/Views/ModConfiguraciones/ManteCliPro.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW9kQ29uZmlndXJhY2lvbmVzXE1hbnRlQ2xpUHJvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/sistemas.web/aldesa/siaweb/hsw/Views/ModConfiguraciones/ManteEmpresas.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW9kQ29uZmlndXJhY2lvbmVzXE1hbnRlRW1wcmVzYXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/sistemas.web/aldesa/siaweb/hsw/Views/ModConfiguraciones/ManteRoles.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW9kQ29uZmlndXJhY2lvbmVzXE1hbnRlUm9sZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/sistemas.web/aldesa/siaweb/hsw/Views/ModConfiguraciones/ManteUsuarios.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW9kQ29uZmlndXJhY2lvbmVzXE1hbnRlVXN1YXJpb3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/sistemas.web/aldesa/siaweb/hsw/Views/ModCotizaciones/ManteCotizaciones.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW9kQ290aXphY2lvbmVzXE1hbnRlQ290aXphY2lvbmVzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/sistemas.web/aldesa/siaweb/hsw/Views/ModFacturacion/ManteFacturas.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW9kRmFjdHVyYWNpb25cTWFudGVGYWN0dXJhcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/sistemas.web/aldesa/siaweb/hsw/Views/ModMantenimiento/ManteIngresos.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW9kTWFudGVuaW1pZW50b1xNYW50ZUluZ3Jlc29zLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/sistemas.web/aldesa/siaweb/hsw/Views/ModRecursosHumanos/ManteColaborador.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW9kUmVjdXJzb3NIdW1hbm9zXE1hbnRlQ29sYWJvcmFkb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/sistemas.web/aldesa/siaweb/hsw/Views/ModReportes/RptInterno.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW9kUmVwb3J0ZXNcUnB0SW50ZXJuby5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/sistemas.web/aldesa/siaweb/hsw/Views/ModReportes/RptRegistroVentas.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW9kUmVwb3J0ZXNcUnB0UmVnaXN0cm9WZW50YXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/sistemas.web/aldesa/siaweb/hsw/Views/ModSIRE/ManteSIRECompras.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW9kU0lSRVxNYW50ZVNJUkVDb21wcmFzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/sistemas.web/aldesa/siaweb/hsw/Views/ModTablas/ManteCliPro.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW9kVGFibGFzXE1hbnRlQ2xpUHJvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/sistemas.web/aldesa/siaweb/hsw/Views/ModTablas/ManteCliProWEB.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW9kVGFibGFzXE1hbnRlQ2xpUHJvV0VCLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/sistemas.web/aldesa/siaweb/hsw/Views/ModTablas/ManteModulosPerfiles.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW9kVGFibGFzXE1hbnRlTW9kdWxvc1BlcmZpbGVzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/sistemas.web/aldesa/siaweb/hsw/Views/ModTablas/ManteServicio.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW9kVGFibGFzXE1hbnRlU2VydmljaW8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/sistemas.web/aldesa/siaweb/hsw/Views/ModTablas/ManteServicioFamilia.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW9kVGFibGFzXE1hbnRlU2VydmljaW9GYW1pbGlhLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/sistemas.web/aldesa/siaweb/hsw/Views/ModTablas/ManteServicioGrupos.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW9kVGFibGFzXE1hbnRlU2VydmljaW9HcnVwb3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/sistemas.web/aldesa/siaweb/hsw/Views/ModTablas/ManteServicioSegmentos.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW9kVGFibGFzXE1hbnRlU2VydmljaW9TZWdtZW50b3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/sistemas.web/aldesa/siaweb/hsw/Views/ModTablas/ManteTabCam.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW9kVGFibGFzXE1hbnRlVGFiQ2FtLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/sistemas.web/aldesa/siaweb/hsw/Views/ModTablas/ManteTabCamP.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW9kVGFibGFzXE1hbnRlVGFiQ2FtUC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/sistemas.web/aldesa/siaweb/hsw/Views/ModVentas/ClientesGR.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW9kVmVudGFzXENsaWVudGVzR1IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/sistemas.web/aldesa/siaweb/hsw/Views/ModVentas/GRRConsulta.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW9kVmVudGFzXEdSUkNvbnN1bHRhLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/sistemas.web/aldesa/siaweb/hsw/Views/ModVentas/GRRemitente20240614.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW9kVmVudGFzXEdSUmVtaXRlbnRlMjAyNDA2MTQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/sistemas.web/aldesa/siaweb/hsw/Views/_partials/_modals/Buscador.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX3BhcnRpYWxzXF9tb2RhbHNcQnVzY2Fkb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/sistemas.web/aldesa/siaweb/hsw/Views/_partials/_modals/CliProAdiMod.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX3BhcnRpYWxzXF9tb2RhbHNcQ2xpUHJvQWRpTW9kLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/sistemas.web/aldesa/siaweb/hsw/Views/_partials/_modals/CliProAdiMod20240610.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX3BhcnRpYWxzXF9tb2RhbHNcQ2xpUHJvQWRpTW9kMjAyNDA2MTAuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/sistemas.web/aldesa/siaweb/hsw/Views/_partials/_modals/GRRemitente.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX3BhcnRpYWxzXF9tb2RhbHNcR1JSZW1pdGVudGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 

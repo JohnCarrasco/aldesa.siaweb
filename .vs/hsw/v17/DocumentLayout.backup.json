@@ -1,0 +1,248 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "F:\\Aldesa\\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\\sistemas.web\\hsw\\demo\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{EDFD7744-F3E3-41D6-AAF6-9A5CCE98F067}|hsw\\hsw.csproj|f:\\aldesa\\onedrive - almacenes de deposito s.a.c. aldesa\\sistemas.web\\hsw\\demo\\hsw\\controllers\\modventas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EDFD7744-F3E3-41D6-AAF6-9A5CCE98F067}|hsw\\hsw.csproj|solutionrelative:hsw\\controllers\\modventas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EDFD7744-F3E3-41D6-AAF6-9A5CCE98F067}|hsw\\hsw.csproj|f:\\aldesa\\onedrive - almacenes de deposito s.a.c. aldesa\\sistemas.web\\hsw\\demo\\hsw\\wwwroot\\scripts\\_partials\\_modals\\buscador.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{EDFD7744-F3E3-41D6-AAF6-9A5CCE98F067}|hsw\\hsw.csproj|solutionrelative:hsw\\wwwroot\\scripts\\_partials\\_modals\\buscador.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EDFD7744-F3E3-41D6-AAF6-9A5CCE98F067}|hsw\\hsw.csproj|f:\\aldesa\\onedrive - almacenes de deposito s.a.c. aldesa\\sistemas.web\\hsw\\demo\\hsw\\views\\modrecursoshumanos\\mantecolaborador.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EDFD7744-F3E3-41D6-AAF6-9A5CCE98F067}|hsw\\hsw.csproj|solutionrelative:hsw\\views\\modrecursoshumanos\\mantecolaborador.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EDFD7744-F3E3-41D6-AAF6-9A5CCE98F067}|hsw\\hsw.csproj|f:\\aldesa\\onedrive - almacenes de deposito s.a.c. aldesa\\sistemas.web\\hsw\\demo\\hsw\\wwwroot\\scripts\\modrecursoshumanos\\mantecolaborador.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{EDFD7744-F3E3-41D6-AAF6-9A5CCE98F067}|hsw\\hsw.csproj|solutionrelative:hsw\\wwwroot\\scripts\\modrecursoshumanos\\mantecolaborador.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EDFD7744-F3E3-41D6-AAF6-9A5CCE98F067}|hsw\\hsw.csproj|f:\\aldesa\\onedrive - almacenes de deposito s.a.c. aldesa\\sistemas.web\\hsw\\demo\\hsw\\wwwroot\\scripts\\_partials\\_modals\\grremitente.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{EDFD7744-F3E3-41D6-AAF6-9A5CCE98F067}|hsw\\hsw.csproj|solutionrelative:hsw\\wwwroot\\scripts\\_partials\\_modals\\grremitente.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EDFD7744-F3E3-41D6-AAF6-9A5CCE98F067}|hsw\\hsw.csproj|f:\\aldesa\\onedrive - almacenes de deposito s.a.c. aldesa\\sistemas.web\\hsw\\demo\\hsw\\views\\_partials\\_modals\\grremitente.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EDFD7744-F3E3-41D6-AAF6-9A5CCE98F067}|hsw\\hsw.csproj|solutionrelative:hsw\\views\\_partials\\_modals\\grremitente.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EDFD7744-F3E3-41D6-AAF6-9A5CCE98F067}|hsw\\hsw.csproj|f:\\aldesa\\onedrive - almacenes de deposito s.a.c. aldesa\\sistemas.web\\hsw\\demo\\hsw\\views\\hsw\\inicio.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EDFD7744-F3E3-41D6-AAF6-9A5CCE98F067}|hsw\\hsw.csproj|solutionrelative:hsw\\views\\hsw\\inicio.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EDFD7744-F3E3-41D6-AAF6-9A5CCE98F067}|hsw\\hsw.csproj|f:\\aldesa\\onedrive - almacenes de deposito s.a.c. aldesa\\sistemas.web\\hsw\\demo\\hsw\\views\\modconfiguraciones\\manteempresas.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EDFD7744-F3E3-41D6-AAF6-9A5CCE98F067}|hsw\\hsw.csproj|solutionrelative:hsw\\views\\modconfiguraciones\\manteempresas.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EDFD7744-F3E3-41D6-AAF6-9A5CCE98F067}|hsw\\hsw.csproj|f:\\aldesa\\onedrive - almacenes de deposito s.a.c. aldesa\\sistemas.web\\hsw\\demo\\hsw\\wwwroot\\scripts\\modconfiguraciones\\manteempresas.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{EDFD7744-F3E3-41D6-AAF6-9A5CCE98F067}|hsw\\hsw.csproj|solutionrelative:hsw\\wwwroot\\scripts\\modconfiguraciones\\manteempresas.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EDFD7744-F3E3-41D6-AAF6-9A5CCE98F067}|hsw\\hsw.csproj|f:\\aldesa\\onedrive - almacenes de deposito s.a.c. aldesa\\sistemas.web\\hsw\\demo\\hsw\\controllers\\hswcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EDFD7744-F3E3-41D6-AAF6-9A5CCE98F067}|hsw\\hsw.csproj|solutionrelative:hsw\\controllers\\hswcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EDFD7744-F3E3-41D6-AAF6-9A5CCE98F067}|hsw\\hsw.csproj|f:\\aldesa\\onedrive - almacenes de deposito s.a.c. aldesa\\sistemas.web\\hsw\\demo\\hsw\\wwwroot\\scripts\\modsire\\mantesirecompras.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{EDFD7744-F3E3-41D6-AAF6-9A5CCE98F067}|hsw\\hsw.csproj|solutionrelative:hsw\\wwwroot\\scripts\\modsire\\mantesirecompras.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EDFD7744-F3E3-41D6-AAF6-9A5CCE98F067}|hsw\\hsw.csproj|f:\\aldesa\\onedrive - almacenes de deposito s.a.c. aldesa\\sistemas.web\\hsw\\demo\\hsw\\views\\modsire\\mantesirecompras.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EDFD7744-F3E3-41D6-AAF6-9A5CCE98F067}|hsw\\hsw.csproj|solutionrelative:hsw\\views\\modsire\\mantesirecompras.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EDFD7744-F3E3-41D6-AAF6-9A5CCE98F067}|hsw\\hsw.csproj|f:\\aldesa\\onedrive - almacenes de deposito s.a.c. aldesa\\sistemas.web\\hsw\\demo\\hsw\\controllers\\modrecursoshumanos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EDFD7744-F3E3-41D6-AAF6-9A5CCE98F067}|hsw\\hsw.csproj|solutionrelative:hsw\\controllers\\modrecursoshumanos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ModVentas.cs",
+              "DocumentMoniker": "F:\\Aldesa\\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\\sistemas.web\\hsw\\demo\\hsw\\Controllers\\ModVentas.cs",
+              "RelativeDocumentMoniker": "hsw\\Controllers\\ModVentas.cs",
+              "ToolTip": "F:\\Aldesa\\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\\sistemas.web\\hsw\\demo\\hsw\\Controllers\\ModVentas.cs",
+              "RelativeToolTip": "hsw\\Controllers\\ModVentas.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-16T22:13:20.56Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Buscador.js",
+              "DocumentMoniker": "F:\\Aldesa\\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\\sistemas.web\\hsw\\demo\\hsw\\wwwroot\\scripts\\_partials\\_modals\\Buscador.js",
+              "RelativeDocumentMoniker": "hsw\\wwwroot\\scripts\\_partials\\_modals\\Buscador.js",
+              "ToolTip": "F:\\Aldesa\\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\\sistemas.web\\hsw\\demo\\hsw\\wwwroot\\scripts\\_partials\\_modals\\Buscador.js*",
+              "RelativeToolTip": "hsw\\wwwroot\\scripts\\_partials\\_modals\\Buscador.js*",
+              "ViewState": "AgIAABkAAAAAAAAAAAAQwNIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-10-16T22:06:50.182Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "GRRemitente.js",
+              "DocumentMoniker": "F:\\Aldesa\\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\\sistemas.web\\hsw\\demo\\hsw\\wwwroot\\scripts\\_partials\\_modals\\GRRemitente.js",
+              "RelativeDocumentMoniker": "hsw\\wwwroot\\scripts\\_partials\\_modals\\GRRemitente.js",
+              "ToolTip": "F:\\Aldesa\\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\\sistemas.web\\hsw\\demo\\hsw\\wwwroot\\scripts\\_partials\\_modals\\GRRemitente.js",
+              "RelativeToolTip": "hsw\\wwwroot\\scripts\\_partials\\_modals\\GRRemitente.js",
+              "ViewState": "AgIAADQAAAAAAAAAAAAkwEoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-10-16T21:14:47.852Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "GRRemitente.cshtml",
+              "DocumentMoniker": "F:\\Aldesa\\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\\sistemas.web\\hsw\\demo\\hsw\\Views\\_partials\\_modals\\GRRemitente.cshtml",
+              "RelativeDocumentMoniker": "hsw\\Views\\_partials\\_modals\\GRRemitente.cshtml",
+              "ToolTip": "F:\\Aldesa\\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\\sistemas.web\\hsw\\demo\\hsw\\Views\\_partials\\_modals\\GRRemitente.cshtml",
+              "RelativeToolTip": "hsw\\Views\\_partials\\_modals\\GRRemitente.cshtml",
+              "ViewState": "AgIAAFoBAAAAAAAAAAAAAHEBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-14T22:19:05.953Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Inicio.cshtml",
+              "DocumentMoniker": "F:\\Aldesa\\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\\sistemas.web\\hsw\\demo\\hsw\\Views\\hsw\\Inicio.cshtml",
+              "RelativeDocumentMoniker": "hsw\\Views\\hsw\\Inicio.cshtml",
+              "ToolTip": "F:\\Aldesa\\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\\sistemas.web\\hsw\\demo\\hsw\\Views\\hsw\\Inicio.cshtml",
+              "RelativeToolTip": "hsw\\Views\\hsw\\Inicio.cshtml",
+              "ViewState": "AgIAAPICAAAAAAAAAAAAAPsCAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-13T13:19:37.845Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ManteSIRECompras.cshtml",
+              "DocumentMoniker": "F:\\Aldesa\\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\\sistemas.web\\hsw\\demo\\hsw\\Views\\ModSIRE\\ManteSIRECompras.cshtml",
+              "RelativeDocumentMoniker": "hsw\\Views\\ModSIRE\\ManteSIRECompras.cshtml",
+              "ToolTip": "F:\\Aldesa\\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\\sistemas.web\\hsw\\demo\\hsw\\Views\\ModSIRE\\ManteSIRECompras.cshtml",
+              "RelativeToolTip": "hsw\\Views\\ModSIRE\\ManteSIRECompras.cshtml",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAAB8AAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-12T04:43:25.876Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ManteEmpresas.cshtml",
+              "DocumentMoniker": "F:\\Aldesa\\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\\sistemas.web\\hsw\\demo\\hsw\\Views\\ModConfiguraciones\\ManteEmpresas.cshtml",
+              "RelativeDocumentMoniker": "hsw\\Views\\ModConfiguraciones\\ManteEmpresas.cshtml",
+              "ToolTip": "F:\\Aldesa\\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\\sistemas.web\\hsw\\demo\\hsw\\Views\\ModConfiguraciones\\ManteEmpresas.cshtml",
+              "RelativeToolTip": "hsw\\Views\\ModConfiguraciones\\ManteEmpresas.cshtml",
+              "ViewState": "AgIAAGMAAAAAAAAAAAAAAG8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-09T13:52:48.257Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ManteEmpresas.js",
+              "DocumentMoniker": "F:\\Aldesa\\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\\sistemas.web\\hsw\\demo\\hsw\\wwwroot\\scripts\\ModConfiguraciones\\ManteEmpresas.js",
+              "RelativeDocumentMoniker": "hsw\\wwwroot\\scripts\\ModConfiguraciones\\ManteEmpresas.js",
+              "ToolTip": "F:\\Aldesa\\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\\sistemas.web\\hsw\\demo\\hsw\\wwwroot\\scripts\\ModConfiguraciones\\ManteEmpresas.js",
+              "RelativeToolTip": "hsw\\wwwroot\\scripts\\ModConfiguraciones\\ManteEmpresas.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-10-09T11:46:13.464Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ManteColaborador.js",
+              "DocumentMoniker": "F:\\Aldesa\\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\\sistemas.web\\hsw\\demo\\hsw\\wwwroot\\scripts\\ModRecursosHumanos\\ManteColaborador.js",
+              "RelativeDocumentMoniker": "hsw\\wwwroot\\scripts\\ModRecursosHumanos\\ManteColaborador.js",
+              "ToolTip": "F:\\Aldesa\\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\\sistemas.web\\hsw\\demo\\hsw\\wwwroot\\scripts\\ModRecursosHumanos\\ManteColaborador.js",
+              "RelativeToolTip": "hsw\\wwwroot\\scripts\\ModRecursosHumanos\\ManteColaborador.js",
+              "ViewState": "AgIAAHAAAAAAAAAAAAAQwH8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-10-09T11:29:23.252Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ManteColaborador.cshtml",
+              "DocumentMoniker": "F:\\Aldesa\\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\\sistemas.web\\hsw\\demo\\hsw\\Views\\ModRecursosHumanos\\ManteColaborador.cshtml",
+              "RelativeDocumentMoniker": "hsw\\Views\\ModRecursosHumanos\\ManteColaborador.cshtml",
+              "ToolTip": "F:\\Aldesa\\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\\sistemas.web\\hsw\\demo\\hsw\\Views\\ModRecursosHumanos\\ManteColaborador.cshtml",
+              "RelativeToolTip": "hsw\\Views\\ModRecursosHumanos\\ManteColaborador.cshtml",
+              "ViewState": "AgIAAFwBAAAAAAAAAAAowHcBAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-09T11:22:26.523Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ManteSIRECompras.js",
+              "DocumentMoniker": "F:\\Aldesa\\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\\sistemas.web\\hsw\\demo\\hsw\\wwwroot\\scripts\\ModSIRE\\ManteSIRECompras.js",
+              "RelativeDocumentMoniker": "hsw\\wwwroot\\scripts\\ModSIRE\\ManteSIRECompras.js",
+              "ToolTip": "F:\\Aldesa\\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\\sistemas.web\\hsw\\demo\\hsw\\wwwroot\\scripts\\ModSIRE\\ManteSIRECompras.js",
+              "RelativeToolTip": "hsw\\wwwroot\\scripts\\ModSIRE\\ManteSIRECompras.js",
+              "ViewState": "AgIAABUBAAAAAAAAAAAwwCgBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-10-12T04:44:00.19Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "HSWController.cs",
+              "DocumentMoniker": "F:\\Aldesa\\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\\sistemas.web\\hsw\\demo\\hsw\\Controllers\\HSWController.cs",
+              "RelativeDocumentMoniker": "hsw\\Controllers\\HSWController.cs",
+              "ToolTip": "F:\\Aldesa\\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\\sistemas.web\\hsw\\demo\\hsw\\Controllers\\HSWController.cs",
+              "RelativeToolTip": "hsw\\Controllers\\HSWController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAOIAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-06T01:00:49.911Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ModRecursosHumanos.cs",
+              "DocumentMoniker": "F:\\Aldesa\\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\\sistemas.web\\hsw\\demo\\hsw\\Controllers\\ModRecursosHumanos.cs",
+              "RelativeDocumentMoniker": "hsw\\Controllers\\ModRecursosHumanos.cs",
+              "ToolTip": "F:\\Aldesa\\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\\sistemas.web\\hsw\\demo\\hsw\\Controllers\\ModRecursosHumanos.cs",
+              "RelativeToolTip": "hsw\\Controllers\\ModRecursosHumanos.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAQwCAAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-09T11:14:13.957Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

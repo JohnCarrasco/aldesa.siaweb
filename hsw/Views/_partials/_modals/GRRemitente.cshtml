@@ -1,0 +1,372 @@
+﻿<style>
+    .card-body {
+        /* flex: 1 1 auto; */
+        padding: 0rem; /*var(--bs-card-spacer-y) var(--bs-card-spacer-x);*/
+        color: var(--bs-card-color);
+    }
+
+    .tab-content:not(.doc-example-content) {
+        padding: 0rem; /*1.25rem;*/
+        border-radius: 0.375rem;
+    }
+
+    /* Estilos para centrar las pestañas y ajustar altura */
+    .nav-align-top {
+        display: flex;
+        justify-content: center;
+        gap: 20px; /* Espacio entre pestañas */
+        margin-top: 20px; /* Espacio desde la parte superior */
+    }
+
+        .nav-align-top .nav-item {
+            flex: 1;
+            text-align: center;
+        }
+
+        .nav-align-top .nav-link {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px; /* Espacio entre icono y texto */
+            white-space: nowrap; /* Evitar que el texto se desborde */
+            height: 80px !important; /* Altura fija para todas las pestañas */
+            justify-content: center; /* Centrar contenido verticalmente */
+            padding: 10px; /* Espaciado interno */
+            text-align: center; /* Alinear texto al centro */
+        }
+
+            .nav-align-top .nav-link i {
+                font-size: 36px;
+            }
+
+
+    .MuiGrid-container {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        box-sizing: border-box;
+    }
+
+    .MuiGrid-spacing-xs-2 {
+        width: calc(100% + 16px);
+        margin: -8px;
+    }
+
+
+
+
+
+
+
+
+
+    .nav-align-top {
+        display: flex;
+        justify-content: center;
+        gap: 20px; /* Espacio entre pestañas */
+        margin-top: 20px; /* Espacio desde la parte superior */
+    }
+
+        .nav-align-top .nav-item {
+            flex: 1;
+            text-align: center;
+        }
+
+        .nav-align-top .nav-link {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px; /* Espacio entre icono y texto */
+            white-space: nowrap; /* Evitar que el texto se desborde */
+            height: 80px !important; /* Altura fija para todas las pestañas */
+            justify-content: center; /* Centrar contenido verticalmente */
+            padding: 10px; /* Espaciado interno */
+            text-align: center; /* Alinear texto al centro */
+        }
+
+    .nav-tabs .nav-link.active {
+        background-color: #E9ECEF; /* Color de fondo de pestaña activa */
+    }
+
+    .modal-body {
+        max-height: calc(100vh - 200px); /* Ajuste para la altura máxima del cuerpo */
+        overflow-y: auto; /* Hacer que el contenido sea desplazable */
+    }
+
+    .tab-pane-content {
+        height: 100%; /* Altura máxima del contenido de la pestaña */
+        overflow-y: auto; /* Permitir desplazamiento vertical si el contenido excede */
+        padding: 15px; /* Espaciado interno para evitar que el contenido toque los bordes */
+    }
+
+    .form-floating-outline {
+        position: relative;
+    }
+
+        .form-floating-outline input {
+            padding-top: 1.625rem;
+        }
+
+        .form-floating-outline label {
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: 0.625rem 0.75rem;
+            transition: all 0.3s ease-in-out;
+            pointer-events: none;
+        }
+
+        .form-floating-outline input:focus ~ label,
+        .form-floating-outline input:not(:placeholder-shown) ~ label {
+            transform: translateY(-100%);
+            font-size: 0.75rem;
+            color: #495057;
+            background-color: #fff;
+            padding: 0 0.375rem;
+        }
+
+
+
+
+
+</style>
+ate App Modal -->
+<div class="modal fade" id="GRRemitente" tabindex="-1" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable" role="document">
+        <div class="modal-content">
+            <div class="modal-header" style="background-color:#5478F1">
+                <h4 class="modal-title" style="color:white" id="modalCenterTitle">Guía de Remisión - Remitente</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <div class="modal-body p-0">
+
+                <div class="card text-center mb-4">
+                    <div class="card-header p-0">
+                        <div class="nav-align-top">
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li class="nav-item">
+                                    <button type="button"
+                                            class="nav-link d-flex flex-column gap-1 active"
+                                            role="tab"
+                                            data-bs-toggle="tab"
+                                            data-bs-target="#navs-informacion-card"
+                                            aria-controls="navs-informacion-card"
+                                            aria-selected="true">
+                                        <i class="tf-icons ri-profile-line"></i> INFORMACION BASICA
+                                    </button>
+                                </li>
+                                <li class="nav-item">
+                                    <button type="button"
+                                            class="nav-link d-flex flex-column gap-1"
+                                            role="tab"
+                                            data-bs-toggle="tab"
+                                            data-bs-target="#navs-datosenvio-card"
+                                            aria-controls="navs-datosenvio-card"
+                                            aria-selected="false">
+                                        <i class="tf-icons ri-truck-line"></i> DATOS DEL ENVÍO
+                                    </button>
+                                </li>
+                                <li class="nav-item">
+                                    <button type="button"
+                                            class="nav-link d-flex flex-column gap-1"
+                                            role="tab"
+                                            data-bs-toggle="tab"
+                                            data-bs-target="#navs-productos-card"
+                                            aria-controls="navs-productos-card"
+                                            aria-selected="false">
+                                        <i class="tf-icons ri-handbag-line"></i> PRODUCTOS
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="card-body">
+                        <div class="tab-content pb-0">
+
+                            <div class="tab-pane fade show active" id="navs-informacion-card" role="tabpanel" style="height:260px;">
+
+                                <div class="_AAV2 tab-pane-content">
+
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="form-floating form-floating-outline mb-1">
+                                                <select class="form-select" tabindex="0" id="cboNumSerGR"></select>
+                                                <label for="cboNumSerGR">Serie *</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="form-floating form-floating-outline mb-1">
+                                                <input class="form-control" type="date" id="dtpFechaGR" />
+                                                <label for="dtpFechaGR">Fecha de Emisión *</label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <label style="display:none" id="lblCodigo">Codigo</label>
+                                    <div class="col-sm-12">
+                                        <label class="control-label">
+                                            <a href="#" id="cmdCliProNuevo">[+ Nuevo]</a>
+                                        </label>
+                                        <div class="input-group input-group-merge mb-4">
+                                            <div class="form-floating form-floating-outline">
+                                                <input class="form-control" placeholder="Destinatario *" type="text" value="" tabindex="2" id="txtDestinatario" autocomplete="off" />
+                                                <label for="txtDestinatario">Destinatario *</label>
+                                            </div>
+                                            <span class="input-group-text cursor-pointer">
+                                                <i class="ri-search-line"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm-12">
+                                        <div class="form-floating form-floating-outline mb-4">
+                                            <input class="form-control" placeholder="Observaciones" type="text" value="" tabindex="3" id="txtObsGR" />
+                                            <label for="txtObsGR">Observaciones</label>
+                                        </div>
+                                    </div>
+
+                                <div class="row">
+
+                                    <label style="display:none" id="lblUbiGeoO">UbiGeoO</label>
+                                    <div class="col-sm-6">
+                                        <div class="input-group input-group-merge mb-4">
+                                            <div class="form-floating form-floating-outline">
+                                                <input class="form-control" placeholder="ubigeo origen *" type="text" value="" tabindex="2" id="txtUbiGeoO" autocomplete="off" />
+                                                <label for="txtUbiGeoO">Ubigeo origen *</label>
+                                            </div>
+                                            <span class="input-group-text cursor-pointer">
+                                                <i class="ri-search-line"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <label style="display:none" id="lblUbiGeoD">UbiGeoD</label>
+                                    <div class="col-sm-6">
+                                        <div class="input-group input-group-merge mb-4">
+                                            <div class="form-floating form-floating-outline">
+                                                <input class="form-control" placeholder="ubigeo destino" type="text" value="" tabindex="2" id="txtUbiGeoD" autocomplete="off" />
+                                                <label for="txtUbiGeoO">Ubigeo destino</label>
+                                            </div>
+                                            <span class="input-group-text cursor-pointer">
+                                                <i class="ri-search-line"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm-6">
+                                        <div class="form-floating form-floating-outline mb-4">
+                                            <input class="form-control" placeholder="Dirección origen *" type="text" value="" tabindex="3" id="txtDireccionO" />
+                                            <label for="txtRazSoc_Comercial">Dirección origen *</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-floating form-floating-outline mb-4">
+                                            <input class="form-control" placeholder="Dirección destino *" type="text" value="" tabindex="3" id="txtDireccionD" />
+                                            <label for="txtRazSoc_Comercial">Dirección destino *</label>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                </div>
+                            </div>
+
+                            <div class="tab-pane fade" id="navs-datosenvio-card" role="tabpanel" style="height:300px;">
+
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="form-floating form-floating-outline mb-4">
+                                            <select class="form-select" tabindex="0" id="cboTabMotGR"></select>
+                                            <label for="cboTabMotGR">Motivo de envío *</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-floating form-floating-outline mb-4">
+                                            <input class="form-control" type="date" id="dtpFecEnvGR" />
+                                            <label for="dtpFecEnvGR">Fecha de envío *</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm-6">
+                                        <div class="form-floating form-floating-outline mb-4">
+                                            <input class="form-control" placeholder="0" type="number" value="" tabindex="2" id="txtCantidGR" autocomplete="off" />
+                                            <label for="txtCantidGR">Cantidad de bultos *</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <div class="form-floating form-floating-outline mb-4">
+                                            <input class="form-control" placeholder="0" type="number" value="" tabindex="2" id="txtPesTotGR" autocomplete="off" />
+                                            <label for="txtPesTotGR">Peso total *</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <div class="form-floating form-floating-outline mb-4">
+                                            <select class="form-select" tabindex="0" id="cboTabUniGR"></select>
+                                            <label for="cboTabUniGR">Peso total (UDM) *</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm-12">
+                                        <div class="form-floating form-floating-outline mb-4">
+                                            <input class="form-control" placeholder="Observaciones" type="text" value="" tabindex="3" id="txtObsGRx" />
+                                            <label for="txtObsGR">Observaciones</label>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="tab-pane fade" id="navs-productos-card" role="tabpanel" style="height:300px;">
+                                <!-- Contenido de la tercera pestaña -->
+                                <div class="row">
+
+                                    <div class="col-sm-6">
+                                        <div class="form-floating form-floating-outline mb-4">
+                                            <input class="form-control" placeholder="Dirección origen *" type="text" value="" tabindex="3" id="txtDireccionOx" />
+                                            <label for="txtRazSoc_Comercial">Dirección origen *</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-floating form-floating-outline mb-4">
+                                            <input class="form-control" placeholder="Dirección destino *" type="text" value="" tabindex="3" id="txtDireccionDx" />
+                                            <label for="txtRazSoc_Comercial">Dirección destino *</label>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="row mt-4">
+                        <div class="d-grid gap-2 col-lg-2 mx-auto">
+                        </div>
+                        <div class="d-grid gap-2 col-lg-3 mx-auto">
+                            <button class="btn btn-primary" type="button" id="btnAceptarCliPro">Aceptar</button>
+                        </div>
+                        <div class="d-grid gap-2 col-lg-3 mx-auto">
+                            <button class="btn btn-outline-secondary" type="reset" data-bs-dismiss="modal">Cancelar</button>
+                        </div>
+                        <div class="d-grid gap-2 col-lg-2 mx-auto">
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</div>
+<!-- Modal
+@* @await Html.PartialAsync("../_Partials/_Modals/CliProAdiMod")
+ *@-->
+<!-- /Modal -->
+@await Html.PartialAsync("../_partials/_modals/Buscador")
+<!--/ Create App Modal -->
+<script type="text/javascript" src="~/scripts/_partials/_modals/GRRemitente.js?v=1.012"></script>

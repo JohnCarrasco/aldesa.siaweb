@@ -1,0 +1,176 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "F:\\Aldesa\\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\\sistemas.web\\asttex\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{EDFD7744-F3E3-41D6-AAF6-9A5CCE98F067}|hsw\\hsw.csproj|f:\\aldesa\\onedrive - almacenes de deposito s.a.c. aldesa\\sistemas.web\\asttex\\hsw\\views\\_partials\\_modals\\grremitente.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EDFD7744-F3E3-41D6-AAF6-9A5CCE98F067}|hsw\\hsw.csproj|solutionrelative:hsw\\views\\_partials\\_modals\\grremitente.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EDFD7744-F3E3-41D6-AAF6-9A5CCE98F067}|hsw\\hsw.csproj|f:\\aldesa\\onedrive - almacenes de deposito s.a.c. aldesa\\sistemas.web\\asttex\\hsw\\wwwroot\\scripts\\_partials\\_modals\\grremitente.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{EDFD7744-F3E3-41D6-AAF6-9A5CCE98F067}|hsw\\hsw.csproj|solutionrelative:hsw\\wwwroot\\scripts\\_partials\\_modals\\grremitente.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EDFD7744-F3E3-41D6-AAF6-9A5CCE98F067}|hsw\\hsw.csproj|f:\\aldesa\\onedrive - almacenes de deposito s.a.c. aldesa\\sistemas.web\\asttex\\hsw\\wwwroot\\scripts\\_partials\\_modals\\buscador.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{EDFD7744-F3E3-41D6-AAF6-9A5CCE98F067}|hsw\\hsw.csproj|solutionrelative:hsw\\wwwroot\\scripts\\_partials\\_modals\\buscador.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EDFD7744-F3E3-41D6-AAF6-9A5CCE98F067}|hsw\\hsw.csproj|f:\\aldesa\\onedrive - almacenes de deposito s.a.c. aldesa\\sistemas.web\\asttex\\hsw\\views\\_partials\\_modals\\buscador.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EDFD7744-F3E3-41D6-AAF6-9A5CCE98F067}|hsw\\hsw.csproj|solutionrelative:hsw\\views\\_partials\\_modals\\buscador.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EDFD7744-F3E3-41D6-AAF6-9A5CCE98F067}|hsw\\hsw.csproj|f:\\aldesa\\onedrive - almacenes de deposito s.a.c. aldesa\\sistemas.web\\asttex\\hsw\\wwwroot\\scripts\\modventas\\grrconsulta.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{EDFD7744-F3E3-41D6-AAF6-9A5CCE98F067}|hsw\\hsw.csproj|solutionrelative:hsw\\wwwroot\\scripts\\modventas\\grrconsulta.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EDFD7744-F3E3-41D6-AAF6-9A5CCE98F067}|hsw\\hsw.csproj|f:\\aldesa\\onedrive - almacenes de deposito s.a.c. aldesa\\sistemas.web\\asttex\\hsw\\views\\modventas\\grrconsulta.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EDFD7744-F3E3-41D6-AAF6-9A5CCE98F067}|hsw\\hsw.csproj|solutionrelative:hsw\\views\\modventas\\grrconsulta.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EDFD7744-F3E3-41D6-AAF6-9A5CCE98F067}|hsw\\hsw.csproj|f:\\aldesa\\onedrive - almacenes de deposito s.a.c. aldesa\\sistemas.web\\asttex\\hsw\\controllers\\modventas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EDFD7744-F3E3-41D6-AAF6-9A5CCE98F067}|hsw\\hsw.csproj|solutionrelative:hsw\\controllers\\modventas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EDFD7744-F3E3-41D6-AAF6-9A5CCE98F067}|hsw\\hsw.csproj|f:\\aldesa\\onedrive - almacenes de deposito s.a.c. aldesa\\sistemas.web\\asttex\\hsw\\wwwroot\\css\\estilos.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{EDFD7744-F3E3-41D6-AAF6-9A5CCE98F067}|hsw\\hsw.csproj|solutionrelative:hsw\\wwwroot\\css\\estilos.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EDFD7744-F3E3-41D6-AAF6-9A5CCE98F067}|hsw\\hsw.csproj|f:\\aldesa\\onedrive - almacenes de deposito s.a.c. aldesa\\sistemas.web\\asttex\\hsw\\views\\hsw\\inicio.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EDFD7744-F3E3-41D6-AAF6-9A5CCE98F067}|hsw\\hsw.csproj|solutionrelative:hsw\\views\\hsw\\inicio.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "GRRemitente.cshtml",
+              "DocumentMoniker": "F:\\Aldesa\\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\\sistemas.web\\asttex\\hsw\\Views\\_partials\\_modals\\GRRemitente.cshtml",
+              "RelativeDocumentMoniker": "hsw\\Views\\_partials\\_modals\\GRRemitente.cshtml",
+              "ToolTip": "F:\\Aldesa\\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\\sistemas.web\\asttex\\hsw\\Views\\_partials\\_modals\\GRRemitente.cshtml",
+              "RelativeToolTip": "hsw\\Views\\_partials\\_modals\\GRRemitente.cshtml",
+              "ViewState": "AQIAABkAAAAAAAAAAAAAACsAAABbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-14T22:17:57.577Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "GRRemitente.js",
+              "DocumentMoniker": "F:\\Aldesa\\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\\sistemas.web\\asttex\\hsw\\wwwroot\\scripts\\_partials\\_modals\\GRRemitente.js",
+              "RelativeDocumentMoniker": "hsw\\wwwroot\\scripts\\_partials\\_modals\\GRRemitente.js",
+              "ToolTip": "F:\\Aldesa\\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\\sistemas.web\\asttex\\hsw\\wwwroot\\scripts\\_partials\\_modals\\GRRemitente.js",
+              "RelativeToolTip": "hsw\\wwwroot\\scripts\\_partials\\_modals\\GRRemitente.js",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAUwBoAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-06-14T22:44:01.515Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Buscador.cshtml",
+              "DocumentMoniker": "F:\\Aldesa\\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\\sistemas.web\\asttex\\hsw\\Views\\_partials\\_modals\\Buscador.cshtml",
+              "RelativeDocumentMoniker": "hsw\\Views\\_partials\\_modals\\Buscador.cshtml",
+              "ToolTip": "F:\\Aldesa\\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\\sistemas.web\\asttex\\hsw\\Views\\_partials\\_modals\\Buscador.cshtml",
+              "RelativeToolTip": "hsw\\Views\\_partials\\_modals\\Buscador.cshtml",
+              "ViewState": "AQIAACoAAAAAAAAAAAAAADIAAABTAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-14T23:21:08.342Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Buscador.js",
+              "DocumentMoniker": "F:\\Aldesa\\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\\sistemas.web\\asttex\\hsw\\wwwroot\\scripts\\_partials\\_modals\\Buscador.js",
+              "RelativeDocumentMoniker": "hsw\\wwwroot\\scripts\\_partials\\_modals\\Buscador.js",
+              "ToolTip": "F:\\Aldesa\\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\\sistemas.web\\asttex\\hsw\\wwwroot\\scripts\\_partials\\_modals\\Buscador.js",
+              "RelativeToolTip": "hsw\\wwwroot\\scripts\\_partials\\_modals\\Buscador.js",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAALwAAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-06-23T02:46:46.859Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Inicio.cshtml",
+              "DocumentMoniker": "F:\\Aldesa\\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\\sistemas.web\\asttex\\hsw\\Views\\hsw\\Inicio.cshtml",
+              "RelativeDocumentMoniker": "hsw\\Views\\hsw\\Inicio.cshtml",
+              "ToolTip": "F:\\Aldesa\\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\\sistemas.web\\asttex\\hsw\\Views\\hsw\\Inicio.cshtml",
+              "RelativeToolTip": "hsw\\Views\\hsw\\Inicio.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-22T11:13:03.025Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "estilos.css",
+              "DocumentMoniker": "F:\\Aldesa\\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\\sistemas.web\\asttex\\hsw\\wwwroot\\css\\estilos.css",
+              "RelativeDocumentMoniker": "hsw\\wwwroot\\css\\estilos.css",
+              "ToolTip": "F:\\Aldesa\\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\\sistemas.web\\asttex\\hsw\\wwwroot\\css\\estilos.css",
+              "RelativeToolTip": "hsw\\wwwroot\\css\\estilos.css",
+              "ViewState": "AQIAAOoBAAAAAAAAAAAhwPUBAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-06-19T22:34:26.756Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "GRRConsulta.js",
+              "DocumentMoniker": "F:\\Aldesa\\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\\sistemas.web\\asttex\\hsw\\wwwroot\\scripts\\ModVentas\\GRRConsulta.js",
+              "RelativeDocumentMoniker": "hsw\\wwwroot\\scripts\\ModVentas\\GRRConsulta.js",
+              "ToolTip": "F:\\Aldesa\\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\\sistemas.web\\asttex\\hsw\\wwwroot\\scripts\\ModVentas\\GRRConsulta.js",
+              "RelativeToolTip": "hsw\\wwwroot\\scripts\\ModVentas\\GRRConsulta.js",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAAKwAAAAHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-06-14T22:34:36.153Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "GRRConsulta.cshtml",
+              "DocumentMoniker": "F:\\Aldesa\\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\\sistemas.web\\asttex\\hsw\\Views\\ModVentas\\GRRConsulta.cshtml",
+              "RelativeDocumentMoniker": "hsw\\Views\\ModVentas\\GRRConsulta.cshtml",
+              "ToolTip": "F:\\Aldesa\\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\\sistemas.web\\asttex\\hsw\\Views\\ModVentas\\GRRConsulta.cshtml",
+              "RelativeToolTip": "hsw\\Views\\ModVentas\\GRRConsulta.cshtml",
+              "ViewState": "AQIAABEAAAAAAAAAAAAIwB8AAABOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-14T22:15:01.641Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ModVentas.cs",
+              "DocumentMoniker": "F:\\Aldesa\\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\\sistemas.web\\asttex\\hsw\\Controllers\\ModVentas.cs",
+              "RelativeDocumentMoniker": "hsw\\Controllers\\ModVentas.cs",
+              "ToolTip": "F:\\Aldesa\\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\\sistemas.web\\asttex\\hsw\\Controllers\\ModVentas.cs",
+              "RelativeToolTip": "hsw\\Controllers\\ModVentas.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-14T22:13:52.585Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

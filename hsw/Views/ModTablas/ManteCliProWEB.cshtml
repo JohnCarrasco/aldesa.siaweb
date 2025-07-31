@@ -1,0 +1,91 @@
+﻿<div id="lista-lst" class="card h-100">
+    <div class="card-header bg-primary">
+        <h5 class="card-title text-white m-0 me-2">Clientes con acceso WEB</h5>
+    </div>
+    <div class="card-body">
+        <div class="card-datatable">
+            <table id="tabla" class="table table-bordered table-striped table-hover table-responsive table-sm">
+                <thead>
+                    <tr style="background-color:#2F75B5;color:white;">
+                        <th class="text-center">Acciones</th>
+                        <th class="text-center">Código</th>
+                        <th class="text-center">Documento</th>
+                        <th class="text-center">Razón Social</th>
+                        <th class="text-center">Dirección</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+    </div>
+</div>
+
+<!--/ Scrollable -->
+
+<!-- Modal -->
+<div class="modal fade" id="ListaAdiMod" tabindex="-1" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <input type="text" id="txtCodigo" hidden />
+            <div class="modal-header bg-primary">
+                <h4 class="modal-title text-white" id="modalCenterTitle">Asignar Clave WEB a Cliente</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row mt-1 mb-2 g-5" id="controles">
+
+                    <div class="col-12 col-md-12">
+                        <div class="form-floating form-floating-outline">
+                            <select id="cboCliPro" class="select2 form-select"></select>
+                            <label for="cboCliPro">Cliente</label>
+                            <div class="invalid-feedback text-start">Por favor seleccione cliente</div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6">
+                        <div class="form-password-toggle">
+                            <div class="input-group input-group-merge">
+                                <div class="form-floating form-floating-outline">
+                                    <input type="password"
+                                           id="txtClave1"
+                                           class="form-control"
+                                           name="txtClave1"
+                                           placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;"
+                                           aria-describedby="txtClave1" autocomplete="off" />
+                                    <label for="txtClave1">Contraseña</label>
+                                </div>
+                                <span class="input-group-text cursor-pointer"><i class="ri-eye-off-line"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="form-password-toggle">
+                            <div class="input-group input-group-merge">
+                                <div class="form-floating form-floating-outline">
+                                    <input type="password"
+                                           id="txtClave2"
+                                           class="form-control"
+                                           name="txtClave2"
+                                           placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;"
+                                           aria-describedby="txtClave2" autocomplete="off" />
+                                    <label for="txtClave2">Reingrese Contraseña</label>
+                                </div>
+                                <span class="input-group-text cursor-pointer"><i class="ri-eye-off-line"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer d-flex justify-content-center">
+                <div class="d-grid gap-3 col-lg-3">
+                    <button class="btn btn-outline-secondary" id="btnCerrar" data-bs-dismiss="modal">Regresar</button>
+                </div>
+                <div class="d-grid gap-3 col-lg-3">
+                    <button class="btn btn-outline-primary" id="btnGrabar">Grabar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /Modal -->
+
+<script type="text/javascript" src="~/scripts/ModTablas/ManteCliProWEB.js?v=1.0004"></script>

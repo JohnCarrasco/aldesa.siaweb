@@ -1,0 +1,33 @@
+﻿<style>
+
+    .nav-tabs .nav-link.active {
+        background-color: #E9ECEF; /* Color de fondo de pestaña activa */
+    }
+
+</style>
+
+ <!-- Content -->
+
+<!-- Invoice List Table -->
+<div class="card">
+    <h5 class="card-header bg-primary text-white">Listado de Clientes/Proveedores</h5>
+    <div class="card-body">
+        <div class="card-datatable table-responsive text-nowrap">
+            <table id="tabla" class="clipro-lista dt-scrollableTable table table-bordered">
+                <thead>
+                    <tr>
+                        <th class="text-center">#Código</th>
+                        <th class="text-center">Razón Social</th>
+                        <th class="text-center text-truncate">Dirección</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+    </div>
+</div>
+<!-- Content -->
+<!-- Modal -->
+@await Html.PartialAsync("../_Partials/_Modals/CliProAdiMod")
+<!-- /Modal -->
+<script type="text/javascript" src="~/Scripts/ModConfiguraciones/ManteCliPro.js?v=1.016"></script>

@@ -1,0 +1,308 @@
+﻿<header class="MuiPaper-root MuiAppBar-root MuiAppBar-positionSticky MuiAppBar-colorInherit _1GLLR MuiPaper-elevation0" style="transform: none; transition: transform 225ms cubic-bezier(0, 0, 0.2, 1) 0ms;">
+    <div class="MuiToolbar-root MuiToolbar-regular MuiToolbar-gutters">
+        <h6 class="MuiTypography-root MuiTypography-h6 MuiTypography-colorInherit" style="flex: 1 1 0%;">DOMINGO » 26º MAYO</h6>
+        <div class="_8BjM1">
+            <button class="MuiButtonBase-root MuiIconButton-root" tabindex="0" type="button"><span class="MuiIconButton-label"><span class="material-icons MuiIcon-root mdi mdi-chevron-left" aria-hidden="true"></span></span><span class="MuiTouchRipple-root"></span></button>
+            <button class="MuiButtonBase-root MuiIconButton-root" tabindex="0" type="button"><span class="MuiIconButton-label"><span class="material-icons MuiIcon-root mdi mdi-calendar" aria-hidden="true"></span></span><span class="MuiTouchRipple-root"></span></button>
+            <button class="MuiButtonBase-root MuiIconButton-root" tabindex="0" type="button"><span class="MuiIconButton-label"><span class="material-icons MuiIcon-root mdi mdi-chevron-right" aria-hidden="true"></span></span><span class="MuiTouchRipple-root"></span></button>
+            <button class="MuiButtonBase-root MuiIconButton-root MuiIconButton-edgeEnd" tabindex="0" type="button"><span class="MuiIconButton-label"><span class="material-icons MuiIcon-root mdi mdi-dots-vertical" aria-hidden="true"></span></span><span class="MuiTouchRipple-root"></span></button>
+        </div>
+    </div>
+</header>
+
+<div class="row gy-4">
+    <h6 class="MuiTypography-root MuiTypography-h6 MuiTypography-colorInherit" style="flex: 1 1 0%;">DOMINGO » 26º MAYO</h6>
+    <div>
+        <button class="MuiButtonBase-root MuiIconButton-root" tabindex="0" type="button"><span class="MuiIconButton-label"><span class="material-icons MuiIcon-root mdi mdi-chevron-left" aria-hidden="true"></span></span><span class="MuiTouchRipple-root"></span></button>
+        <button class="MuiButtonBase-root MuiIconButton-root" tabindex="0" type="button"><span class="MuiIconButton-label"><span class="material-icons MuiIcon-root mdi mdi-calendar" aria-hidden="true"></span></span><span class="MuiTouchRipple-root"></span></button>
+        <button class="MuiButtonBase-root MuiIconButton-root" tabindex="0" type="button"><span class="MuiIconButton-label"><span class="material-icons MuiIcon-root mdi mdi-chevron-right" aria-hidden="true"></span></span><span class="MuiTouchRipple-root"></span></button>
+        <button class="MuiButtonBase-root MuiIconButton-root MuiIconButton-edgeEnd" tabindex="0" type="button"><span class="MuiIconButton-label"><span class="material-icons MuiIcon-root mdi mdi-dots-vertical" aria-hidden="true"></span></span><span class="MuiTouchRipple-root"></span></button>
+    </div>
+
+</div>
+
+<div class="row">
+    <div class="col-sm-6">
+        <div class="form-floating form-floating-outline mb-4">
+            <input class="form-control" placeholder="Destinatario" type="text" value="" tabindex="0" id="txtDestinatario" />
+            <label for="txtTelefono">Destinatario</label>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+@{
+    Layout = null;
+}
+
+<style>
+    .btn-group > .btn:first-child:not(:last-child):not(.dropdown-toggle) {
+        margin-right: 5px;
+    }
+
+    select.form-control:not([size]):not([multiple]) {
+        font-size: 12px;
+        height: calc(2.25rem + 2px);
+    }
+
+    div.dt-container div.dt-search input {
+        font-size: 12px;
+    }
+
+    .col-form-label {
+        font-size: 12px;
+    }
+
+    .form-control {
+        font-size: 12px;
+    }
+
+</style>
+
+<!-- Page-header start -->
+<div class="page-header">
+    <div class="row align-items-end">
+        <div class="col-lg-8">
+        </div>
+        <div class="col-lg-4">
+            <div class="page-header-breadcrumb">
+                <ul class="breadcrumb-title">
+                    <li class="breadcrumb-item">
+                        <a href="#" data-url="/HSW/DBDefault" onclick="expandir(this)"> <i class="feather icon-home"></i> </a>
+                    </li>
+                    <li class="breadcrumb-item">
+                        <a href="#!">Configuraciones</a>
+                    </li>
+                    <li class="breadcrumb-item">
+                        <a href="#!">Usuarios</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Page-header end -->
+
+<!-- Page-body start -->
+<div class="page-body">
+    <div class="row">
+        <!-- Grid Options card start -->
+        <div class="col-xs-12 col-sm-12 col-lg-12">
+            <div class="card">
+                <div class="card-header" style="background-color:#45a1de;color:white">
+                    <h3 class="card-title"><i class="fa fa-list"></i> Usuarios</h3>
+                </div>
+                <div class="card-block">
+                    <div class="row">
+                        <div class="col-sm-12 col-xl-4 m-b-10">
+                            <label class="col-form-label">Establecimiento</label>
+                            <select id="cboEstablecimientos" class="form-control form-control-inverse">
+                            </select>
+                        </div>
+                        <div class="col-sm-12 col-xl-4 m-t-25 m-b-10">
+                            <div class="checkbox-color checkbox-primary">
+                                <input id="chkActivos" type="checkbox" checked="">
+                                <label for="chkActivos" class="col-form-label">
+                                    Activos
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="table-responsive">
+                        <table id="tabla" class="table-compact table-striped table-hover table-bordered">
+                            <thead>
+                                <tr style="background-color:#2F75B5;color:white;">
+                                    <th style="text-align:center;vertical-align:middle;">Acción</th>
+                                    <th style="text-align:center;vertical-align:middle;">Id</th>
+                                    <th style="text-align:center;vertical-align:middle;">Establecimiento</th>
+                                    <th style="text-align:center;vertical-align:middle;">Usuario</th>
+                                    <th style="text-align:center;vertical-align:middle;">Código</th>
+                                    <th style="text-align:center;vertical-align:middle;">DNI</th>
+                                    <th style="text-align:center;vertical-align:middle;">Apellidos y Nombres</th>
+                                    <th style="text-align:center;vertical-align:middle;">Móvil</th>
+                                    <th style="text-align:center;vertical-align:middle;">Rol</th>
+                                    <th style="text-align:center;vertical-align:middle;">Estado</th>
+                                    <th style="text-align:center;vertical-align:middle;">Usuario Creador</th>
+                                    <th style="text-align:center;vertical-align:middle;">Fecha/Hora Creación</th>
+                                    <th style="text-align:center;vertical-align:middle;">Usuario Modifica</th>
+                                    <th style="text-align:center;vertical-align:middle;">Fecha/Hora Modifica</th>
+                                    <th style="text-align:center;vertical-align:middle;">Usuario Desactiva</th>
+                                    <th style="text-align:center;vertical-align:middle;">Fecha/Hora Desactiva</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="usuario-edt" tabindex="-1" role="dialog" data-backdrop="static">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header" style="background-color:#45a1de;color:white">
+                    <h4 class="modal-title" id="tit_modal"></h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="col-form-label">Usuario *</label>
+                                <input type="text" id="txtid_usr" style="visibility:hidden">
+                                <input type="text" class="form-control" id="txtUsuario" autocomplete="off" style="text-transform:uppercase" onkeyup="this.value=this.value.toUpperCase();" placeholder="Usuario">
+                                <small class="invalid-feedback">El campo usuario es obligatorio</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-12 col-xl-6">
+                            <div class="form-group">
+                                <label class="col-form-label">Tipo de Documento *</label>
+                                <select id="cboTipDocPer" class="form-control form-control-inverse">
+                                </select>
+                                <small class="invalid-feedback">Debe seleccionar un tipo de documento</small>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-xl-6">
+                            <div class="form-group">
+                                <label class="col-form-label">Nro. de Documento *</label>
+                                <input type="text" class="form-control" id="txtNroDoc" autocomplete="off" placeholder="Ingrese Nro. Documento">
+                                <small class="invalid-feedback">El campo nro. de documento es obligatorio</small>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-12 col-xl-6">
+                            <div class="form-group">
+                                <label class="col-form-label">Apellido paterno *</label>
+                                <input type="text" class="form-control" id="txtApePat" autocomplete="off" style="text-transform:uppercase" onkeyup="this.value=this.value.toUpperCase();" placeholder="Apellido paterno" maxlength="50">
+                                <small class="invalid-feedback">El campo apellido paterno es obligatorio</small>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-xl-6">
+                            <div class="form-group">
+                                <label class="col-form-label">Apellido materno *</label>
+                                <input type="text" class="form-control" id="txtApeMat" autocomplete="off" style="text-transform:uppercase" onkeyup="this.value=this.value.toUpperCase();" placeholder="Apellido materno" maxlength="50">
+                                <small class="invalid-feedback">El campo apellido materno es obligatorio</small>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-12 col-xl-12">
+                            <div class="form-group">
+                                <label class="col-form-label">Nombres *</label>
+                                <input type="text" class="form-control" id="txtNombre" autocomplete="off" style="text-transform:uppercase" onkeyup="this.value=this.value.toUpperCase();" placeholder="Nombres" maxlength="50">
+                                <small class="invalid-feedback">El campo nombres es obligatorio</small>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-12 col-xl-6">
+                            <div class="form-group">
+                                <label class="col-form-label">Correo</label>
+                                <input type="text" class="form-control" id="txtCorreo" autocomplete="off" placeholder="Correo" maxlength="100">
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-xl-6">
+                            <div class="form-group">
+                                <label class="col-form-label">Móvil</label>
+                                <input type="text" class="form-control" id="txtTelefono" autocomplete="off" placeholder="Móvil">
+                            </div>
+                        </div>
+
+                        <div class="col-sm-12 col-xl-6">
+                            <div class="form-group">
+                                <label class="col-form-label">Establecimiento *</label>
+                                <select id="cboEstablecimiento" class="form-control form-control-inverse">
+                                </select>
+                                <small class="invalid-feedback">Debe seleccionar un establecimiento</small>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-xl-6">
+                            <div class="form-group">
+                                <label class="col-form-label">Rol *</label>
+                                <select id="cboRol" class="form-control form-control-inverse">
+                                </select>
+                                <small class="invalid-feedback">Debe seleccionar un rol</small>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-12 col-xl-6" id="dvClave1">
+                            <div class="form-group">
+                                <label class="col-form-label">Ingrese clave</label>
+                                <input type="password" class="form-control" id="txtClave1">
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-xl-6"id="dvClave2">
+                            <div class="form-group">
+                                <label class="col-form-label">Reingrese clave</label>
+                                <input type="password" class="form-control" id="txtClave2">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default waves-effect" id="btnCerrar">Cancelar</button>
+                    <button type="button" class="btn btn-primary waves-effect waves-light" id="btnGrabar">Grabar</button>
+                </div>
+             </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="clave-edt" tabindex="-1" role="dialog" data-backdrop="static">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header" style="background-color:#45a1de;color:white">
+                    <h4 class="modal-title">Resetear Contraseña</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="col-form-label">Usuario *</label>
+                                <input type="text" id="txtid_usr_rc" style="visibility:hidden">
+                                <input type="text" class="form-control" id="txtUsuario_rc" disabled>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+
+                        <div class="col-sm-12 col-xl-6">
+                            <div class="form-group">
+                                <label class="col-form-label">Ingrese clave</label>
+                                <input type="password" class="form-control" id="txtClave1_rc">
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-xl-6">
+                            <div class="form-group">
+                                <label class="col-form-label">Reingrese clave</label>
+                                <input type="password" class="form-control" id="txtClave2_rc">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default waves-effect" id="btnCerrar_rc">Cancelar</button>
+                    <button type="button" class="btn btn-primary waves-effect waves-light" id="btnGrabar_rc">Grabar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+@*
+<script src="~/Scripts/ModConfiguraciones/ManteUsuarios.js?v=1.019"></script>
+*@

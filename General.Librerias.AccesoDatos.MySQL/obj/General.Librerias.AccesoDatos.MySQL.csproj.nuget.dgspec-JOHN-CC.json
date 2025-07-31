@@ -1,0 +1,77 @@
+{
+  "format": 1,
+  "restore": {
+    "F:\\Aldesa\\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\\sistemas.web\\asttex\\General.Librerias.AccesoDatos.MySQL\\General.Librerias.AccesoDatos.MySQL.csproj": {}
+  },
+  "projects": {
+    "F:\\Aldesa\\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\\sistemas.web\\asttex\\General.Librerias.AccesoDatos.MySQL\\General.Librerias.AccesoDatos.MySQL.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "F:\\Aldesa\\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\\sistemas.web\\asttex\\General.Librerias.AccesoDatos.MySQL\\General.Librerias.AccesoDatos.MySQL.csproj",
+        "projectName": "General.Librerias.AccesoDatos.MySQL",
+        "projectPath": "F:\\Aldesa\\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\\sistemas.web\\asttex\\General.Librerias.AccesoDatos.MySQL\\General.Librerias.AccesoDatos.MySQL.csproj",
+        "packagesPath": "C:\\Users\\JOHN\\.nuget\\packages\\",
+        "outputPath": "F:\\Aldesa\\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\\sistemas.web\\asttex\\General.Librerias.AccesoDatos.MySQL\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\JOHN\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "MySqlConnector": {
+              "target": "Package",
+              "version": "[2.3.6, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.205/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

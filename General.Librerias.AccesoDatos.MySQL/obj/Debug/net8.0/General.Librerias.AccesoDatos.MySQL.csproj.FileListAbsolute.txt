@@ -1,0 +1,120 @@
+F:\Aldesa\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\sistemas.web\elsolsac\General.Librerias.AccesoDatos.MySQL\bin\Debug\net8.0\General.Librerias.AccesoDatos.MySQL.deps.json
+F:\Aldesa\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\sistemas.web\elsolsac\General.Librerias.AccesoDatos.MySQL\bin\Debug\net8.0\General.Librerias.AccesoDatos.MySQL.dll
+F:\Aldesa\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\sistemas.web\elsolsac\General.Librerias.AccesoDatos.MySQL\bin\Debug\net8.0\General.Librerias.AccesoDatos.MySQL.pdb
+F:\Aldesa\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\sistemas.web\elsolsac\General.Librerias.AccesoDatos.MySQL\obj\Debug\net8.0\General.Librerias.AccesoDatos.MySQL.csproj.AssemblyReference.cache
+F:\Aldesa\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\sistemas.web\elsolsac\General.Librerias.AccesoDatos.MySQL\obj\Debug\net8.0\General.Librerias.AccesoDatos.MySQL.GeneratedMSBuildEditorConfig.editorconfig
+F:\Aldesa\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\sistemas.web\elsolsac\General.Librerias.AccesoDatos.MySQL\obj\Debug\net8.0\General.Librerias.AccesoDatos.MySQL.AssemblyInfoInputs.cache
+F:\Aldesa\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\sistemas.web\elsolsac\General.Librerias.AccesoDatos.MySQL\obj\Debug\net8.0\General.Librerias.AccesoDatos.MySQL.AssemblyInfo.cs
+F:\Aldesa\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\sistemas.web\elsolsac\General.Librerias.AccesoDatos.MySQL\obj\Debug\net8.0\General.Librerias.AccesoDatos.MySQL.csproj.CoreCompileInputs.cache
+F:\Aldesa\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\sistemas.web\elsolsac\General.Librerias.AccesoDatos.MySQL\obj\Debug\net8.0\General.Librerias.AccesoDatos.MySQL.dll
+F:\Aldesa\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\sistemas.web\elsolsac\General.Librerias.AccesoDatos.MySQL\obj\Debug\net8.0\refint\General.Librerias.AccesoDatos.MySQL.dll
+F:\Aldesa\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\sistemas.web\elsolsac\General.Librerias.AccesoDatos.MySQL\obj\Debug\net8.0\General.Librerias.AccesoDatos.MySQL.pdb
+F:\Aldesa\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\sistemas.web\elsolsac\General.Librerias.AccesoDatos.MySQL\obj\Debug\net8.0\ref\General.Librerias.AccesoDatos.MySQL.dll
+C:\Users\JOHN CARRASCO\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\sistemas.web\elsolsac\General.Librerias.AccesoDatos.MySQL\bin\Debug\net8.0\General.Librerias.AccesoDatos.MySQL.deps.json
+C:\Users\JOHN CARRASCO\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\sistemas.web\elsolsac\General.Librerias.AccesoDatos.MySQL\bin\Debug\net8.0\General.Librerias.AccesoDatos.MySQL.dll
+C:\Users\JOHN CARRASCO\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\sistemas.web\elsolsac\General.Librerias.AccesoDatos.MySQL\bin\Debug\net8.0\General.Librerias.AccesoDatos.MySQL.pdb
+C:\Users\JOHN CARRASCO\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\sistemas.web\elsolsac\General.Librerias.AccesoDatos.MySQL\obj\Debug\net8.0\General.Librerias.AccesoDatos.MySQL.csproj.AssemblyReference.cache
+C:\Users\JOHN CARRASCO\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\sistemas.web\elsolsac\General.Librerias.AccesoDatos.MySQL\obj\Debug\net8.0\General.Librerias.AccesoDatos.MySQL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\JOHN CARRASCO\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\sistemas.web\elsolsac\General.Librerias.AccesoDatos.MySQL\obj\Debug\net8.0\General.Librerias.AccesoDatos.MySQL.AssemblyInfoInputs.cache
+C:\Users\JOHN CARRASCO\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\sistemas.web\elsolsac\General.Librerias.AccesoDatos.MySQL\obj\Debug\net8.0\General.Librerias.AccesoDatos.MySQL.AssemblyInfo.cs
+C:\Users\JOHN CARRASCO\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\sistemas.web\elsolsac\General.Librerias.AccesoDatos.MySQL\obj\Debug\net8.0\General.Librerias.AccesoDatos.MySQL.csproj.CoreCompileInputs.cache
+C:\Users\JOHN CARRASCO\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\sistemas.web\elsolsac\General.Librerias.AccesoDatos.MySQL\obj\Debug\net8.0\General.Librerias.AccesoDatos.MySQL.dll
+C:\Users\JOHN CARRASCO\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\sistemas.web\elsolsac\General.Librerias.AccesoDatos.MySQL\obj\Debug\net8.0\refint\General.Librerias.AccesoDatos.MySQL.dll
+C:\Users\JOHN CARRASCO\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\sistemas.web\elsolsac\General.Librerias.AccesoDatos.MySQL\obj\Debug\net8.0\General.Librerias.AccesoDatos.MySQL.pdb
+C:\Users\JOHN CARRASCO\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\sistemas.web\elsolsac\General.Librerias.AccesoDatos.MySQL\obj\Debug\net8.0\ref\General.Librerias.AccesoDatos.MySQL.dll
+F:\Aldesa\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\sistemas.web\conta\General.Librerias.AccesoDatos.MySQL\bin\Debug\net8.0\General.Librerias.AccesoDatos.MySQL.deps.json
+F:\Aldesa\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\sistemas.web\conta\General.Librerias.AccesoDatos.MySQL\bin\Debug\net8.0\General.Librerias.AccesoDatos.MySQL.dll
+F:\Aldesa\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\sistemas.web\conta\General.Librerias.AccesoDatos.MySQL\bin\Debug\net8.0\General.Librerias.AccesoDatos.MySQL.pdb
+F:\Aldesa\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\sistemas.web\conta\General.Librerias.AccesoDatos.MySQL\obj\Debug\net8.0\General.Librerias.AccesoDatos.MySQL.csproj.AssemblyReference.cache
+F:\Aldesa\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\sistemas.web\conta\General.Librerias.AccesoDatos.MySQL\obj\Debug\net8.0\General.Librerias.AccesoDatos.MySQL.GeneratedMSBuildEditorConfig.editorconfig
+F:\Aldesa\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\sistemas.web\conta\General.Librerias.AccesoDatos.MySQL\obj\Debug\net8.0\General.Librerias.AccesoDatos.MySQL.AssemblyInfoInputs.cache
+F:\Aldesa\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\sistemas.web\conta\General.Librerias.AccesoDatos.MySQL\obj\Debug\net8.0\General.Librerias.AccesoDatos.MySQL.AssemblyInfo.cs
+F:\Aldesa\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\sistemas.web\conta\General.Librerias.AccesoDatos.MySQL\obj\Debug\net8.0\General.Librerias.AccesoDatos.MySQL.csproj.CoreCompileInputs.cache
+F:\Aldesa\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\sistemas.web\conta\General.Librerias.AccesoDatos.MySQL\obj\Debug\net8.0\General.Librerias.AccesoDatos.MySQL.dll
+F:\Aldesa\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\sistemas.web\conta\General.Librerias.AccesoDatos.MySQL\obj\Debug\net8.0\refint\General.Librerias.AccesoDatos.MySQL.dll
+F:\Aldesa\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\sistemas.web\conta\General.Librerias.AccesoDatos.MySQL\obj\Debug\net8.0\General.Librerias.AccesoDatos.MySQL.pdb
+F:\Aldesa\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\sistemas.web\conta\General.Librerias.AccesoDatos.MySQL\obj\Debug\net8.0\ref\General.Librerias.AccesoDatos.MySQL.dll
+F:\Aldesa\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\sistemas.web\asttex\General.Librerias.AccesoDatos.MySQL\bin\Debug\net8.0\General.Librerias.AccesoDatos.MySQL.deps.json
+F:\Aldesa\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\sistemas.web\asttex\General.Librerias.AccesoDatos.MySQL\bin\Debug\net8.0\General.Librerias.AccesoDatos.MySQL.dll
+F:\Aldesa\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\sistemas.web\asttex\General.Librerias.AccesoDatos.MySQL\bin\Debug\net8.0\General.Librerias.AccesoDatos.MySQL.pdb
+F:\Aldesa\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\sistemas.web\asttex\General.Librerias.AccesoDatos.MySQL\obj\Debug\net8.0\General.Librerias.AccesoDatos.MySQL.csproj.AssemblyReference.cache
+F:\Aldesa\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\sistemas.web\asttex\General.Librerias.AccesoDatos.MySQL\obj\Debug\net8.0\General.Librerias.AccesoDatos.MySQL.GeneratedMSBuildEditorConfig.editorconfig
+F:\Aldesa\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\sistemas.web\asttex\General.Librerias.AccesoDatos.MySQL\obj\Debug\net8.0\General.Librerias.AccesoDatos.MySQL.AssemblyInfoInputs.cache
+F:\Aldesa\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\sistemas.web\asttex\General.Librerias.AccesoDatos.MySQL\obj\Debug\net8.0\General.Librerias.AccesoDatos.MySQL.AssemblyInfo.cs
+F:\Aldesa\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\sistemas.web\asttex\General.Librerias.AccesoDatos.MySQL\obj\Debug\net8.0\General.Librerias.AccesoDatos.MySQL.csproj.CoreCompileInputs.cache
+F:\Aldesa\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\sistemas.web\asttex\General.Librerias.AccesoDatos.MySQL\obj\Debug\net8.0\General.Librerias.AccesoDatos.MySQL.dll
+F:\Aldesa\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\sistemas.web\asttex\General.Librerias.AccesoDatos.MySQL\obj\Debug\net8.0\refint\General.Librerias.AccesoDatos.MySQL.dll
+F:\Aldesa\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\sistemas.web\asttex\General.Librerias.AccesoDatos.MySQL\obj\Debug\net8.0\General.Librerias.AccesoDatos.MySQL.pdb
+F:\Aldesa\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\sistemas.web\asttex\General.Librerias.AccesoDatos.MySQL\obj\Debug\net8.0\ref\General.Librerias.AccesoDatos.MySQL.dll
+C:\Users\JOHN CARRASCO\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\sistemas.web\asttex\General.Librerias.AccesoDatos.MySQL\bin\Debug\net8.0\General.Librerias.AccesoDatos.MySQL.deps.json
+C:\Users\JOHN CARRASCO\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\sistemas.web\asttex\General.Librerias.AccesoDatos.MySQL\bin\Debug\net8.0\General.Librerias.AccesoDatos.MySQL.dll
+C:\Users\JOHN CARRASCO\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\sistemas.web\asttex\General.Librerias.AccesoDatos.MySQL\bin\Debug\net8.0\General.Librerias.AccesoDatos.MySQL.pdb
+C:\Users\JOHN CARRASCO\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\sistemas.web\asttex\General.Librerias.AccesoDatos.MySQL\obj\Debug\net8.0\General.Librerias.AccesoDatos.MySQL.csproj.AssemblyReference.cache
+C:\Users\JOHN CARRASCO\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\sistemas.web\asttex\General.Librerias.AccesoDatos.MySQL\obj\Debug\net8.0\General.Librerias.AccesoDatos.MySQL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\JOHN CARRASCO\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\sistemas.web\asttex\General.Librerias.AccesoDatos.MySQL\obj\Debug\net8.0\General.Librerias.AccesoDatos.MySQL.AssemblyInfoInputs.cache
+C:\Users\JOHN CARRASCO\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\sistemas.web\asttex\General.Librerias.AccesoDatos.MySQL\obj\Debug\net8.0\General.Librerias.AccesoDatos.MySQL.AssemblyInfo.cs
+C:\Users\JOHN CARRASCO\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\sistemas.web\asttex\General.Librerias.AccesoDatos.MySQL\obj\Debug\net8.0\General.Librerias.AccesoDatos.MySQL.csproj.CoreCompileInputs.cache
+C:\Users\JOHN CARRASCO\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\sistemas.web\asttex\General.Librerias.AccesoDatos.MySQL\obj\Debug\net8.0\General.Librerias.AccesoDatos.MySQL.dll
+C:\Users\JOHN CARRASCO\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\sistemas.web\asttex\General.Librerias.AccesoDatos.MySQL\obj\Debug\net8.0\refint\General.Librerias.AccesoDatos.MySQL.dll
+C:\Users\JOHN CARRASCO\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\sistemas.web\asttex\General.Librerias.AccesoDatos.MySQL\obj\Debug\net8.0\General.Librerias.AccesoDatos.MySQL.pdb
+C:\Users\JOHN CARRASCO\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\sistemas.web\asttex\General.Librerias.AccesoDatos.MySQL\obj\Debug\net8.0\ref\General.Librerias.AccesoDatos.MySQL.dll
+F:\Aldesa\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\sistemas.web\hsw\contador\General.Librerias.AccesoDatos.MySQL\bin\Debug\net8.0\General.Librerias.AccesoDatos.MySQL.deps.json
+F:\Aldesa\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\sistemas.web\hsw\contador\General.Librerias.AccesoDatos.MySQL\bin\Debug\net8.0\General.Librerias.AccesoDatos.MySQL.dll
+F:\Aldesa\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\sistemas.web\hsw\contador\General.Librerias.AccesoDatos.MySQL\bin\Debug\net8.0\General.Librerias.AccesoDatos.MySQL.pdb
+F:\Aldesa\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\sistemas.web\hsw\contador\General.Librerias.AccesoDatos.MySQL\obj\Debug\net8.0\General.Librerias.AccesoDatos.MySQL.csproj.AssemblyReference.cache
+F:\Aldesa\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\sistemas.web\hsw\contador\General.Librerias.AccesoDatos.MySQL\obj\Debug\net8.0\General.Librerias.AccesoDatos.MySQL.GeneratedMSBuildEditorConfig.editorconfig
+F:\Aldesa\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\sistemas.web\hsw\contador\General.Librerias.AccesoDatos.MySQL\obj\Debug\net8.0\General.Librerias.AccesoDatos.MySQL.AssemblyInfoInputs.cache
+F:\Aldesa\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\sistemas.web\hsw\contador\General.Librerias.AccesoDatos.MySQL\obj\Debug\net8.0\General.Librerias.AccesoDatos.MySQL.AssemblyInfo.cs
+F:\Aldesa\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\sistemas.web\hsw\contador\General.Librerias.AccesoDatos.MySQL\obj\Debug\net8.0\General.Librerias.AccesoDatos.MySQL.csproj.CoreCompileInputs.cache
+F:\Aldesa\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\sistemas.web\hsw\contador\General.Librerias.AccesoDatos.MySQL\obj\Debug\net8.0\General.Librerias.AccesoDatos.MySQL.dll
+F:\Aldesa\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\sistemas.web\hsw\contador\General.Librerias.AccesoDatos.MySQL\obj\Debug\net8.0\refint\General.Librerias.AccesoDatos.MySQL.dll
+F:\Aldesa\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\sistemas.web\hsw\contador\General.Librerias.AccesoDatos.MySQL\obj\Debug\net8.0\General.Librerias.AccesoDatos.MySQL.pdb
+F:\Aldesa\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\sistemas.web\hsw\contador\General.Librerias.AccesoDatos.MySQL\obj\Debug\net8.0\ref\General.Librerias.AccesoDatos.MySQL.dll
+F:\Aldesa\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\sistemas.web\hsw\contador - copia\General.Librerias.AccesoDatos.MySQL\bin\Debug\net8.0\General.Librerias.AccesoDatos.MySQL.deps.json
+F:\Aldesa\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\sistemas.web\hsw\contador - copia\General.Librerias.AccesoDatos.MySQL\bin\Debug\net8.0\General.Librerias.AccesoDatos.MySQL.dll
+F:\Aldesa\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\sistemas.web\hsw\contador - copia\General.Librerias.AccesoDatos.MySQL\bin\Debug\net8.0\General.Librerias.AccesoDatos.MySQL.pdb
+F:\Aldesa\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\sistemas.web\hsw\contador - copia\General.Librerias.AccesoDatos.MySQL\obj\Debug\net8.0\General.Librerias.AccesoDatos.MySQL.csproj.AssemblyReference.cache
+F:\Aldesa\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\sistemas.web\hsw\contador - copia\General.Librerias.AccesoDatos.MySQL\obj\Debug\net8.0\General.Librerias.AccesoDatos.MySQL.GeneratedMSBuildEditorConfig.editorconfig
+F:\Aldesa\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\sistemas.web\hsw\contador - copia\General.Librerias.AccesoDatos.MySQL\obj\Debug\net8.0\General.Librerias.AccesoDatos.MySQL.AssemblyInfoInputs.cache
+F:\Aldesa\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\sistemas.web\hsw\contador - copia\General.Librerias.AccesoDatos.MySQL\obj\Debug\net8.0\General.Librerias.AccesoDatos.MySQL.AssemblyInfo.cs
+F:\Aldesa\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\sistemas.web\hsw\contador - copia\General.Librerias.AccesoDatos.MySQL\obj\Debug\net8.0\General.Librerias.AccesoDatos.MySQL.csproj.CoreCompileInputs.cache
+F:\Aldesa\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\sistemas.web\hsw\contador - copia\General.Librerias.AccesoDatos.MySQL\obj\Debug\net8.0\General.Librerias.AccesoDatos.MySQL.dll
+F:\Aldesa\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\sistemas.web\hsw\contador - copia\General.Librerias.AccesoDatos.MySQL\obj\Debug\net8.0\refint\General.Librerias.AccesoDatos.MySQL.dll
+F:\Aldesa\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\sistemas.web\hsw\contador - copia\General.Librerias.AccesoDatos.MySQL\obj\Debug\net8.0\General.Librerias.AccesoDatos.MySQL.pdb
+F:\Aldesa\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\sistemas.web\hsw\contador - copia\General.Librerias.AccesoDatos.MySQL\obj\Debug\net8.0\ref\General.Librerias.AccesoDatos.MySQL.dll
+F:\Aldesa\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\sistemas.web\hsw\demo\General.Librerias.AccesoDatos.MySQL\bin\Debug\net8.0\General.Librerias.AccesoDatos.MySQL.deps.json
+F:\Aldesa\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\sistemas.web\hsw\demo\General.Librerias.AccesoDatos.MySQL\bin\Debug\net8.0\General.Librerias.AccesoDatos.MySQL.dll
+F:\Aldesa\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\sistemas.web\hsw\demo\General.Librerias.AccesoDatos.MySQL\bin\Debug\net8.0\General.Librerias.AccesoDatos.MySQL.pdb
+F:\Aldesa\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\sistemas.web\hsw\demo\General.Librerias.AccesoDatos.MySQL\obj\Debug\net8.0\General.Librerias.AccesoDatos.MySQL.csproj.AssemblyReference.cache
+F:\Aldesa\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\sistemas.web\hsw\demo\General.Librerias.AccesoDatos.MySQL\obj\Debug\net8.0\General.Librerias.AccesoDatos.MySQL.GeneratedMSBuildEditorConfig.editorconfig
+F:\Aldesa\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\sistemas.web\hsw\demo\General.Librerias.AccesoDatos.MySQL\obj\Debug\net8.0\General.Librerias.AccesoDatos.MySQL.AssemblyInfoInputs.cache
+F:\Aldesa\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\sistemas.web\hsw\demo\General.Librerias.AccesoDatos.MySQL\obj\Debug\net8.0\General.Librerias.AccesoDatos.MySQL.AssemblyInfo.cs
+F:\Aldesa\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\sistemas.web\hsw\demo\General.Librerias.AccesoDatos.MySQL\obj\Debug\net8.0\General.Librerias.AccesoDatos.MySQL.csproj.CoreCompileInputs.cache
+F:\Aldesa\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\sistemas.web\hsw\demo\General.Librerias.AccesoDatos.MySQL\obj\Debug\net8.0\General.Librerias.AccesoDatos.MySQL.dll
+F:\Aldesa\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\sistemas.web\hsw\demo\General.Librerias.AccesoDatos.MySQL\obj\Debug\net8.0\refint\General.Librerias.AccesoDatos.MySQL.dll
+F:\Aldesa\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\sistemas.web\hsw\demo\General.Librerias.AccesoDatos.MySQL\obj\Debug\net8.0\General.Librerias.AccesoDatos.MySQL.pdb
+F:\Aldesa\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\sistemas.web\hsw\demo\General.Librerias.AccesoDatos.MySQL\obj\Debug\net8.0\ref\General.Librerias.AccesoDatos.MySQL.dll
+F:\Aldesa\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\sistemas.web\aldesa\siaweb\General.Librerias.AccesoDatos.MySQL\bin\Debug\net8.0\General.Librerias.AccesoDatos.MySQL.deps.json
+F:\Aldesa\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\sistemas.web\aldesa\siaweb\General.Librerias.AccesoDatos.MySQL\bin\Debug\net8.0\General.Librerias.AccesoDatos.MySQL.dll
+F:\Aldesa\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\sistemas.web\aldesa\siaweb\General.Librerias.AccesoDatos.MySQL\bin\Debug\net8.0\General.Librerias.AccesoDatos.MySQL.pdb
+F:\Aldesa\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\sistemas.web\aldesa\siaweb\General.Librerias.AccesoDatos.MySQL\obj\Debug\net8.0\General.Librerias.AccesoDatos.MySQL.csproj.AssemblyReference.cache
+F:\Aldesa\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\sistemas.web\aldesa\siaweb\General.Librerias.AccesoDatos.MySQL\obj\Debug\net8.0\General.Librerias.AccesoDatos.MySQL.GeneratedMSBuildEditorConfig.editorconfig
+F:\Aldesa\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\sistemas.web\aldesa\siaweb\General.Librerias.AccesoDatos.MySQL\obj\Debug\net8.0\General.Librerias.AccesoDatos.MySQL.AssemblyInfoInputs.cache
+F:\Aldesa\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\sistemas.web\aldesa\siaweb\General.Librerias.AccesoDatos.MySQL\obj\Debug\net8.0\General.Librerias.AccesoDatos.MySQL.AssemblyInfo.cs
+F:\Aldesa\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\sistemas.web\aldesa\siaweb\General.Librerias.AccesoDatos.MySQL\obj\Debug\net8.0\General.Librerias.AccesoDatos.MySQL.csproj.CoreCompileInputs.cache
+F:\Aldesa\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\sistemas.web\aldesa\siaweb\General.Librerias.AccesoDatos.MySQL\obj\Debug\net8.0\General.Librerias.AccesoDatos.MySQL.dll
+F:\Aldesa\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\sistemas.web\aldesa\siaweb\General.Librerias.AccesoDatos.MySQL\obj\Debug\net8.0\refint\General.Librerias.AccesoDatos.MySQL.dll
+F:\Aldesa\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\sistemas.web\aldesa\siaweb\General.Librerias.AccesoDatos.MySQL\obj\Debug\net8.0\General.Librerias.AccesoDatos.MySQL.pdb
+F:\Aldesa\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\sistemas.web\aldesa\siaweb\General.Librerias.AccesoDatos.MySQL\obj\Debug\net8.0\ref\General.Librerias.AccesoDatos.MySQL.dll
+D:\OneDrive\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\sistemas.web\aldesa\siaweb\General.Librerias.AccesoDatos.MySQL\bin\Debug\net8.0\General.Librerias.AccesoDatos.MySQL.deps.json
+D:\OneDrive\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\sistemas.web\aldesa\siaweb\General.Librerias.AccesoDatos.MySQL\bin\Debug\net8.0\General.Librerias.AccesoDatos.MySQL.dll
+D:\OneDrive\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\sistemas.web\aldesa\siaweb\General.Librerias.AccesoDatos.MySQL\bin\Debug\net8.0\General.Librerias.AccesoDatos.MySQL.pdb
+D:\OneDrive\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\sistemas.web\aldesa\siaweb\General.Librerias.AccesoDatos.MySQL\obj\Debug\net8.0\General.Librerias.AccesoDatos.MySQL.csproj.AssemblyReference.cache
+D:\OneDrive\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\sistemas.web\aldesa\siaweb\General.Librerias.AccesoDatos.MySQL\obj\Debug\net8.0\General.Librerias.AccesoDatos.MySQL.GeneratedMSBuildEditorConfig.editorconfig
+D:\OneDrive\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\sistemas.web\aldesa\siaweb\General.Librerias.AccesoDatos.MySQL\obj\Debug\net8.0\General.Librerias.AccesoDatos.MySQL.AssemblyInfoInputs.cache
+D:\OneDrive\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\sistemas.web\aldesa\siaweb\General.Librerias.AccesoDatos.MySQL\obj\Debug\net8.0\General.Librerias.AccesoDatos.MySQL.AssemblyInfo.cs
+D:\OneDrive\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\sistemas.web\aldesa\siaweb\General.Librerias.AccesoDatos.MySQL\obj\Debug\net8.0\General.Librerias.AccesoDatos.MySQL.csproj.CoreCompileInputs.cache
+D:\OneDrive\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\sistemas.web\aldesa\siaweb\General.Librerias.AccesoDatos.MySQL\obj\Debug\net8.0\General.Librerias.AccesoDatos.MySQL.dll
+D:\OneDrive\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\sistemas.web\aldesa\siaweb\General.Librerias.AccesoDatos.MySQL\obj\Debug\net8.0\refint\General.Librerias.AccesoDatos.MySQL.dll
+D:\OneDrive\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\sistemas.web\aldesa\siaweb\General.Librerias.AccesoDatos.MySQL\obj\Debug\net8.0\General.Librerias.AccesoDatos.MySQL.pdb
+D:\OneDrive\OneDrive - ALMACENES DE DEPOSITO S.A.C. ALDESA\sistemas.web\aldesa\siaweb\General.Librerias.AccesoDatos.MySQL\obj\Debug\net8.0\ref\General.Librerias.AccesoDatos.MySQL.dll
